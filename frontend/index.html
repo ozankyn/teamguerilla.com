@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Guerilla Marketing — Markanız Sahada, Biz Arkasındayız</title>
+<meta name="description" content="2004'ten bu yana Türkiye genelinde saha pazarlama, merchandising, roadshow, etkinlik ve gerilla pazarlama hizmetleri sunan Team Guerilla Marketing.">
+
+<!-- Fonts: Outfit (Display) + Plus Jakarta Sans (Body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES — DESIGN TOKENS
+   ============================================ */
+
+/* ---------- DARK THEME (Default) ---------- */
+[data-theme="dark"] {
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #111111;
+  --bg-card: #1A1A1A;
+  --bg-card-hover: #222222;
+  --bg-footer: #080808;
+  --bg-nav: rgba(13, 13, 13, 0.88);
+  --bg-mobile-menu: rgba(13, 13, 13, 0.97);
+  --accent: #E63946;
+  --accent-hover: #FF4D5A;
+  --accent-glow: rgba(230, 57, 70, 0.25);
+  --accent-soft: rgba(230, 57, 70, 0.06);
+  --text-primary: #FFFFFF;
+  --text-body: #C8C8C8;
+  --text-muted: #888888;
+  --text-subtle: #555555;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(26, 26, 26, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --logo-filter: brightness(0) invert(1);
+  --grid-line: rgba(255, 255, 255, 0.02);
+  --toggle-bg: #2A2A2A;
+  --toggle-knob: #FFFFFF;
+  --stat-divider: rgba(255, 255, 255, 0.06);
+  --marquee-logo-bg: rgba(255, 255, 255, 0.04);
+  --marquee-logo-text: #555;
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  --bg-primary: #F8F7F5;
+  --bg-secondary: #F0EFEC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F4F2;
+  --bg-footer: #1A1A1A;
+  --bg-nav: rgba(248, 247, 245, 0.88);
+  --bg-mobile-menu: rgba(248, 247, 245, 0.97);
+  --accent: #D62839;
+  --accent-hover: #E63946;
+  --accent-glow: rgba(214, 40, 57, 0.2);
+  --accent-soft: rgba(214, 40, 57, 0.04);
+  --text-primary: #111111;
+  --text-body: #444444;
+  --text-muted: #777777;
+  --text-subtle: #AAAAAA;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --logo-filter: none;
+  --grid-line: rgba(0, 0, 0, 0.03);
+  --toggle-bg: #E0DDD8;
+  --toggle-knob: #FFFFFF;
+  --stat-divider: rgba(0, 0, 0, 0.08);
+  --marquee-logo-bg: rgba(0, 0, 0, 0.04);
+  --marquee-logo-text: #AAA;
+}
+
+/* Light theme footer stays dark */
+[data-theme="light"] .footer {
+  --text-primary: #FFFFFF;
+  --text-body: #C8C8C8;
+  --text-muted: #888888;
+  --text-subtle: #555555;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+}
+
+:root {
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Spacing (8px base) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Layout */
+  --container-max: 1320px;
+  --nav-height: 72px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Glow */
+  --shadow-glow: 0 0 40px var(--accent-glow);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --duration-theme: 500ms;
+}
+
+/* ============================================
+   THEME TRANSITION
+   ============================================ */
+html, body,
+.nav, .nav.scrolled,
+.feat-card,
+.stats,
+.cta-section,
+.footer {
+  transition:
+    background-color var(--duration-theme) var(--ease-out),
+    color var(--duration-theme) var(--ease-out),
+    border-color var(--duration-theme) var(--ease-out);
+}
+
+.hero__title,
+.hero__subtitle,
+.hero__tag,
+.section-label,
+.section-title,
+.feat-card__title,
+.feat-card__desc,
+.stats__number,
+.stats__label,
+.cta-section__title,
+.cta-section__subtitle,
+.nav__links a,
+.nav__logo,
+.footer__brand-name,
+.footer__brand-desc,
+.footer__col-title,
+.footer__links a,
+.footer__copy,
+.footer__legal a,
+.trusted__label {
+  transition: color var(--duration-theme) var(--ease-out);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-body);
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 var(--space-5); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding: 0 var(--space-8); }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > .reveal {
+  transition-delay: calc(var(--stagger, 0) * 80ms);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.nav.scrolled {
+  background: var(--bg-nav);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .nav__inner { padding: 0 var(--space-8); }
+}
+
+/* Logo */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.nav__logo img {
+  height: 44px;
+  width: auto;
+  filter: var(--logo-filter);
+  transition: filter var(--duration-theme) var(--ease-out);
+}
+
+/* Right side group */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .nav__right { gap: var(--space-4); }
+}
+
+/* Desktop Nav Links */
+.nav__links {
+  display: none;
+  list-style: none;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .nav__links { display: flex; }
+}
+
+.nav__links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color var(--duration-fast) var(--ease-out);
+  position: relative;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+.nav__links a:hover,
+.nav__links a[aria-current="page"] {
+  color: var(--text-primary);
+}
+
+.nav__links a:hover::after,
+.nav__links a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: var(--toggle-bg);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background var(--duration-normal) var(--ease-out);
+  flex-shrink: 0;
+  border: 1px solid var(--border-subtle);
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-light);
+}
+
+.theme-toggle__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--toggle-knob);
+  border-radius: 50%;
+  transition: transform var(--duration-normal) var(--ease-spring);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="light"] .theme-toggle__knob {
+  transform: translateX(24px);
+}
+
+.theme-toggle__icon {
+  width: 12px;
+  height: 12px;
+  transition: opacity var(--duration-fast), transform var(--duration-normal) var(--ease-spring);
+}
+
+.theme-toggle__icon--moon {
+  color: #1A1A1A;
+  display: block;
+}
+
+.theme-toggle__icon--sun {
+  color: #F59E0B;
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle__icon--moon {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+/* Language Switcher */
+.nav__lang {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav__lang-active {
+  color: var(--text-primary);
+}
+
+.nav__lang-inactive {
+  color: var(--text-subtle);
+  transition: color var(--duration-fast);
+}
+
+.nav__lang-inactive:hover {
+  color: var(--text-muted);
+}
+
+.nav__lang-divider {
+  color: var(--text-subtle);
+  user-select: none;
+}
+
+/* Mobile Menu Toggle */
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-1);
+  z-index: 1001;
+}
+
+@media (min-width: 1024px) {
+  .nav__toggle { display: none; }
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: transform var(--duration-normal) var(--ease-out),
+              opacity var(--duration-fast),
+              background-color var(--duration-theme);
+}
+
+.nav__toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav__toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.nav__mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-mobile-menu);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.nav__mobile.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav__mobile a {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-body);
+  transition: color var(--duration-fast);
+}
+
+.nav__mobile a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-16) 0 var(--space-10);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Dark overlay on image */
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(13, 13, 13, 0.92) 0%,
+    rgba(13, 13, 13, 0.78) 40%,
+    rgba(13, 13, 13, 0.55) 100%
+  );
+}
+
+[data-theme="light"] .hero__bg::after {
+  background: linear-gradient(
+    to right,
+    rgba(248, 247, 245, 0.94) 0%,
+    rgba(248, 247, 245, 0.82) 40%,
+    rgba(248, 247, 245, 0.6) 100%
+  );
+}
+
+/* Grid lines on top of image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, black 20%, transparent 70%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  z-index: 1;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__tag {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) 0.2s forwards;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  max-width: 900px;
+  margin-bottom: var(--space-4);
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) 0.4s forwards;
+}
+
+.hero__subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin-bottom: var(--space-6);
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) 0.6s forwards;
+}
+
+.hero__cta {
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) 0.8s forwards;
+}
+
+/* CTA Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: var(--accent);
+  padding: 14px 32px;
+  border-radius: 100px;
+  transition: background var(--duration-fast),
+              transform var(--duration-fast) var(--ease-spring),
+              box-shadow var(--duration-normal);
+  min-height: 48px;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-primary svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.btn-primary:hover svg {
+  transform: translateX(3px);
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-subtle);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1s var(--ease-out) 1.2s forwards;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--text-subtle), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.6; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
+  50% { opacity: 0.8; transform: scaleY(1); }
+}
+
+/* ============================================
+   SERVICES — FEATURED GRID
+   ============================================ */
+.services {
+  padding: var(--space-12) 0;
+  position: relative;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-8);
+}
+
+/* Featured Services Grid */
+.feat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .feat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(220px, auto);
+  }
+  .feat-card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .feat-card:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+/* Featured Card */
+.feat-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-4);
+  cursor: default;
+  transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast);
+}
+
+.feat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Background image */
+.feat-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.feat-card__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.feat-card:hover .feat-card__bg img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.feat-card__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+[data-theme="dark"] .feat-card__bg::after {
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.65) 50%,
+    rgba(10, 10, 10, 0.3) 100%
+  );
+}
+
+[data-theme="light"] .feat-card__bg::after {
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+}
+
+.feat-card:hover .feat-card__bg::after {
+  opacity: 0.9;
+}
+
+/* Content */
+.feat-card__content {
+  position: relative;
+  z-index: 2;
+}
+
+.feat-card__dept {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: var(--space-2);
+}
+
+.feat-card__dept--retail {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3B82F6;
+}
+
+.feat-card__dept--event {
+  background: rgba(230, 57, 70, 0.15);
+  color: #E63946;
+}
+
+[data-theme="dark"] .feat-card__dept--retail {
+  background: rgba(96, 165, 250, 0.15);
+  color: #60A5FA;
+}
+
+[data-theme="dark"] .feat-card__dept--event {
+  background: rgba(255, 107, 107, 0.15);
+  color: #FF6B6B;
+}
+
+.feat-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-1);
+}
+
+.feat-card__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (min-width: 1024px) {
+  .feat-card:nth-child(1) .feat-card__title {
+    font-size: 28px;
+  }
+  .feat-card:nth-child(1) .feat-card__desc {
+    font-size: 16px;
+    max-width: 420px;
+  }
+}
+
+/* All services CTA */
+.services__cta {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.services__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--accent);
+  padding: 14px 32px;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast), color var(--duration-fast), gap var(--duration-fast);
+}
+
+.services__cta-link:hover {
+  background: var(--accent);
+  color: #fff;
+  gap: 12px;
+}
+
+.services__cta-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   STATS
+   ============================================ */
+.stats {
+  padding: var(--space-10) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+.stats__item {
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .stats__item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 48px;
+    background: var(--stat-divider);
+  }
+}
+
+.stats__number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px);
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.stats__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   TRUSTED BY — LOGO STRIP
+   ============================================ */
+.trusted {
+  padding: var(--space-10) 0;
+}
+
+.trusted__label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-subtle);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-5);
+}
+
+.trusted__track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.trusted__scroll {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  animation: marquee 30s linear infinite;
+  flex-shrink: 0;
+}
+
+.trusted__logo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 48px;
+  background: var(--marquee-logo-bg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--marquee-logo-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity var(--duration-fast);
+  padding: 6px 12px;
+}
+
+.trusted__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.7);
+  transition: filter var(--duration-fast);
+}
+
+.trusted__logo:hover img {
+  filter: grayscale(0) opacity(1);
+}
+
+.trusted__logo:hover {
+  opacity: 0.9;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--space-8))); }
+}
+
+/* ============================================
+   CLOSING CTA
+   ============================================ */
+.cta-section {
+  padding: var(--space-16) 0;
+  text-align: center;
+  position: relative;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-section__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 4.5vw, 52px);
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.cta-section__subtitle {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.cta-section .btn-primary {
+  position: relative;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--bg-footer);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-10) 0 var(--space-5);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+}
+
+.footer__brand {
+  max-width: 280px;
+}
+
+.footer__brand-logo {
+  height: 38px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: var(--space-2);
+}
+
+.footer__brand-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer__col-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer__links a,
+.footer__links li {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color var(--duration-fast);
+  padding: 2px 0;
+}
+
+.footer__links a:hover {
+  color: var(--text-primary);
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.footer__social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: background var(--duration-fast), color var(--duration-fast);
+}
+
+.footer__social a:hover {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: var(--text-subtle);
+}
+
+.footer__legal {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer__legal a {
+  font-size: 13px;
+  color: var(--text-subtle);
+  transition: color var(--duration-fast);
+}
+
+.footer__legal a:hover {
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" role="navigation" aria-label="Ana gezinme">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Team Guerilla Marketing anasayfa">
+      <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" onerror="this.onerror=null;this.parentElement.innerHTML='<span style=\'font-family:var(--font-display);font-weight:800;font-size:24px;color:var(--text-primary);letter-spacing:-1px\'>Team<span style=color:var(--accent)>G</span></span>'">
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="/" aria-current="page">Ana Sayfa</a></li>
+      <li><a href="/hizmetler">Hizmetler</a></li>
+      <li><a href="/referanslar">Referanslar</a></li>
+      <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+      <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
+    </ul>
+
+    <div class="nav__right">
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Temayı değiştir" role="switch" aria-checked="false">
+        <div class="theme-toggle__knob">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </div>
+      </button>
+
+      <!-- Language Switcher -->
+      <div class="nav__lang" aria-label="Dil seçimi">
+        <span class="nav__lang-active" aria-current="true">TR</span>
+        <span class="nav__lang-divider" aria-hidden="true">|</span>
+        <a href="/en" class="nav__lang-inactive">EN</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav__toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Mobil menü" aria-hidden="true">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hizmetler">Hizmetler</a>
+  <a href="/referanslar">Referanslar</a>
+  <a href="/biz-kimiz">Biz Kimiz?</a>
+  <a href="/iletisim">İletişim</a>
+  <a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a>
+</div>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__bg" aria-hidden="true">
+    <img id="hero-bg-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80&fit=crop&auto=format"
+         alt=""
+         loading="eager"
+         fetchpriority="high">
+  </div>
+  <div class="container hero__content">
+    <p class="hero__tag">Saha Pazarlama Ajansı — 2004'ten beri</p>
+    <h1 class="hero__title" id="hero-title">
+      Markanız sahada,<br>biz arkasındayız.
+    </h1>
+    <p class="hero__subtitle">
+      2004'ten bu yana Türkiye'nin dört bir yanında, sahada güçlü sonuçlar üretiyoruz.
+    </p>
+    <div class="hero__cta">
+      <a href="/iletisim" class="btn-primary">
+        Projenizi Konuşalım
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true" style="z-index:2">
+    <span>Keşfet</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES — BENTO GRID
+     ============================================ -->
+<section class="services" id="hizmetler" aria-labelledby="services-title">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Hizmetlerimiz</p>
+      <h2 class="section-title" id="services-title">Ne Yapıyoruz?</h2>
+    </div>
+
+    <div class="feat-grid">
+
+      <!-- 1 — Merchandising (büyük kart) -->
+      <article class="feat-card reveal" style="--stagger: 0">
+        <div class="feat-card__bg" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
+        </div>
+        <div class="feat-card__content">
+          <span class="feat-card__dept feat-card__dept--retail">Retail</span>
+          <h3 class="feat-card__title">Merchandising</h3>
+          <p class="feat-card__desc">Raf düzeninden stok takibine, satış noktalarınızda markanızı görünür kılıyoruz.</p>
+        </div>
+      </article>
+
+      <!-- 2 — Satış Destek -->
+      <article class="feat-card reveal" style="--stagger: 1">
+        <div class="feat-card__bg" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
+        </div>
+        <div class="feat-card__content">
+          <span class="feat-card__dept feat-card__dept--retail">Retail</span>
+          <h3 class="feat-card__title">Satış Destek</h3>
+          <p class="feat-card__desc">Sahada satış ekiplerinizi güçlendiriyor, hedeflerinize ulaşmanızı destekliyoruz.</p>
+        </div>
+      </article>
+
+      <!-- 3 — Event / Etkinlik (geniş kart) -->
+      <article class="feat-card reveal" style="--stagger: 2">
+        <div class="feat-card__bg" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
+        </div>
+        <div class="feat-card__content">
+          <span class="feat-card__dept feat-card__dept--event">Event</span>
+          <h3 class="feat-card__title">Event / Etkinlik</h3>
+          <p class="feat-card__desc">Lansmanından bayi toplantısına, kurumsal etkinliklerinizi uçtan uca yönetiyoruz.</p>
+        </div>
+      </article>
+
+      <!-- 4 — Yazılım Hizmetleri -->
+      <article class="feat-card reveal" style="--stagger: 3">
+        <div class="feat-card__bg" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
+        </div>
+        <div class="feat-card__content">
+          <span class="feat-card__dept feat-card__dept--retail">Retail</span>
+          <h3 class="feat-card__title">Yazılım Hizmetleri</h3>
+          <p class="feat-card__desc">Saha operasyonlarınız için özel raporlama, takip ve analiz çözümleri geliştiriyoruz.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="services__cta reveal">
+      <a href="/hizmetler" class="services__cta-link">
+        Tüm Hizmetlerimizi İnceleyin
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STATS
+     ============================================ -->
+<section class="stats" aria-label="Rakamlarla Team Guerilla">
+  <div class="container">
+    <div class="stats__grid reveal-stagger">
+      <div class="stats__item reveal" style="--stagger: 0">
+        <div class="stats__number" data-count="20">20+</div>
+        <div class="stats__label">Yıllık Deneyim</div>
+      </div>
+      <div class="stats__item reveal" style="--stagger: 1">
+        <div class="stats__number" data-count="67">67</div>
+        <div class="stats__label">Saha Profesyoneli</div>
+      </div>
+      <div class="stats__item reveal" style="--stagger: 2">
+        <div class="stats__number" data-count="81">81</div>
+        <div class="stats__label">İl Genelinde Operasyon</div>
+      </div>
+      <div class="stats__item reveal" style="--stagger: 3">
+        <div class="stats__number" data-count="500">500+</div>
+        <div class="stats__label">Tamamlanan Proje</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TRUSTED BY — LOGO STRIP
+     ============================================ -->
+<section class="trusted reveal" aria-label="Referans markalar">
+  <div class="container">
+    <p class="trusted__label">Birlikte çalıştığımız markalar</p>
+  </div>
+  <div class="trusted__track" id="trusted-track">
+    <div class="trusted__scroll" aria-hidden="true">
+      <div class="trusted__logo">Marka 1</div>
+      <div class="trusted__logo">Marka 2</div>
+      <div class="trusted__logo">Marka 3</div>
+      <div class="trusted__logo">Marka 4</div>
+      <div class="trusted__logo">Marka 5</div>
+      <div class="trusted__logo">Marka 6</div>
+      <div class="trusted__logo">Marka 7</div>
+      <div class="trusted__logo">Marka 8</div>
+      <div class="trusted__logo">Marka 9</div>
+      <div class="trusted__logo">Marka 10</div>
+      <div class="trusted__logo">Marka 11</div>
+      <div class="trusted__logo">Marka 12</div>
+    </div>
+    <div class="trusted__scroll" aria-hidden="true">
+      <div class="trusted__logo">Marka 1</div>
+      <div class="trusted__logo">Marka 2</div>
+      <div class="trusted__logo">Marka 3</div>
+      <div class="trusted__logo">Marka 4</div>
+      <div class="trusted__logo">Marka 5</div>
+      <div class="trusted__logo">Marka 6</div>
+      <div class="trusted__logo">Marka 7</div>
+      <div class="trusted__logo">Marka 8</div>
+      <div class="trusted__logo">Marka 9</div>
+      <div class="trusted__logo">Marka 10</div>
+      <div class="trusted__logo">Marka 11</div>
+      <div class="trusted__logo">Marka 12</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CLOSING CTA
+     ============================================ -->
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="cta-section__title" id="cta-title">
+        Bir sonraki projeniz için<br>konuşalım.
+      </h2>
+      <p class="cta-section__subtitle">
+        Markanıza özel saha çözümlerini birlikte planlayalım.
+      </p>
+      <a href="/iletisim" class="btn-primary">
+        İletişime Geçin
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
+        <p class="footer__brand-desc">
+          2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://vimeo.com/teamguerillamarketing" aria-label="Vimeo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.42c-.1 2.1-1.56 4.98-4.38 8.65C14.73 19.73 12.23 21.5 10.18 21.5c-1.27 0-2.35-1.18-3.23-3.54L5.38 12.2c-.53-2.36-1.1-3.54-1.72-3.54-.13 0-.6.28-1.4.84L1 7.96c.88-.78 1.75-1.55 2.61-2.33C4.93 4.44 5.95 3.8 6.68 3.74c1.39-.13 2.25.82 2.57 2.87.35 2.21.59 3.59.72 4.14.4 1.82.84 2.73 1.32 2.73.37 0 .93-.59 1.68-1.77.74-1.18 1.14-2.08 1.2-2.69.1-.99-.29-1.49-1.17-1.49-.42 0-.85.1-1.29.29.86-2.81 2.5-4.18 4.93-4.1 1.8.05 2.65 1.22 2.56 3.5z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCYukizkFAsXgTI-bN8l7QhQ" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.93 29 29 0 00.46-5.25 29 29 0 00-.46-5.5z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Retail</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/hizmetler#merchandising">Merchandising</a></li>
+          <li><a href="/hizmetler#satis-destek">Satış Destek</a></li>
+          <li><a href="/hizmetler#gizli-musteri">Gizli Müşteri</a></li>
+          <li><a href="/hizmetler#pop-posm">POP / POSM Lojistik</a></li>
+          <li><a href="/hizmetler#yazilim">Yazılım Hizmetleri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Event</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/hizmetler#sampling">Sampling / Tadım</a></li>
+          <li><a href="/hizmetler#roadshow">Roadshow</a></li>
+          <li><a href="/hizmetler#gerilla">Gerilla Pazarlama</a></li>
+          <li><a href="/hizmetler#etkinlik">Event / Etkinlik</a></li>
+          <li><a href="/hizmetler#mice">M.I.C.E.</a></li>
+          <li><a href="/hizmetler#neuro">Neuro Marketing</a></li>
+          <li><a href="/hizmetler#tasarim">Tasarım Atölyesi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Kurumsal</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+          <li><a href="/referanslar">Referanslar</a></li>
+          <li><a href="/iletisim">İletişim</a></li>
+          <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
+          <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle)"><a href="https://teamguerilla.social" target="_blank" rel="noopener">teamguerilla.social ↗</a></li>
+          <li><a href="https://venagrup.com" target="_blank" rel="noopener">Venagrup ↗</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">İletişim</h3>
+        <ul class="footer__links" role="list">
+          <li>İstanbul, Kadıköy</li>
+          <li><a href="tel:02164103999">0216 410 39 99</a></li>
+          <li><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2025 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
+      <div class="footer__legal">
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">KVKK</a>
+        <a href="#">Kullanım Şartları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ---- THEME TOGGLE ----
+  var themeToggle = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+
+  // Check saved preference or system preference
+  var savedTheme = localStorage.getItem('tg-theme');
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+    themeToggle.setAttribute('aria-checked', savedTheme === 'light');
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    html.setAttribute('data-theme', 'light');
+    themeToggle.setAttribute('aria-checked', 'true');
+  }
+
+  themeToggle.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    themeToggle.setAttribute('aria-checked', next === 'light');
+    localStorage.setItem('tg-theme', next);
+  });
+
+  // Listen for system theme changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('tg-theme')) {
+        html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  // ---- NAV SCROLL EFFECT ----
+  var nav = document.querySelector('.nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 40) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // ---- MOBILE MENU ----
+  var toggle = document.querySelector('.nav__toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() {
+      var isOpen = mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ---- SCROLL REVEAL ----
+  var revealElements = document.querySelectorAll('.reveal');
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    revealElements.forEach(function(el) { observer.observe(el); });
+  } else {
+    revealElements.forEach(function(el) { el.classList.add('visible'); });
+  }
+
+  // ---- COUNTER ANIMATION ----
+  var statNumbers = document.querySelectorAll('.stats__number');
+
+  if ('IntersectionObserver' in window) {
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(function(el) { counterObserver.observe(el); });
+  }
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'));
+    var suffix = el.textContent.includes('+') ? '+' : '';
+    var duration = 1500;
+    var startTime = performance.now();
+
+    function update(currentTime) {
+      var elapsed = currentTime - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = target + suffix;
+    }
+
+    requestAnimationFrame(update);
+  }
+
+})();
+</script>
+
+<!-- Dynamic content from Admin API -->
+<script>
+(function() {
+  // Load homepage images from admin content
+  fetch('/api/content/page/home')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      // Hero background
+      if (data['hero.image'] && data['hero.image'].value) {
+        var heroImg = document.getElementById('hero-bg-img');
+        if (heroImg) heroImg.src = data['hero.image'].value;
+      }
+    })
+    .catch(function() { /* Fallback: keep default images */ });
+
+  // Load brand logos from references
+  fetch('/api/references')
+    .then(function(r) { return r.json(); })
+    .then(function(refs) {
+      // Get refs with logos
+      var withLogos = refs.filter(function(r) { return r.logo && r.active !== false; });
+      // Also get all brand names for marquee (with or without logos)
+      var allBrands = refs.filter(function(r) { return r.active !== false; });
+      
+      if (allBrands.length === 0) return;
+
+      var track = document.getElementById('trusted-track');
+      if (!track) return;
+
+      // Build logo items HTML
+      var items = allBrands.map(function(r) {
+        if (r.logo) {
+          return '<div class="trusted__logo" title="' + r.brand + '"><img src="' + r.logo + '" alt="' + r.brand + '"></div>';
+        } else {
+          return '<div class="trusted__logo">' + r.brand + '</div>';
+        }
+      }).join('');
+
+      // Duplicate for seamless marquee
+      track.innerHTML = '<div class="trusted__scroll" aria-hidden="true">' + items + '</div>'
+        + '<div class="trusted__scroll" aria-hidden="true">' + items + '</div>';
+    })
+    .catch(function() { /* Fallback: keep placeholder brands */ });
+})();
+</script>
+
+</body>
+</html>

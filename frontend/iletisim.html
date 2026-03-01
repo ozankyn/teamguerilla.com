@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim — Team Guerilla Marketing</title>
+<meta name="description" content="Team Guerilla Marketing ile iletişime geçin. İstanbul Kadıköy ofisimiz, telefon, e-posta ve iletişim formu.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+[data-theme="dark"] {
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #111111;
+  --bg-card: #1A1A1A;
+  --bg-card-hover: #222222;
+  --bg-footer: #080808;
+  --bg-nav: rgba(13, 13, 13, 0.88);
+  --bg-mobile-menu: rgba(13, 13, 13, 0.97);
+  --accent: #E63946;
+  --accent-hover: #FF4D5A;
+  --accent-glow: rgba(230, 57, 70, 0.25);
+  --accent-soft: rgba(230, 57, 70, 0.06);
+  --text-primary: #FFFFFF;
+  --text-body: #C8C8C8;
+  --text-muted: #888888;
+  --text-subtle: #555555;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(26, 26, 26, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --logo-filter: brightness(0) invert(1);
+  --grid-line: rgba(255, 255, 255, 0.02);
+  --toggle-bg: #2A2A2A;
+  --toggle-knob: #FFFFFF;
+  --input-bg: #151515;
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus-border: var(--accent);
+  --input-text: #FFFFFF;
+  --input-placeholder: #555;
+  --map-filter: brightness(0.6) contrast(1.1) saturate(0);
+  --success-bg: rgba(34, 197, 94, 0.1);
+  --success-border: rgba(34, 197, 94, 0.3);
+  --success-text: #4ade80;
+  --error-text: #f87171;
+}
+[data-theme="light"] {
+  --bg-primary: #F8F7F5;
+  --bg-secondary: #F0EFEC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F4F2;
+  --bg-footer: #1A1A1A;
+  --bg-nav: rgba(248, 247, 245, 0.88);
+  --bg-mobile-menu: rgba(248, 247, 245, 0.97);
+  --accent: #D62839;
+  --accent-hover: #E63946;
+  --accent-glow: rgba(214, 40, 57, 0.2);
+  --accent-soft: rgba(214, 40, 57, 0.04);
+  --text-primary: #111111;
+  --text-body: #444444;
+  --text-muted: #777777;
+  --text-subtle: #AAAAAA;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --logo-filter: none;
+  --grid-line: rgba(0, 0, 0, 0.03);
+  --toggle-bg: #E0DDD8;
+  --toggle-knob: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --input-border: rgba(0, 0, 0, 0.12);
+  --input-focus-border: var(--accent);
+  --input-text: #111111;
+  --input-placeholder: #AAA;
+  --map-filter: saturate(0.8);
+  --success-bg: rgba(34, 197, 94, 0.08);
+  --success-border: rgba(34, 197, 94, 0.25);
+  --success-text: #16a34a;
+  --error-text: #dc2626;
+}
+[data-theme="light"] .footer {
+  --text-primary: #FFFFFF; --text-body: #C8C8C8; --text-muted: #888888;
+  --text-subtle: #555555; --border-subtle: rgba(255, 255, 255, 0.06);
+}
+:root {
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px;
+  --space-5: 40px; --space-6: 48px; --space-7: 56px; --space-8: 64px;
+  --space-10: 80px; --space-12: 96px; --space-16: 128px;
+  --container-max: 1320px; --nav-height: 72px;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 24px;
+  --shadow-glow: 0 0 40px var(--accent-glow);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 200ms; --duration-normal: 400ms; --duration-slow: 600ms; --duration-theme: 500ms;
+}
+
+html, body, .nav, .nav.scrolled, .footer, .page-hero, .contact-section {
+  transition: background-color var(--duration-theme) var(--ease-out),
+              color var(--duration-theme) var(--ease-out),
+              border-color var(--duration-theme) var(--ease-out);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.6;
+  color: var(--text-body); background-color: var(--bg-primary); overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-3); }
+@media (min-width: 768px) { .container { padding: 0 var(--space-5); } }
+@media (min-width: 1200px) { .container { padding: 0 var(--space-8); } }
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-height);
+  transition: background var(--duration-normal) var(--ease-out), backdrop-filter var(--duration-normal) var(--ease-out);
+}
+.nav.scrolled {
+  background: var(--bg-nav); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.nav__inner {
+  max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-3);
+  display: flex; align-items: center; justify-content: space-between; height: 100%;
+}
+@media (min-width: 1200px) { .nav__inner { padding: 0 var(--space-8); } }
+.nav__logo { display: flex; align-items: center; }
+.nav__logo img {
+  height: 44px; width: auto; filter: var(--logo-filter); transition: filter var(--duration-theme) var(--ease-out); }
+.nav__right { display: flex; align-items: center; gap: var(--space-2); }
+@media (min-width: 768px) { .nav__right { gap: var(--space-4); } }
+.nav__links { display: none; gap: var(--space-5); align-items: center; }
+@media (min-width: 1024px) { .nav__links { display: flex; } }
+.nav__links a {
+  font-family: var(--font-body); font-weight: 500; font-size: 14px; color: var(--text-muted);
+  transition: color var(--duration-fast) var(--ease-out); padding: var(--space-1) 0; position: relative;
+}
+.nav__links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent);
+  transform: scaleX(0); transform-origin: right; transition: transform var(--duration-normal) var(--ease-out);
+}
+.nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--text-primary); }
+.nav__links a:hover::after, .nav__links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+.theme-toggle {
+  position: relative; width: 52px; height: 28px; background: var(--toggle-bg);
+  border: 1px solid var(--border-subtle); border-radius: 99px; cursor: pointer;
+  transition: background var(--duration-theme) var(--ease-out), border-color var(--duration-theme) var(--ease-out);
+}
+.theme-toggle__knob {
+  position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: var(--toggle-knob);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+[data-theme="light"] .theme-toggle__knob { transform: translateX(24px); }
+.theme-toggle__icon { width: 12px; height: 12px; color: #333; }
+.theme-toggle__icon--sun { display: none; }
+[data-theme="light"] .theme-toggle__icon--moon { display: none; }
+[data-theme="light"] .theme-toggle__icon--sun { display: block; }
+.nav__lang { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; }
+.nav__lang-active { color: var(--text-primary); }
+.nav__lang-inactive { color: var(--text-subtle); transition: color var(--duration-fast) var(--ease-out); }
+.nav__lang-inactive:hover { color: var(--text-primary); }
+.nav__lang-divider { color: var(--text-subtle); font-size: 11px; }
+.nav__toggle {
+  display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px;
+}
+@media (min-width: 1024px) { .nav__toggle { display: none; } }
+.nav__toggle span {
+  display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px;
+  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-fast);
+}
+.nav__toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.active span:nth-child(2) { opacity: 0; }
+.nav__toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
+  flex-direction: column; align-items: center; justify-content: center; gap: var(--space-5);
+}
+.mobile-menu.active { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 5vw, 40px);
+  color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
+}
+.mobile-menu a:hover, .mobile-menu a[aria-current="page"] { color: var(--accent); }
+
+/* ============================================
+   PAGE HERO
+   ============================================ */
+.page-hero {
+  padding-top: calc(var(--nav-height) + var(--space-10));
+  padding-bottom: var(--space-6);
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 50% 70% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 70% at 50% 50%, black 20%, transparent 70%);
+}
+.page-hero::after {
+  content: ''; position: absolute; top: -100px; right: -200px; width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%); pointer-events: none;
+}
+.page-hero__content { position: relative; z-index: 1; max-width: 620px; }
+.page-hero__label {
+  font-family: var(--font-body); font-weight: 600; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: var(--space-3);
+}
+.page-hero__title {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.08; letter-spacing: -2px; color: var(--text-primary); margin-bottom: var(--space-3);
+}
+.page-hero__desc {
+  font-size: clamp(16px, 1.8vw, 19px); line-height: 1.7; color: var(--text-body);
+}
+
+/* ============================================
+   CONTACT INFO CARDS
+   ============================================ */
+.info-cards {
+  padding: var(--space-6) 0 var(--space-8);
+}
+
+.info-cards__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+@media (min-width: 768px) {
+  .info-cards__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+.info-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.info-card__icon {
+  width: 44px; height: 44px; color: var(--accent);
+}
+
+.info-card__title {
+  font-family: var(--font-display); font-weight: 700; font-size: 18px;
+  color: var(--text-primary); letter-spacing: -0.3px;
+}
+
+.info-card__text {
+  font-size: 15px; line-height: 1.7; color: var(--text-body);
+}
+
+.info-card__link {
+  font-weight: 600; font-size: 15px; color: var(--accent);
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+.info-card__link:hover { gap: 10px; }
+.info-card__link svg { width: 16px; height: 16px; }
+
+/* ============================================
+   CONTACT SECTION (Form + Map)
+   ============================================ */
+.contact-section {
+  padding: var(--space-8) 0 var(--space-12);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+@media (min-width: 768px) {
+  .contact__grid { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+}
+@media (min-width: 1024px) {
+  .contact__grid { gap: var(--space-8); }
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-form__title {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(24px, 3vw, 32px); letter-spacing: -1px;
+  color: var(--text-primary); margin-bottom: var(--space-1);
+}
+
+.contact-form__subtitle {
+  font-size: 15px; color: var(--text-muted); margin-bottom: var(--space-2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group__label {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group__input,
+.form-group__textarea,
+.form-group__select {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--input-text);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.form-group__input::placeholder,
+.form-group__textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+.form-group__input:focus,
+.form-group__textarea:focus,
+.form-group__select:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group__select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+@media (min-width: 480px) {
+  .form-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* Validation */
+.form-group__input.error,
+.form-group__textarea.error,
+.form-group__select.error {
+  border-color: var(--error-text);
+}
+
+.form-group__error {
+  font-size: 12px;
+  color: var(--error-text);
+  display: none;
+}
+.form-group__error.visible { display: block; }
+
+/* Submit */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  padding: 16px 36px; border-radius: var(--radius-sm); border: none; cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out); width: 100%;
+}
+.btn--primary { background: var(--accent); color: #FFFFFF; box-shadow: var(--shadow-glow); }
+.btn--primary:hover {
+  background: var(--accent-hover); transform: translateY(-2px);
+  box-shadow: 0 0 60px var(--accent-glow);
+}
+.btn--primary:disabled {
+  opacity: 0.6; cursor: not-allowed; transform: none;
+  box-shadow: none;
+}
+
+@media (min-width: 480px) { .btn { width: auto; } }
+
+/* Loading spinner */
+.btn__spinner {
+  display: none;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+.btn--loading .btn__spinner { display: block; }
+.btn--loading .btn__text { display: none; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Success message */
+.form-success {
+  display: none;
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: center;
+}
+.form-success.visible { display: block; }
+
+.form-success__icon {
+  width: 48px; height: 48px; color: var(--success-text); margin: 0 auto var(--space-2);
+}
+.form-success__title {
+  font-family: var(--font-display); font-weight: 700; font-size: 18px;
+  color: var(--text-primary); margin-bottom: 4px;
+}
+.form-success__text {
+  font-size: 14px; color: var(--text-muted);
+}
+
+/* Map */
+.contact-map {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  border: 1px solid var(--border-subtle);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: 0;
+  filter: var(--map-filter);
+  transition: filter var(--duration-theme) var(--ease-out);
+}
+
+@media (min-width: 768px) {
+  .contact-map { min-height: 100%; }
+  .contact-map iframe { min-height: 520px; }
+}
+
+/* Map overlay card */
+.contact-map__overlay {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  right: var(--space-3);
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  z-index: 2;
+}
+
+.contact-map__overlay-text {
+  font-size: 13px;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-map__overlay-text svg {
+  width: 16px; height: 16px; color: var(--accent); flex-shrink: 0;
+}
+
+.contact-map__overlay-link {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+.contact-map__overlay-link:hover { gap: 8px; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer { background: var(--bg-footer); padding: var(--space-10) 0 var(--space-4); }
+.footer__grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--space-6);
+  padding-bottom: var(--space-8); border-bottom: 1px solid var(--border-subtle);
+}
+@media (min-width: 768px) { .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
+.footer__brand-logo { height: 38px; width: auto; filter: brightness(0) invert(1); margin-bottom: var(--space-2); }
+.footer__brand-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 280px; margin-bottom: var(--space-3); }
+.footer__social { display: flex; gap: var(--space-2); }
+.footer__social a {
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm); color: var(--text-muted);
+  transition: color var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+}
+.footer__social a:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.06); }
+.footer__social svg { width: 18px; height: 18px; }
+.footer__col-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--text-primary);
+  margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 1px;
+}
+.footer__links { display: flex; flex-direction: column; gap: var(--space-1); }
+.footer__links li, .footer__links a { font-size: 14px; color: var(--text-muted); transition: color var(--duration-fast) var(--ease-out); }
+.footer__links a:hover { color: var(--text-primary); }
+.footer__bottom {
+  display: flex; flex-direction: column; gap: var(--space-2); padding-top: var(--space-4);
+  align-items: center; text-align: center;
+}
+@media (min-width: 768px) { .footer__bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+.footer__copy { font-size: 13px; color: var(--text-subtle); }
+.footer__legal { display: flex; gap: var(--space-3); }
+.footer__legal a { font-size: 13px; color: var(--text-subtle); transition: color var(--duration-fast) var(--ease-out); }
+.footer__legal a:hover { color: var(--text-muted); }
+
+/* ============================================
+   REVEAL & A11Y
+   ============================================ */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
+  transition-delay: calc(var(--stagger, 0) * 80ms);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Ana gezinme">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Team Guerilla Marketing anasayfa">
+      <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" onerror="this.onerror=null;this.parentElement.innerHTML='<span style=\'font-family:var(--font-display);font-weight:800;font-size:24px;color:var(--text-primary);letter-spacing:-1px\'>Team<span style=color:var(--accent)>G</span></span>'">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hizmetler">Hizmetler</a></li>
+      <li><a href="/referanslar">Referanslar</a></li>
+      <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+      <li><a href="/iletisim" aria-current="page">İletişim</a></li>
+      <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Temayı değiştir" role="switch" aria-checked="false">
+        <div class="theme-toggle__knob">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+      </button>
+      <div class="nav__lang" aria-label="Dil seçimi">
+        <span class="nav__lang-active" aria-current="true">TR</span>
+        <span class="nav__lang-divider" aria-hidden="true">|</span>
+        <a href="/en/contact" class="nav__lang-inactive">EN</a>
+      </div>
+      <button class="nav__toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobil menü">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hizmetler">Hizmetler</a>
+  <a href="/referanslar">Referanslar</a>
+  <a href="/biz-kimiz">Biz Kimiz?</a>
+  <a href="/iletisim" aria-current="page">İletişim</a>
+  <a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a>
+</div>
+
+<main>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <div class="page-hero__content reveal" style="--stagger: 0">
+      <p class="page-hero__label" aria-hidden="true">İletişim</p>
+      <h1 id="page-title" class="page-hero__title">Size nasıl yardımcı olabiliriz?</h1>
+      <p class="page-hero__desc">
+        Projeniz hakkında konuşmak, teklif almak veya sadece merhaba demek için bize ulaşın. En kısa sürede dönüş yapacağız.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INFO CARDS ===== -->
+<section class="info-cards" aria-label="İletişim bilgileri">
+  <div class="container">
+    <div class="info-cards__grid">
+
+      <article class="info-card reveal" style="--stagger: 0">
+        <svg class="info-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M24 4C16.27 4 10 10.27 10 18c0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14z"/>
+          <circle cx="24" cy="18" r="5"/>
+        </svg>
+        <h2 class="info-card__title">Adres</h2>
+        <p class="info-card__text" id="ct-address">Caferağa Mah. Kadıköy<br>İstanbul, Türkiye</p>
+        <a href="https://maps.google.com/?q=Team+Guerilla+Marketing+Kadıköy+İstanbul" target="_blank" rel="noopener" class="info-card__link" id="ct-address-link">
+          Yol tarifi al
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="info-card reveal" style="--stagger: 1">
+        <svg class="info-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 8a4 4 0 014-4h16a4 4 0 014 4v32a4 4 0 01-4 4H16a4 4 0 01-4-4V8z"/>
+          <line x1="20" y1="38" x2="28" y2="38"/>
+        </svg>
+        <h2 class="info-card__title">Telefon</h2>
+        <p class="info-card__text">Hafta içi 09:00 – 18:00<br>arası bizi arayabilirsiniz.</p>
+        <a href="tel:02164103999" class="info-card__link" id="ct-phone">
+          0216 410 39 99
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="info-card reveal" style="--stagger: 2">
+        <svg class="info-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="4" y="10" width="40" height="28" rx="4"/>
+          <path d="M4 14l20 14 20-14"/>
+        </svg>
+        <h2 class="info-card__title">E-posta</h2>
+        <p class="info-card__text">Teklif, iş birliği veya genel<br>sorularınız için yazın.</p>
+        <a href="mailto:info@teamguerilla.com" class="info-card__link" id="ct-email">
+          info@teamguerilla.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORM + MAP ===== -->
+<section class="contact-section" aria-labelledby="form-title">
+  <div class="container">
+    <div class="contact__grid">
+
+      <!-- Form -->
+      <div class="reveal" style="--stagger: 0">
+        <form class="contact-form" id="contact-form" novalidate>
+          <h2 id="form-title" class="contact-form__title">Mesaj gönderin</h2>
+          <p class="contact-form__subtitle">Alanları doldurun, size en kısa sürede dönelim.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-group__label" for="name">Ad Soyad *</label>
+              <input type="text" id="name" name="name" class="form-group__input" placeholder="Adınız Soyadınız" required autocomplete="name">
+              <span class="form-group__error" id="name-error">Lütfen adınızı girin.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="company">Şirket</label>
+              <input type="text" id="company" name="company" class="form-group__input" placeholder="Şirket adı (opsiyonel)" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-group__label" for="email">E-posta *</label>
+              <input type="email" id="email" name="email" class="form-group__input" placeholder="ornek@sirket.com" required autocomplete="email">
+              <span class="form-group__error" id="email-error">Geçerli bir e-posta girin.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" class="form-group__input" placeholder="05XX XXX XX XX" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-group__label" for="service">İlgilendiğiniz Hizmet</label>
+            <select id="service" name="service" class="form-group__select">
+              <option value="">Seçiniz (opsiyonel)</option>
+              <option value="merchandising">Merchandising</option>
+              <option value="sampling">Sampling / Tadım</option>
+              <option value="roadshow">Roadshow</option>
+              <option value="gerilla">Gerilla Pazarlama</option>
+              <option value="event">Event / Etkinlik</option>
+              <option value="mice">M.I.C.E.</option>
+              <option value="neuro">Neuro Marketing</option>
+              <option value="tasarim">Tasarım Atölyesi</option>
+              <option value="diger">Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-group__label" for="message">Mesajınız *</label>
+            <textarea id="message" name="message" class="form-group__textarea" placeholder="Projeniz hakkında kısaca bilgi verin..." required rows="5"></textarea>
+            <span class="form-group__error" id="message-error">Lütfen mesajınızı yazın.</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="submit-btn">
+            <span class="btn__text">Gönder</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+            <svg class="btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <!-- Success -->
+        <div class="form-success" id="form-success" role="alert">
+          <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <circle cx="24" cy="24" r="20"/>
+            <path d="M14 24l7 7 13-13" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="form-success__title">Mesajınız iletildi!</h3>
+          <p class="form-success__text">En kısa sürede size dönüş yapacağız. Teşekkürler.</p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="contact-map reveal" style="--stagger: 1">
+        <iframe
+          id="ct-map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6506185942424!2d29.024!3d40.990!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679a5b0e51%3A0x4e5b7c6d7e8f9a0b!2sKad%C4%B1k%C3%B6y%2C%20Istanbul!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Team Guerilla Marketing ofis konumu — Kadıköy, İstanbul">
+        </iframe>
+        <div class="contact-map__overlay">
+          <div class="contact-map__overlay-text" id="ct-map-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Caferağa Mah. Kadıköy, İstanbul
+          </div>
+          <a href="https://maps.google.com/?q=Team+Guerilla+Marketing+Kadıköy+İstanbul" target="_blank" rel="noopener" class="contact-map__overlay-link" id="ct-map-link">
+            Google Maps'te aç
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
+        <p class="footer__brand-desc">
+          2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/team-gerilla-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Hizmetler</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/hizmetler#merchandising">Merchandising</a></li>
+          <li><a href="/hizmetler#sampling">Sampling / Tadım</a></li>
+          <li><a href="/hizmetler#roadshow">Roadshow</a></li>
+          <li><a href="/hizmetler#gerilla">Gerilla Pazarlama</a></li>
+          <li><a href="/hizmetler#event">Event / Etkinlik</a></li>
+          <li><a href="/hizmetler#mice">M.I.C.E.</a></li>
+          <li><a href="/hizmetler#neuro">Neuro Marketing</a></li>
+          <li><a href="/hizmetler#tasarim">Tasarım Atölyesi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Kurumsal</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+          <li><a href="/referanslar">Referanslar</a></li>
+          <li><a href="/iletisim">İletişim</a></li>
+          <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
+          <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle)"><a href="https://teamguerilla.social" target="_blank" rel="noopener">teamguerilla.social ↗</a></li>
+          <li><a href="https://venagrup.com" target="_blank" rel="noopener">Venagrup ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">İletişim</h3>
+        <ul class="footer__links" role="list" id="ct-footer-info">
+          <li>İstanbul, Kadıköy</li>
+          <li><a href="tel:02164103999">0216 410 39 99</a></li>
+          <li><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2025 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
+      <div class="footer__legal">
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">KVKK</a>
+        <a href="#">Kullanım Şartları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Theme Toggle */
+(function() {
+  var toggle = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+  var saved = localStorage.getItem('tg-theme');
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var initial = saved || (systemDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', initial);
+  if (toggle) toggle.setAttribute('aria-checked', initial === 'light' ? 'true' : 'false');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('tg-theme', next);
+      this.setAttribute('aria-checked', next === 'light' ? 'true' : 'false');
+    });
+  }
+})();
+
+/* Nav Scroll */
+(function() {
+  var nav = document.querySelector('.nav');
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+})();
+
+/* Mobile Menu */
+(function() {
+  var toggle = document.querySelector('.nav__toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var open = !menu.classList.contains('active');
+    menu.classList.toggle('active', open);
+    this.classList.toggle('active', open);
+    this.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menu.classList.remove('active');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+
+/* Reveal */
+(function() {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el) { observer.observe(el); });
+})();
+
+/* ============================================
+   FORM VALIDATION & SUBMISSION
+   ============================================ */
+(function() {
+  var form = document.getElementById('contact-form');
+  var submitBtn = document.getElementById('submit-btn');
+  var successEl = document.getElementById('form-success');
+  if (!form) return;
+
+  function showError(id, show) {
+    var el = document.getElementById(id + '-error');
+    var input = document.getElementById(id);
+    if (el) el.classList.toggle('visible', show);
+    if (input) input.classList.toggle('error', show);
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  // Clear errors on input
+  form.querySelectorAll('input, textarea, select').forEach(function(el) {
+    el.addEventListener('input', function() {
+      showError(this.id, false);
+    });
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var message = document.getElementById('message');
+
+    if (!name.value.trim()) { showError('name', true); valid = false; }
+    else { showError('name', false); }
+
+    if (!email.value.trim() || !validateEmail(email.value)) { showError('email', true); valid = false; }
+    else { showError('email', false); }
+
+    if (!message.value.trim()) { showError('message', true); valid = false; }
+    else { showError('message', false); }
+
+    if (!valid) {
+      // Focus first error
+      var firstError = form.querySelector('.error');
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    // Submit to API
+    submitBtn.classList.add('btn--loading');
+    submitBtn.disabled = true;
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: (document.getElementById('phone').value || '').trim(),
+        company: (document.getElementById('company').value || '').trim(),
+        service: (document.getElementById('service').value || '').trim(),
+        message: message.value.trim()
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      submitBtn.classList.remove('btn--loading');
+      submitBtn.disabled = false;
+      if (data.success) {
+        form.style.display = 'none';
+        successEl.classList.add('visible');
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert(data.error || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+      }
+    })
+    .catch(function() {
+      submitBtn.classList.remove('btn--loading');
+      submitBtn.disabled = false;
+      alert('Bağlantı hatası. Lütfen tekrar deneyin.');
+    });
+  });
+})();
+</script>
+
+<!-- Dynamic content from Admin API -->
+<script>
+(function() {
+  fetch('/api/content/page/contact')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Address card
+      var addr = d['address.tr'];
+      if (addr && addr.value) {
+        var el = document.getElementById('ct-address');
+        if (el) el.innerHTML = addr.value.replace(/,\s*/g, '<br>');
+      }
+
+      // Phone
+      var phone = d['phone'];
+      var phoneRaw = d['phone.raw'];
+      if (phone && phone.value) {
+        var pEl = document.getElementById('ct-phone');
+        if (pEl) {
+          pEl.textContent = phone.value;
+          if (phoneRaw && phoneRaw.value) pEl.href = 'tel:' + phoneRaw.value;
+        }
+      }
+
+      // Email
+      var email = d['email'];
+      if (email && email.value) {
+        var eEl = document.getElementById('ct-email');
+        if (eEl) {
+          eEl.textContent = email.value;
+          eEl.href = 'mailto:' + email.value;
+        }
+      }
+
+      // Map
+      var mapEmbed = d['map.embed'];
+      if (mapEmbed && mapEmbed.value) {
+        var iframe = document.getElementById('ct-map-iframe');
+        if (iframe) iframe.src = mapEmbed.value;
+      }
+
+      var mapQuery = d['map.query'];
+      var mapsUrl = mapQuery && mapQuery.value
+        ? 'https://maps.google.com/?q=' + mapQuery.value
+        : null;
+
+      // Map overlay address
+      if (addr && addr.value) {
+        var mapAddr = document.getElementById('ct-map-address');
+        if (mapAddr) {
+          var svg = mapAddr.querySelector('svg');
+          var svgHtml = svg ? svg.outerHTML : '';
+          mapAddr.innerHTML = svgHtml + ' ' + addr.value;
+        }
+      }
+
+      // Map link
+      if (mapsUrl) {
+        var mapLink = document.getElementById('ct-map-link');
+        if (mapLink) mapLink.href = mapsUrl;
+        var addrLink = document.getElementById('ct-address-link');
+        if (addrLink) addrLink.href = mapsUrl;
+      }
+
+      // Footer
+      var shortAddr = d['address.short.tr'];
+      var footerInfo = document.getElementById('ct-footer-info');
+      if (footerInfo) {
+        var fAddr = (shortAddr && shortAddr.value) || (addr && addr.value) || 'İstanbul, Kadıköy';
+        var fPhone = (phone && phone.value) || '0216 410 39 99';
+        var fPhoneRaw = (phoneRaw && phoneRaw.value) || '02164103999';
+        var fEmail = (email && email.value) || 'info@teamguerilla.com';
+        footerInfo.innerHTML = '<li>' + fAddr + '</li>'
+          + '<li><a href="tel:' + fPhoneRaw + '">' + fPhone + '</a></li>'
+          + '<li><a href="mailto:' + fEmail + '">' + fEmail + '</a></li>';
+      }
+    })
+    .catch(function() { /* Fallback: keep defaults */ });
+})();
+</script>
+
+</body>
+</html>

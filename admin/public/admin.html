@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel — Team Guerilla</title>
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h1>Team <span>G</span></h1>
+      <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menüyü kapat">✕</button>
+    </div>
+    <ul class="nav-list">
+      <li><a href="#" data-section="dashboard" class="nav-link active"><i>📊</i> Dashboard</a></li>
+      <li><a href="#" data-section="content" class="nav-link"><i>📝</i> Sayfa İçerikleri</a></li>
+      <li><a href="#" data-section="services" class="nav-link"><i>⚙️</i> Hizmetler</a></li>
+      <li><a href="#" data-section="references" class="nav-link"><i>🏢</i> Referanslar</a></li>
+      <li><a href="#" data-section="team" class="nav-link"><i>👥</i> Ekip</a></li>
+      <li><a href="#" data-section="media" class="nav-link"><i>🖼️</i> Medya</a></li>
+      <li><a href="#" data-section="messages" class="nav-link"><i>💬</i> Mesajlar <span id="msgBadge" class="nav-badge" style="display:none">0</span></a></li>
+      <li class="nav-divider"></li>
+      <li id="usersNavItem" style="display:none"><a href="#" data-section="users" class="nav-link"><i>🔑</i> Kullanıcılar</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span id="userName">—</span>
+        <small id="userRole">—</small>
+      </div>
+      <button class="btn-icon" onclick="logout()" title="Çıkış">🚪</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menü">☰</button>
+    <h1>TG Admin</h1>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="main">
+    <!-- DASHBOARD -->
+    <section id="sec-dashboard" class="section active">
+      <div class="section-header">
+        <h2>Dashboard</h2>
+        <p class="text-muted">Genel bakış</p>
+      </div>
+      <div class="stats-grid" id="dashboardStats">
+        <div class="stat-card"><div class="stat-value" id="statServices">—</div><div class="stat-label">Hizmet</div></div>
+        <div class="stat-card"><div class="stat-value" id="statReferences">—</div><div class="stat-label">Referans</div></div>
+        <div class="stat-card"><div class="stat-value" id="statTeam">—</div><div class="stat-label">Ekip Üyesi</div></div>
+        <div class="stat-card"><div class="stat-value" id="statUsers">—</div><div class="stat-label">Kullanıcı</div></div>
+      </div>
+      <div class="card" style="margin-top:24px">
+        <h3>Hızlı İşlemler</h3>
+        <div class="quick-actions">
+          <button class="btn btn-outline" onclick="navigateTo('references')">+ Referans Ekle</button>
+          <button class="btn btn-outline" onclick="navigateTo('team')">+ Ekip Üyesi Ekle</button>
+          <button class="btn btn-outline" onclick="navigateTo('content')">İçerik Düzenle</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT EDITOR -->
+    <section id="sec-content" class="section">
+      <div class="section-header">
+        <h2>Sayfa İçerikleri</h2>
+        <p class="text-muted">Her sayfadaki metin ve başlıkları düzenleyin</p>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="home" onclick="switchContentTab('home')">Ana Sayfa</button>
+        <button class="tab" data-tab="about" onclick="switchContentTab('about')">Biz Kimiz</button>
+        <button class="tab" data-tab="contact" onclick="switchContentTab('contact')">İletişim</button>
+      </div>
+      <div id="contentEditor" class="content-editor"></div>
+      <div style="margin-top:20px; text-align:right">
+        <button class="btn btn-primary" onclick="saveContent()" id="saveContentBtn">Değişiklikleri Kaydet</button>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="sec-services" class="section">
+      <div class="section-header">
+        <div>
+          <h2>Hizmetler</h2>
+          <p class="text-muted">Retail ve Event departmanı hizmetleri</p>
+        </div>
+        <button class="btn btn-primary" onclick="openServiceModal()">+ Yeni Hizmet</button>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" onclick="filterServices('all')">Tümü</button>
+        <button class="filter-btn" data-filter="retail" onclick="filterServices('retail')">Retail</button>
+        <button class="filter-btn" data-filter="event" onclick="filterServices('event')">Event</button>
+      </div>
+      <div id="servicesList" class="items-grid"></div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="sec-references" class="section">
+      <div class="section-header">
+        <div>
+          <h2>Referanslar</h2>
+          <p class="text-muted">Müşteri markaları ve sektörel dağılım</p>
+        </div>
+        <button class="btn btn-primary" onclick="openReferenceModal()">+ Yeni Referans</button>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" onclick="filterReferences('all')">Tümü</button>
+        <button class="filter-btn" data-filter="fmcg" onclick="filterReferences('fmcg')">FMCG</button>
+        <button class="filter-btn" data-filter="automotive" onclick="filterReferences('automotive')">Otomotiv</button>
+        <button class="filter-btn" data-filter="technology" onclick="filterReferences('technology')">Teknoloji</button>
+        <button class="filter-btn" data-filter="retail" onclick="filterReferences('retail')">Perakende</button>
+        <button class="filter-btn" data-filter="finance" onclick="filterReferences('finance')">Finans</button>
+        <button class="filter-btn" data-filter="pharma" onclick="filterReferences('pharma')">İlaç</button>
+        <button class="filter-btn" data-filter="energy" onclick="filterReferences('energy')">Enerji</button>
+        <button class="filter-btn" data-filter="other" onclick="filterReferences('other')">Diğer</button>
+      </div>
+      <div id="referencesList" class="items-grid refs-grid"></div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="sec-team" class="section">
+      <div class="section-header">
+        <div>
+          <h2>Ekip Üyeleri</h2>
+          <p class="text-muted">Biz Kimiz sayfasında görünen ekip</p>
+        </div>
+        <button class="btn btn-primary" onclick="openTeamModal()">+ Yeni Üye</button>
+      </div>
+      <div id="teamList" class="items-grid team-grid"></div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="sec-media" class="section">
+      <div class="section-header">
+        <div>
+          <h2>Medya Kütüphanesi</h2>
+          <p class="text-muted">Yüklü görseller</p>
+        </div>
+        <label class="btn btn-primary" for="mediaUpload" style="cursor:pointer">
+          + Görsel Yükle
+          <input type="file" id="mediaUpload" accept="image/*" multiple hidden onchange="uploadFiles(this.files)">
+        </label>
+      </div>
+      <div class="upload-zone" id="uploadZone">
+        <p>Görselleri buraya sürükleyip bırakın veya yukarıdaki butona tıklayın</p>
+        <small>JPG, PNG, GIF, WebP, SVG — Max 5MB</small>
+      </div>
+      <div id="mediaGrid" class="media-grid"></div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section id="sec-messages" class="section">
+      <div class="section-header">
+        <div>
+          <h2>İletişim Mesajları</h2>
+          <p class="text-muted">Web sitesinden gelen form mesajları</p>
+        </div>
+      </div>
+      <div id="messagesList" class="items-list"></div>
+      <div id="messagesEmpty" style="display:none" class="card">
+        <p style="color:var(--text-muted);text-align:center;padding:40px 0">Henüz mesaj yok.</p>
+      </div>
+    </section>
+
+    <!-- USERS -->
+    <section id="sec-users" class="section">
+      <div class="section-header">
+        <div>
+          <h2>Kullanıcı Yönetimi</h2>
+          <p class="text-muted">Admin panele erişim yetkisi olan kullanıcılar</p>
+        </div>
+        <button class="btn btn-primary" onclick="openUserModal()">+ Yeni Kullanıcı</button>
+      </div>
+      <div id="usersList" class="items-list"></div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal" id="modalContent">
+      <div class="modal-header">
+        <h3 id="modalTitle">—</h3>
+        <button class="btn-icon" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/js/api.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

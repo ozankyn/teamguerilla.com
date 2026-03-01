@@ -1,0 +1,5 @@
+node_modules/
+admin/data/
+admin/uploads/
+.env
+.DS_Store
