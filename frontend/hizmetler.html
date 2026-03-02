@@ -193,11 +193,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
-  flex-direction: column; align-items: center; justify-content: center; gap: var(--space-5);
+  flex-direction: column; gap: var(--space-5);
+  align-items: center;
+  justify-content: center;
 }
 .mobile-menu.active { display: flex; }
 .mobile-menu a {
-  font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 5vw, 40px);
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
   color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
 }
 .mobile-menu a:hover, .mobile-menu a[aria-current="page"] { color: var(--accent); }
@@ -440,6 +442,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(-2px);
 }
 
+.init-card__logo {
+  height: 55px;
+  margin-bottom: var(--space-2);
+}
+.init-card:nth-child(2) .init-card__logo {
+  height: 35px;
+}
+.init-card__logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.init-card__logo .logo-light { display: none; }
+[data-theme="light"] .init-card__logo .logo-dark { display: none; }
+[data-theme="light"] .init-card__logo .logo-light { display: block; }
+
 .init-card__badge {
   display: inline-flex;
   padding: 4px 10px;
@@ -646,7 +664,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="dept__grid dept__grid--5">
+    <div class="dept__grid dept__grid--5" id="retail-grid">
 
       <!-- 01 Merchandising -->
       <article class="svc-card reveal" style="--stagger: 0" id="merchandising">
@@ -752,9 +770,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="dept__grid">
-
-      <!-- 01 Sampling -->
+    <div class="dept__grid" id="event-grid">
       <article class="svc-card reveal" style="--stagger: 0" id="sampling">
         <div class="svc-card__image">
           <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&fit=crop&auto=format" alt="Sampling ve tadım etkinlikleri" loading="lazy">
@@ -894,6 +910,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div class="init-grid">
 
       <article class="init-card reveal" style="--stagger: 0">
+        <div class="init-card__logo">
+          <img src="/assets/logos/social_logo_beyaz.png" alt="teamguerilla.social" class="logo-dark">
+          <img src="/assets/logos/social_logo.png" alt="teamguerilla.social" class="logo-light">
+        </div>
         <span class="init-card__badge">Dijital</span>
         <h3 class="init-card__name">teamguerilla.social</h3>
         <p class="init-card__desc">Sosyal medya yönetimi, dijital içerik üretimi ve online kampanya planlaması. Sahada kazandığımız deneyimi dijital dünyaya taşıyoruz.</p>
@@ -909,6 +929,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </article>
 
       <article class="init-card reveal" style="--stagger: 1">
+        <div class="init-card__logo">
+          <img src="/assets/logos/vena_logo_beyaz.png" alt="Venagrup" class="logo-dark">
+          <img src="/assets/logos/vena_logo_siyah.png" alt="Venagrup" class="logo-light">
+        </div>
         <span class="init-card__badge">Prodüksiyon</span>
         <h3 class="init-card__name">Venagrup</h3>
         <p class="init-card__desc">Dijital pazarlama stratejileri ve prodüksiyon hizmetleri. Ortaklık yapımızla daha geniş kapsamlı proje çözümleri sunuyoruz.</p>
@@ -917,8 +941,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <span class="init-card__tag">Prodüksiyon</span>
           <span class="init-card__tag">Strateji</span>
         </div>
-        <a href="https://venagrup.com" target="_blank" rel="noopener" class="init-card__link">
-          venagrup.com
+        <a href="https://venagrup.co" target="_blank" rel="noopener" class="init-card__link">
+          venagrup.co
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
       </article>
@@ -950,7 +974,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="footer__brand">
         <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
-        <p class="footer__brand-desc">2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.</p>
+        <p class="footer__brand-desc">2005'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -985,14 +1009,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
           <li><a href="/referanslar">Referanslar</a></li>
           <li><a href="/iletisim">İletişim</a></li>
-          <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
           <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle)"><a href="https://teamguerilla.social" target="_blank" rel="noopener">teamguerilla.social ↗</a></li>
           <li><a href="https://venagrup.com" target="_blank" rel="noopener">Venagrup ↗</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2025 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
+      <p class="footer__copy">&copy; 2026 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
       <div class="footer__legal">
         <a href="#">Gizlilik Politikası</a>
         <a href="#">KVKK</a>
@@ -1076,6 +1099,77 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   els.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+<!-- Dynamic Services from API -->
+<script>
+(function() {
+  var defaultImg = 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80&fit=crop&auto=format';
+
+  function slugify(str) {
+    return str.toLowerCase()
+      .replace(/ı/g,'i').replace(/ğ/g,'g').replace(/ü/g,'u')
+      .replace(/ş/g,'s').replace(/ö/g,'o').replace(/ç/g,'c')
+      .replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  }
+
+  function buildCard(svc, idx) {
+    var slug = slugify(svc.name_tr);
+    var img = svc.image || defaultImg;
+    var sectors = svc.sectors || [];
+    var tagsHtml = sectors.map(function(s) {
+      return '<span class="svc-card__tag">' + s + '</span>';
+    }).join('');
+
+    return '<article class="svc-card reveal" style="--stagger: ' + idx + '" id="' + slug + '">' +
+      '<div class="svc-card__image">' +
+        '<img src="' + img + '" alt="' + svc.name_tr + '" loading="lazy">' +
+        '<span class="svc-card__number">' + String(idx + 1).padStart(2, '0') + '</span>' +
+      '</div>' +
+      '<div class="svc-card__body">' +
+        '<h3 class="svc-card__title">' + svc.name_tr + '</h3>' +
+        '<p class="svc-card__desc">' + svc.description_tr + '</p>' +
+        (tagsHtml ? '<div class="svc-card__sectors">' + tagsHtml + '</div>' : '') +
+      '</div>' +
+    '</article>';
+  }
+
+  fetch('/api/services')
+    .then(function(r) { return r.json(); })
+    .then(function(services) {
+      var active = services.filter(function(s) { return s.active !== false; });
+      active.sort(function(a, b) { return (a.order || 0) - (b.order || 0); });
+
+      var retail = active.filter(function(s) { return s.department === 'retail'; });
+      var event = active.filter(function(s) { return s.department === 'event'; });
+
+      var retailGrid = document.getElementById('retail-grid');
+      var eventGrid = document.getElementById('event-grid');
+
+      if (retailGrid && retail.length > 0) {
+        retailGrid.innerHTML = retail.map(buildCard).join('');
+        if (retail.length <= 3) retailGrid.className = 'dept__grid';
+        else retailGrid.className = 'dept__grid dept__grid--5';
+      }
+
+      if (eventGrid && event.length > 0) {
+        eventGrid.innerHTML = event.map(buildCard).join('');
+      }
+
+      // Re-apply reveal observer
+      var newEls = document.querySelectorAll('.svc-card.reveal:not(.visible)');
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      newEls.forEach(function(el) { obs.observe(el); });
+    })
+    .catch(function() { /* Keep hardcoded fallback */ });
 })();
 </script>
 

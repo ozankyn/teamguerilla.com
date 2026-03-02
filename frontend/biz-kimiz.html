@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biz Kimiz? — Team Guerilla Marketing</title>
-<meta name="description" content="2004'ten bu yana Türkiye genelinde saha pazarlama hizmetleri sunan Team Guerilla Marketing'i yakından tanıyın.">
+<meta name="description" content="2005'ten bu yana Türkiye genelinde saha pazarlama hizmetleri sunan Team Guerilla Marketing'i yakından tanıyın.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,9 +49,19 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
 .nav__toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}@media(min-width:1024px){.nav__toggle{display:none}}
 .nav__toggle span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:transform var(--duration-normal) var(--ease-out),opacity var(--duration-fast)}
 .nav__toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav__toggle.active span:nth-child(2){opacity:0}.nav__toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:var(--bg-mobile-menu);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);flex-direction:column;align-items:center;justify-content:center;gap:var(--space-5)}
-.mobile-menu.active{display:flex}
-.mobile-menu a{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,5vw,40px);color:var(--text-primary);transition:color var(--duration-fast) var(--ease-out)}
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
+  flex-direction: column; gap: var(--space-5);
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu.active { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
+  color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
+}
 .mobile-menu a:hover,.mobile-menu a[aria-current="page"]{color:var(--accent)}
 
 /* PAGE HERO */
@@ -221,7 +231,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
       <div class="page-hero__content reveal" style="--stagger:0">
         <p class="page-hero__label" aria-hidden="true">Biz Kimiz?</p>
         <h1 id="page-title" class="page-hero__title">Sahada 20 yılı aşkın deneyim</h1>
-        <p class="page-hero__desc">2004 yılında İstanbul'da kurulan Team Guerilla Marketing, Türkiye'nin dört bir yanında markaları tüketiciyle sahada buluşturuyor. Dijitalin yükseldiği bir dünyada sahadaki insan temasının gücüne inanıyoruz.</p>
+        <p class="page-hero__desc" id="about-hero-desc">2005 yılında İstanbul'da kurulan Team Guerilla Marketing, Türkiye'nin dört bir yanında markaları tüketiciyle sahada buluşturuyor. Dijitalin yükseldiği bir dünyada sahadaki insan temasının gücüne inanıyoruz.</p>
       </div>
       <div class="page-hero__image reveal" style="--stagger:1">
         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&fit=crop&auto=format" alt="Ekip çalışması" loading="eager">
@@ -235,7 +245,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
   <div class="container">
     <div class="about__intro reveal" style="--stagger:0">
       <h2 id="story-title" class="about__intro-title">Hikayemiz</h2>
-      <p class="about__intro-text">2004'te küçük bir ekiple başladık. İlk günden itibaren inandığımız tek şey vardı: marka ile tüketici arasındaki en güçlü bağ sahada kurulur. Yıllar içinde bu inançla büyüdük; bugün 67 kişilik profesyonel ekibimizle Türkiye genelinde 81 ilde operasyon yürütüyoruz. Her projede aynı titizliği, aynı enerjiyi ve aynı sahaya inme kararlılığını koruyoruz.</p>
+      <p class="about__intro-text" id="about-story">2005'te küçük bir ekiple başladık. İlk günden itibaren inandığımız tek şey vardı: marka ile tüketici arasındaki en güçlü bağ sahada kurulur. Yıllar içinde bu inançla büyüdük; bugün 67 kişilik profesyonel ekibimizle Türkiye genelinde 81 ilde operasyon yürütüyoruz. Her projede aynı titizliği, aynı enerjiyi ve aynı sahaya inme kararlılığını koruyoruz.</p>
     </div>
   </div>
 </section>
@@ -251,26 +261,26 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
       <article class="value-card reveal" style="--stagger:0">
         <span class="value-card__number" aria-hidden="true">01</span>
         <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 4v40M4 24h40"/><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="18" stroke-dasharray="4 4"/></svg>
-        <h3 class="value-card__title">Sahada Güçlüyüz</h3>
-        <p class="value-card__desc">Masabaşı stratejiler değil, sahada sonuç üreten ekipler. 81 ilde operasyon kapasitemizle her noktaya ulaşıyoruz.</p>
+        <h3 class="value-card__title" id="val-title-0">Sahada Güçlüyüz</h3>
+        <p class="value-card__desc" id="val-desc-0">Masabaşı stratejiler değil, sahada sonuç üreten ekipler. 81 ilde operasyon kapasitemizle her noktaya ulaşıyoruz.</p>
       </article>
       <article class="value-card reveal" style="--stagger:1">
         <span class="value-card__number" aria-hidden="true">02</span>
         <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 24l6 6 14-14"/><rect x="6" y="6" width="36" height="36" rx="6"/></svg>
-        <h3 class="value-card__title">Veriye Dayalı Çalışıyoruz</h3>
-        <p class="value-card__desc">Her operasyonu raporluyor, her kampanyayı ölçüyor, her sonucu analiz ediyoruz. Müşterilerimize his değil, veri sunuyoruz.</p>
+        <h3 class="value-card__title" id="val-title-1">Veriye Dayalı Çalışıyoruz</h3>
+        <p class="value-card__desc" id="val-desc-1">Her operasyonu raporluyor, her kampanyayı ölçüyor, her sonucu analiz ediyoruz. Müşterilerimize his değil, veri sunuyoruz.</p>
       </article>
       <article class="value-card reveal" style="--stagger:2">
         <span class="value-card__number" aria-hidden="true">03</span>
         <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 16c0-6.6 5.4-12 12-12s12 5.4 12 12"/><path d="M8 28c0-8.8 7.2-16 16-16s16 7.2 16 16"/><circle cx="24" cy="36" r="6"/></svg>
-        <h3 class="value-card__title">Esnek ve Hızlıyız</h3>
-        <p class="value-card__desc">Her marka farklı, her proje kendine özgü. Standart paketler yerine ihtiyaca özel çözümler üretiyoruz.</p>
+        <h3 class="value-card__title" id="val-title-2">Esnek ve Hızlıyız</h3>
+        <p class="value-card__desc" id="val-desc-2">Her marka farklı, her proje kendine özgü. Standart paketler yerine ihtiyaca özel çözümler üretiyoruz.</p>
       </article>
       <article class="value-card reveal" style="--stagger:3">
         <span class="value-card__number" aria-hidden="true">04</span>
         <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 20a8 8 0 1116 0"/><path d="M12 32c0-6.6 5.4-12 12-12s12 5.4 12 12"/><circle cx="24" cy="12" r="6"/><circle cx="10" cy="36" r="5"/><circle cx="38" cy="36" r="5"/></svg>
-        <h3 class="value-card__title">İnsan Odaklıyız</h3>
-        <p class="value-card__desc">Ekibimize yatırım yapıyoruz çünkü sahada farkı insanlar yaratır. Sürekli eğitim, düzgün çalışma koşulları ve motivasyon.</p>
+        <h3 class="value-card__title" id="val-title-3">İnsan Odaklıyız</h3>
+        <p class="value-card__desc" id="val-desc-3">Ekibimize yatırım yapıyoruz çünkü sahada farkı insanlar yaratır. Sürekli eğitim, düzgün çalışma koşulları ve motivasyon.</p>
       </article>
     </div>
   </div>
@@ -281,16 +291,16 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
   <div class="container">
     <div class="timeline__header reveal" style="--stagger:0">
       <p class="timeline__label" aria-hidden="true">Yolculuğumuz</p>
-      <h2 id="timeline-title" class="timeline__title">2004'ten bugüne</h2>
+      <h2 id="timeline-title" class="timeline__title">2005'ten bugüne</h2>
     </div>
     <div class="timeline" role="list" aria-label="Şirket zaman çizelgesi">
-      <div class="timeline__item reveal" style="--stagger:0" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2004</div><p class="timeline__text">Team Guerilla Marketing İstanbul Kadıköy'de kuruldu. İlk projelerimizi FMCG sektöründe merchandising hizmetleriyle gerçekleştirdik.</p></div>
-      <div class="timeline__item reveal" style="--stagger:1" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2007</div><p class="timeline__text">Sampling ve tadım hizmetlerini portföyümüze ekledik. Saha ekibimiz 20 kişiye ulaştı.</p></div>
-      <div class="timeline__item reveal" style="--stagger:2" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2010</div><p class="timeline__text">İlk çok şehirli roadshow projemizi hayata geçirdik. Türkiye genelinde operasyon kapasitemizi genişlettik.</p></div>
-      <div class="timeline__item reveal" style="--stagger:3" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2013</div><p class="timeline__text">Gerilla pazarlama ve event hizmetlerini başlattık. Otomotiv ve teknoloji sektörlerinden ilk büyük müşterilerimizi kazandık.</p></div>
-      <div class="timeline__item reveal" style="--stagger:4" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2016</div><p class="timeline__text">M.I.C.E. hizmetlerini ekledik. Kendi tasarım atölyemizi kurarak stand ve materyal üretimini iç kaynağa aldık.</p></div>
-      <div class="timeline__item reveal" style="--stagger:5" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2019</div><p class="timeline__text">Neuro Marketing danışmanlık hizmetini başlattık. 100'den fazla markayla çalışma deneyimine ulaştık.</p></div>
-      <div class="timeline__item reveal" style="--stagger:6" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2024</div><p class="timeline__text">20. yılımızı kutladık. 67 kişilik ekibimizle 81 ilde operasyon yürütüyor, 8 farklı hizmet alanında hizmet veriyoruz.</p></div>
+      <div class="timeline__item reveal" style="--stagger:0" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2005</div><p class="timeline__text">Team Guerilla Marketing İstanbul Mecidiyeköy'de kuruldu. İlk projelerimizi FMCG sektöründe bir çok Roadshow, Konser, Horeca sponsorlukları vb. gibi Event hizmetleriyle gerçekleştirdik.</p></div>
+      <div class="timeline__item reveal" style="--stagger:1" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2008</div><p class="timeline__text">Türkiye genelinde başlayan satış destek projeleri ile Retail departmanının temelleri atıldı.</p></div>
+      <div class="timeline__item reveal" style="--stagger:2" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2010</div><p class="timeline__text">İlk kongremizi, EPDK için düzenleyerek M.I.C.E hizmetlerini başlattık.</p></div>
+      <div class="timeline__item reveal" style="--stagger:3" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2013</div><p class="timeline__text">Event ve Retail departmanları olarak, potföye yeni birçok müşteri dahil ettik.</p></div>
+      <div class="timeline__item reveal" style="--stagger:4" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2016</div><p class="timeline__text">Retail departmanını 2016 yılında yeniden yapılandırarak, eğitim, raporlama, filo yönetimi, yazılım alt departmanlarını oluşturduk.</p></div>
+      <div class="timeline__item reveal" style="--stagger:5" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2019</div><p class="timeline__text">Neuro Marketing alanında projeler gerçekleştirerek, sahada tüketiciler ile bir ilki buluşturmuş olduk.</p></div>
+      <div class="timeline__item reveal" style="--stagger:6" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2025</div><p class="timeline__text">20. yılımızı kutladık. 500+ kişilik ekibimizle 81 ilde operasyon yürütüyor, 8 farklı hizmet alanında hizmet vermeye ve yeni girişimlerimiz ile büyümeye devam ediyoruz.</p></div>
     </div>
   </div>
 </section>
@@ -301,9 +311,9 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
     <div class="team__grid">
       <div class="team__content reveal" style="--stagger:0">
         <h2 id="team-title" class="team__title">Ekibimiz</h2>
-        <p class="team__desc">67 kişilik profesyonel saha ekibimiz, her biri kendi alanında deneyimli uzmanlardan oluşuyor. Proje yöneticileri, saha koordinatörleri, tasarımcılar ve lojistik ekibi — hep birlikte markanızın sahada kusursuz temsil edilmesini sağlıyoruz.</p>
+        <p class="team__desc">500+ kişilik profesyonel saha ekibimiz, her biri kendi alanında deneyimli uzmanlardan oluşuyor. Proje yöneticileri, saha koordinatörleri, tasarımcılar ve lojistik ekibi — hep birlikte markanızın sahada kusursuz temsil edilmesini sağlıyoruz.</p>
         <div class="team__stats">
-          <div class="team__stat"><div class="team__stat-number">67</div><div class="team__stat-label">Profesyonel</div></div>
+          <div class="team__stat"><div class="team__stat-number">500+</div><div class="team__stat-label">Profesyonel</div></div>
           <div class="team__stat"><div class="team__stat-number">81</div><div class="team__stat-label">İl kapsamı</div></div>
           <div class="team__stat"><div class="team__stat-number">8+</div><div class="team__stat-label">Yıl ort. deneyim</div></div>
           <div class="team__stat"><div class="team__stat-number">%92</div><div class="team__stat-label">Ekip devamlılığı</div></div>
@@ -356,7 +366,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
       <div class="footer__brand">
         <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
-        <p class="footer__brand-desc">2004'ten bu yana markalarla tüketiciyi sahada buluşturan saha pazarlama ajansı.</p>
+        <p class="footer__brand-desc">2005'ten bu yana markalarla tüketiciyi sahada buluşturan saha pazarlama ajansı.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -419,7 +429,9 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
 
 /* Team Carousel */
 (function(){
-  var photos = [
+  var defaultPhoto = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop&crop=face&auto=format';
+
+  var fallbackPhotos = [
     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop&crop=face&auto=format',
     'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&fit=crop&crop=face&auto=format',
     'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&fit=crop&crop=face&auto=format',
@@ -438,30 +450,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
     'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80&fit=crop&crop=face&auto=format'
   ];
 
-  var row1 = [
-    {name:'Ozan Kılıç',role:'Genel Müdür',p:0},
-    {name:'Ayşe Demir',role:'Retail Direktör',p:1},
-    {name:'Emre Yılmaz',role:'Event Direktör',p:2},
-    {name:'Zeynep Arslan',role:'Operasyon Müdürü',p:3},
-    {name:'Murat Çelik',role:'İş Geliştirme',p:4},
-    {name:'Elif Koç',role:'Proje Yöneticisi',p:5},
-    {name:'Burak Şahin',role:'Saha Koordinatörü',p:6},
-    {name:'Selin Öztürk',role:'Kreatif Direktör',p:7}
-  ];
-
-  var row2 = [
-    {name:'Tolga Aydın',role:'Lojistik Müdürü',p:8},
-    {name:'Deniz Kara',role:'Finans Müdürü',p:9},
-    {name:'Can Erdoğan',role:'IT & Yazılım',p:10},
-    {name:'Aslı Güneş',role:'İK Müdürü',p:11},
-    {name:'Kerem Aksoy',role:'Merchandising Lideri',p:12},
-    {name:'İrem Yıldız',role:'Event Koordinatörü',p:13},
-    {name:'Serkan Tunç',role:'Bölge Müdürü',p:14},
-    {name:'Pınar Bal',role:'Tasarım Atölyesi',p:15}
-  ];
-
   function card(d){
-    return '<article class="person-card"><div class="person-card__photo"><img src="'+photos[d.p]+'" alt="'+d.name+'" loading="lazy"></div><div class="person-card__info"><div class="person-card__name">'+d.name+'</div><div class="person-card__role">'+d.role+'</div></div></article>';
+    return '<article class="person-card"><div class="person-card__photo"><img src="'+d.photo+'" alt="'+d.name+'" loading="lazy"></div><div class="person-card__info"><div class="person-card__name">'+d.name+'</div><div class="person-card__role">'+d.role+'</div></div></article>';
   }
 
   function fill(id, data){
@@ -470,12 +460,71 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
     var html='';
     for(var r=0;r<3;r++){for(var i=0;i<data.length;i++){html+=card(data[i])}}
     el.innerHTML=html;
-    // Start animation after images have a chance to layout
     requestAnimationFrame(function(){el.classList.add('scrolling')});
   }
 
-  fill('carousel-row-1',row1);
-  fill('carousel-row-2',row2);
+  fetch('/api/team')
+    .then(function(r){return r.json()})
+    .then(function(team){
+      var active = team.filter(function(t){return t.active !== false});
+      active.sort(function(a,b){return (a.order||0)-(b.order||0)});
+
+      var members = active.map(function(t, i){
+        return {
+          name: t.name,
+          role: t.title_tr || '',
+          photo: t.photo || fallbackPhotos[i % fallbackPhotos.length]
+        };
+      });
+
+      var half = Math.ceil(members.length / 2);
+      fill('carousel-row-1', members.slice(0, half));
+      fill('carousel-row-2', members.slice(half));
+    })
+    .catch(function(){
+      // Fallback if API fails
+      fill('carousel-row-1', []);
+      fill('carousel-row-2', []);
+    });
+})();
+</script>
+
+<!-- Dynamic content from Admin API -->
+<script>
+(function() {
+  fetch('/api/content/page/about')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Hero
+      if (d['hero.title.tr'] && d['hero.title.tr'].value) {
+        var t = document.getElementById('page-title');
+        if (t) t.innerHTML = d['hero.title.tr'].value;
+      }
+      if (d['hero.subtitle.tr'] && d['hero.subtitle.tr'].value) {
+        var s = document.getElementById('about-hero-desc');
+        if (s) s.textContent = d['hero.subtitle.tr'].value;
+      }
+      // Story
+      if (d['story.tr'] && d['story.tr'].value) {
+        var st = document.getElementById('about-story');
+        if (st) st.textContent = d['story.tr'].value;
+      }
+      // Value cards
+      var vals = ['value0', 'value1', 'value2', 'value3'];
+      for (var i = 0; i < 4; i++) {
+        var titleKey = vals[i] + '.title.tr';
+        var descKey = vals[i] + '.desc.tr';
+        if (d[titleKey] && d[titleKey].value) {
+          var vt = document.getElementById('val-title-' + i);
+          if (vt) vt.textContent = d[titleKey].value;
+        }
+        if (d[descKey] && d[descKey].value) {
+          var vd = document.getElementById('val-desc-' + i);
+          if (vd) vd.textContent = d[descKey].value;
+        }
+      }
+    })
+    .catch(function() { /* Keep defaults */ });
 })();
 </script>
 

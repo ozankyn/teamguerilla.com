@@ -259,6 +259,7 @@ function renderServices() {
 function openServiceModal(id) {
   const item = id ? state.services.find(s => s.id === id) : null;
   const title = item ? 'Hizmeti Düzenle' : 'Yeni Hizmet';
+  const imgPreview = item?.image ? `<img src="${item.image}" style="max-height:80px;border-radius:6px;margin-top:8px;">` : '';
 
   openModal(title, `
     <div class="form-row">
@@ -292,6 +293,16 @@ function openServiceModal(id) {
         <input type="text" id="f_icon" value="${item?.icon || ''}" placeholder="ör: grid, zap, globe">
       </div>
     </div>
+    <div class="form-group">
+      <label>Görsel</label>
+      <input type="hidden" id="f_image" value="${item?.image || ''}">
+      <button type="button" class="btn btn-sm btn-outline" onclick="pickServiceImage()">📷 Görsel Yükle</button>
+      <div id="svc-img-preview">${imgPreview}</div>
+    </div>
+    <div class="form-group">
+      <label>Sektörler (virgülle ayırın)</label>
+      <input type="text" id="f_sectors" value="${(item?.sectors || []).join(', ')}" placeholder="ör: FMCG, Perakende, Teknoloji">
+    </div>
     <label class="checkbox-label">
       <input type="checkbox" id="f_active" ${item?.active !== false ? 'checked' : ''}> Aktif
     </label>
@@ -301,11 +312,30 @@ function openServiceModal(id) {
   ]);
 }
 
+async function pickServiceImage() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.onchange = async function() {
+    if (!input.files[0]) return;
+    try {
+      const result = await API.upload(input.files[0], 'services');
+      document.getElementById('f_image').value = result.url;
+      document.getElementById('svc-img-preview').innerHTML = '<img src="' + result.url + '" style="max-height:80px;border-radius:6px;margin-top:8px;">';
+      showToast('Görsel yüklendi', 'success');
+    } catch(e) { showToast('Yükleme hatası', 'error'); }
+  };
+  input.click();
+}
+
 async function saveService(id) {
+  const sectorsRaw = val('f_sectors');
+  const sectors = sectorsRaw ? sectorsRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
   const data = {
     name_tr: val('f_name_tr'), name_en: val('f_name_en'),
     description_tr: val('f_desc_tr'), description_en: val('f_desc_en'),
     department: val('f_department'), icon: val('f_icon'),
+    image: val('f_image'), sectors: sectors,
     active: document.getElementById('f_active').checked,
   };
   try {

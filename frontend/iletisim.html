@@ -198,11 +198,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
-  flex-direction: column; align-items: center; justify-content: center; gap: var(--space-5);
+  flex-direction: column; gap: var(--space-5);
+  align-items: center;
+  justify-content: center;
 }
 .mobile-menu.active { display: flex; }
 .mobile-menu a {
-  font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 5vw, 40px);
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
   color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
 }
 .mobile-menu a:hover, .mobile-menu a[aria-current="page"] { color: var(--accent); }
@@ -795,7 +797,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
         <p class="footer__brand-desc">
-          2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
+          2005'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
         </p>
         <div class="footer__social">
           <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>

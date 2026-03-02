@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team Guerilla Marketing — Markanız Sahada, Biz Arkasındayız</title>
-<meta name="description" content="2004'ten bu yana Türkiye genelinde saha pazarlama, merchandising, roadshow, etkinlik ve gerilla pazarlama hizmetleri sunan Team Guerilla Marketing.">
+<meta name="description" content="2005'ten bu yana Türkiye genelinde saha pazarlama, merchandising, roadshow, etkinlik ve gerilla pazarlama hizmetleri sunan Team Guerilla Marketing.">
 
 <!-- Fonts: Outfit (Display) + Plus Jakarta Sans (Body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -781,7 +781,7 @@ button {
     grid-column: span 2;
     grid-row: span 2;
   }
-  .feat-card:nth-child(3) {
+  .feat-card:nth-child(4) {
     grid-column: span 2;
   }
 }
@@ -1039,8 +1039,8 @@ button {
 
 .trusted__logo {
   flex-shrink: 0;
-  width: 120px;
-  height: 48px;
+  width: 240px;
+  height: 86px;
   background: var(--marquee-logo-bg);
   border-radius: var(--radius-sm);
   display: flex;
@@ -1048,29 +1048,28 @@ button {
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--marquee-logo-text);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity var(--duration-fast);
-  padding: 6px 12px;
+  padding: 8px 16px;
 }
 
 .trusted__logo img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(1) opacity(0.7);
   transition: filter var(--duration-fast);
 }
 
 .trusted__logo:hover img {
-  filter: grayscale(0) opacity(1);
+  filter: brightness(1.1);
 }
 
 .trusted__logo:hover {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 @keyframes marquee {
@@ -1327,15 +1326,15 @@ button {
          fetchpriority="high">
   </div>
   <div class="container hero__content">
-    <p class="hero__tag">Saha Pazarlama Ajansı — 2004'ten beri</p>
+    <p class="hero__tag" id="hero-tag">Saha Pazarlama Ajansı — 2005'ten beri</p>
     <h1 class="hero__title" id="hero-title">
       Markanız sahada,<br>biz arkasındayız.
     </h1>
-    <p class="hero__subtitle">
-      2004'ten bu yana Türkiye'nin dört bir yanında, sahada güçlü sonuçlar üretiyoruz.
+    <p class="hero__subtitle" id="hero-subtitle">
+      2005'ten bu yana Türkiye'nin dört bir yanında, sahada güçlü sonuçlar üretiyoruz.
     </p>
     <div class="hero__cta">
-      <a href="/iletisim" class="btn-primary">
+      <a href="/iletisim" class="btn-primary" id="hero-cta-btn">
         Projenizi Konuşalım
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1385,20 +1384,8 @@ button {
         </div>
       </article>
 
-      <!-- 3 — Event / Etkinlik (geniş kart) -->
+      <!-- 3 — Yazılım Hizmetleri -->
       <article class="feat-card reveal" style="--stagger: 2">
-        <div class="feat-card__bg" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
-        </div>
-        <div class="feat-card__content">
-          <span class="feat-card__dept feat-card__dept--event">Event</span>
-          <h3 class="feat-card__title">Event / Etkinlik</h3>
-          <p class="feat-card__desc">Lansmanından bayi toplantısına, kurumsal etkinliklerinizi uçtan uca yönetiyoruz.</p>
-        </div>
-      </article>
-
-      <!-- 4 — Yazılım Hizmetleri -->
-      <article class="feat-card reveal" style="--stagger: 3">
         <div class="feat-card__bg" aria-hidden="true">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
         </div>
@@ -1406,6 +1393,18 @@ button {
           <span class="feat-card__dept feat-card__dept--retail">Retail</span>
           <h3 class="feat-card__title">Yazılım Hizmetleri</h3>
           <p class="feat-card__desc">Saha operasyonlarınız için özel raporlama, takip ve analiz çözümleri geliştiriyoruz.</p>
+        </div>
+      </article>
+
+      <!-- 4 — Event / Etkinlik (geniş kart) -->
+      <article class="feat-card reveal" style="--stagger: 3">
+        <div class="feat-card__bg" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop&auto=format" alt="" loading="lazy">
+        </div>
+        <div class="feat-card__content">
+          <span class="feat-card__dept feat-card__dept--event">Event</span>
+          <h3 class="feat-card__title">Event / Etkinlik</h3>
+          <p class="feat-card__desc">Lansmanından bayi toplantısına, kurumsal etkinliklerinizi uçtan uca yönetiyoruz.</p>
         </div>
       </article>
 
@@ -1427,20 +1426,20 @@ button {
   <div class="container">
     <div class="stats__grid reveal-stagger">
       <div class="stats__item reveal" style="--stagger: 0">
-        <div class="stats__number" data-count="20">20+</div>
-        <div class="stats__label">Yıllık Deneyim</div>
+        <div class="stats__number" id="stat-val-0" data-count="20">20+</div>
+        <div class="stats__label" id="stat-lbl-0">Yıllık Deneyim</div>
       </div>
       <div class="stats__item reveal" style="--stagger: 1">
-        <div class="stats__number" data-count="67">67</div>
-        <div class="stats__label">Saha Profesyoneli</div>
+        <div class="stats__number" id="stat-val-1" data-count="67">67</div>
+        <div class="stats__label" id="stat-lbl-1">Saha Profesyoneli</div>
       </div>
       <div class="stats__item reveal" style="--stagger: 2">
-        <div class="stats__number" data-count="81">81</div>
-        <div class="stats__label">İl Genelinde Operasyon</div>
+        <div class="stats__number" id="stat-val-2" data-count="81">81</div>
+        <div class="stats__label" id="stat-lbl-2">İl Genelinde Operasyon</div>
       </div>
       <div class="stats__item reveal" style="--stagger: 3">
-        <div class="stats__number" data-count="500">500+</div>
-        <div class="stats__label">Tamamlanan Proje</div>
+        <div class="stats__number" id="stat-val-3" data-count="500">500+</div>
+        <div class="stats__label" id="stat-lbl-3">Tamamlanan Proje</div>
       </div>
     </div>
   </div>
@@ -1518,7 +1517,7 @@ button {
         <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
         <p class="footer__brand-desc">
-          2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
+          2005'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.
         </p>
         <div class="footer__social">
           <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener">
@@ -1527,11 +1526,7 @@ button {
           <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="https://vimeo.com/teamguerillamarketing" aria-label="Vimeo" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.42c-.1 2.1-1.56 4.98-4.38 8.65C14.73 19.73 12.23 21.5 10.18 21.5c-1.27 0-2.35-1.18-3.23-3.54L5.38 12.2c-.53-2.36-1.1-3.54-1.72-3.54-.13 0-.6.28-1.4.84L1 7.96c.88-.78 1.75-1.55 2.61-2.33C4.93 4.44 5.95 3.8 6.68 3.74c1.39-.13 2.25.82 2.57 2.87.35 2.21.59 3.59.72 4.14.4 1.82.84 2.73 1.32 2.73.37 0 .93-.59 1.68-1.77.74-1.18 1.14-2.08 1.2-2.69.1-.99-.29-1.49-1.17-1.49-.42 0-.85.1-1.29.29.86-2.81 2.5-4.18 4.93-4.1 1.8.05 2.65 1.22 2.56 3.5z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/channel/UCYukizkFAsXgTI-bN8l7QhQ" aria-label="YouTube" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.93 29 29 0 00.46-5.25 29 29 0 00-.46-5.5z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+          <a href="https://www.linkedin.com/company/team-gerilla-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
       </div>
@@ -1565,16 +1560,13 @@ button {
           <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
           <li><a href="/referanslar">Referanslar</a></li>
           <li><a href="/iletisim">İletişim</a></li>
-          <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
-          <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle)"><a href="https://teamguerilla.social" target="_blank" rel="noopener">teamguerilla.social ↗</a></li>
-          <li><a href="https://venagrup.com" target="_blank" rel="noopener">Venagrup ↗</a></li>
         </ul>
       </div>
 
       <div>
         <h3 class="footer__col-title">İletişim</h3>
         <ul class="footer__links" role="list">
-          <li>İstanbul, Kadıköy</li>
+          <li>İstanbul, Maltepe</li>
           <li><a href="tel:02164103999">0216 410 39 99</a></li>
           <li><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
         </ul>
@@ -1583,7 +1575,7 @@ button {
     </div>
 
     <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2025 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
+      <p class="footer__copy">&copy; 2026 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
       <div class="footer__legal">
         <a href="#">Gizlilik Politikası</a>
         <a href="#">KVKK</a>
@@ -1732,6 +1724,46 @@ button {
         var heroImg = document.getElementById('hero-bg-img');
         if (heroImg) heroImg.src = data['hero.image'].value;
       }
+      // Hero texts
+      if (data['hero.title.tr'] && data['hero.title.tr'].value) {
+        var t = document.getElementById('hero-title');
+        if (t) t.innerHTML = data['hero.title.tr'].value;
+      }
+      if (data['hero.subtitle.tr'] && data['hero.subtitle.tr'].value) {
+        var s = document.getElementById('hero-subtitle');
+        if (s) s.textContent = data['hero.subtitle.tr'].value;
+      }
+      if (data['hero.cta.tr'] && data['hero.cta.tr'].value) {
+        var c = document.getElementById('hero-cta-btn');
+        if (c) {
+          var svg = c.querySelector('svg');
+          var svgHtml = svg ? svg.outerHTML : '';
+          c.innerHTML = data['hero.cta.tr'].value + ' ' + svgHtml;
+        }
+      }
+      // Stats
+      var statsMap = [
+        { key: 'stats.years', idx: 0 },
+        { key: 'stats.team', idx: 1 },
+        { key: 'stats.cities', idx: 2 },
+        { key: 'stats.projects', idx: 3 }
+      ];
+      statsMap.forEach(function(s) {
+        var valKey = s.key + '.value';
+        var lblKey = s.key + '.label.tr';
+        if (data[valKey] && data[valKey].value) {
+          var el = document.getElementById('stat-val-' + s.idx);
+          if (el) {
+            el.textContent = data[valKey].value;
+            var num = parseInt(data[valKey].value.replace(/\D/g, ''));
+            if (num) el.setAttribute('data-count', num);
+          }
+        }
+        if (data[lblKey] && data[lblKey].value) {
+          var lbl = document.getElementById('stat-lbl-' + s.idx);
+          if (lbl) lbl.textContent = data[lblKey].value;
+        }
+      });
     })
     .catch(function() { /* Fallback: keep default images */ });
 

@@ -187,11 +187,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
-  flex-direction: column; align-items: center; justify-content: center; gap: var(--space-5);
+  flex-direction: column; gap: var(--space-5);
+  align-items: center;
+  justify-content: center;
 }
 .mobile-menu.active { display: flex; }
 .mobile-menu a {
-  font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 5vw, 40px);
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
   color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
 }
 .mobile-menu a:hover, .mobile-menu a[aria-current="page"] { color: var(--accent); }
@@ -341,6 +343,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.3;
 }
 
+.ref-card__logo {
+  height: 32px;
+  margin-bottom: 4px;
+}
+.ref-card__logo img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .ref-card__sector {
   display: inline-flex;
   padding: 3px 10px;
@@ -351,6 +364,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--accent-soft);
   color: var(--accent);
   align-self: flex-start;
+}
+
+.ref-card__services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.ref-card__service {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
 }
 
 /* Animate cards */
@@ -610,7 +640,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="footer__brand">
         <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
-        <p class="footer__brand-desc">2004'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.</p>
+        <p class="footer__brand-desc">2005'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -741,54 +771,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    REFERENCES DATA & FILTER
    ============================================ */
 (function() {
-  var brands = [
-    // FMCG
-    { name: 'Unilever', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Procter & Gamble', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Nestlé', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Coca-Cola', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'PepsiCo', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Ülker', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Eti', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Danone', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Mondelez', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Henkel', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Ferrero', sector: 'fmcg', sectorLabel: 'FMCG' },
-    { name: 'Red Bull', sector: 'fmcg', sectorLabel: 'FMCG' },
-    // Otomotiv
-    { name: 'Ford Otosan', sector: 'otomotiv', sectorLabel: 'Otomotiv' },
-    { name: 'Toyota', sector: 'otomotiv', sectorLabel: 'Otomotiv' },
-    { name: 'Mercedes-Benz', sector: 'otomotiv', sectorLabel: 'Otomotiv' },
-    { name: 'BMW', sector: 'otomotiv', sectorLabel: 'Otomotiv' },
-    { name: 'Hyundai', sector: 'otomotiv', sectorLabel: 'Otomotiv' },
-    // Teknoloji
-    { name: 'Samsung', sector: 'teknoloji', sectorLabel: 'Teknoloji' },
-    { name: 'Huawei', sector: 'teknoloji', sectorLabel: 'Teknoloji' },
-    { name: 'Xiaomi', sector: 'teknoloji', sectorLabel: 'Teknoloji' },
-    { name: 'Türk Telekom', sector: 'teknoloji', sectorLabel: 'Teknoloji' },
-    { name: 'Vodafone', sector: 'teknoloji', sectorLabel: 'Teknoloji' },
-    // Perakende
-    { name: 'Migros', sector: 'perakende', sectorLabel: 'Perakende' },
-    { name: 'CarrefourSA', sector: 'perakende', sectorLabel: 'Perakende' },
-    { name: 'MediaMarkt', sector: 'perakende', sectorLabel: 'Perakende' },
-    { name: 'Boyner', sector: 'perakende', sectorLabel: 'Perakende' },
-    // Finans
-    { name: 'Garanti BBVA', sector: 'finans', sectorLabel: 'Finans' },
-    { name: 'İş Bankası', sector: 'finans', sectorLabel: 'Finans' },
-    { name: 'Yapı Kredi', sector: 'finans', sectorLabel: 'Finans' },
-    { name: 'Akbank', sector: 'finans', sectorLabel: 'Finans' },
-    // İlaç / Sağlık
-    { name: 'Bayer', sector: 'ilac', sectorLabel: 'İlaç / Sağlık' },
-    { name: 'Novartis', sector: 'ilac', sectorLabel: 'İlaç / Sağlık' },
-    { name: 'Abdi İbrahim', sector: 'ilac', sectorLabel: 'İlaç / Sağlık' },
-    // Enerji
-    { name: 'Opet', sector: 'enerji', sectorLabel: 'Enerji' },
-    { name: 'Shell', sector: 'enerji', sectorLabel: 'Enerji' },
-    { name: 'BP', sector: 'enerji', sectorLabel: 'Enerji' },
-    // Diğer
-    { name: 'Türk Hava Yolları', sector: 'diger', sectorLabel: 'Havacılık' },
-    { name: 'Turkcell', sector: 'diger', sectorLabel: 'Telekomünikasyon' }
-  ];
+  var SECTOR_MAP = {
+    'fmcg': { filter: 'fmcg', label: 'FMCG' },
+    'automotive': { filter: 'otomotiv', label: 'Otomotiv' },
+    'technology': { filter: 'teknoloji', label: 'Teknoloji' },
+    'retail': { filter: 'perakende', label: 'Perakende' },
+    'finance': { filter: 'finans', label: 'Finans' },
+    'pharma': { filter: 'ilac', label: 'İlaç / Sağlık' },
+    'energy': { filter: 'enerji', label: 'Enerji' },
+    'other': { filter: 'diger', label: 'Diğer' }
+  };
 
   var grid = document.getElementById('refs-grid');
   var emptyEl = document.getElementById('refs-empty');
@@ -796,13 +788,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   var filterBtns = document.querySelectorAll('.filter-btn');
   var resetBtn = document.getElementById('reset-filter');
   var currentSector = 'all';
+  var allBrands = [];
 
   function renderCards(sector) {
-    var filtered = sector === 'all' ? brands : brands.filter(function(b) { return b.sector === sector; });
-
-    // Clear
+    var filtered = sector === 'all' ? allBrands : allBrands.filter(function(b) { return b.sector === sector; });
     grid.innerHTML = '';
-
     if (filtered.length === 0) {
       emptyEl.classList.add('visible');
       countEl.textContent = '0 referans';
@@ -810,20 +800,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     }
     emptyEl.classList.remove('visible');
     countEl.textContent = filtered.length + ' referans';
-
     filtered.forEach(function(brand, i) {
       var card = document.createElement('article');
       card.className = 'ref-card entering';
       card.style.setProperty('--i', i);
+      var tagsHtml = (brand.services || []).map(function(s) {
+        return '<span class="ref-card__service">' + s + '</span>';
+      }).join('');
+      var logoHtml = brand.logo ? '<div class="ref-card__logo"><img src="' + brand.logo + '" alt="' + brand.name + '"></div>' : '';
       card.innerHTML =
+        logoHtml +
         '<div class="ref-card__brand">' + brand.name + '</div>' +
-        '<span class="ref-card__sector">' + brand.sectorLabel + '</span>';
+        '<span class="ref-card__sector">' + brand.sectorLabel + '</span>' +
+        (tagsHtml ? '<div class="ref-card__services">' + tagsHtml + '</div>' : '');
       grid.appendChild(card);
     });
   }
 
-  // Initial render
-  renderCards('all');
+  // Fetch from API
+  fetch('/api/references')
+    .then(function(r) { return r.json(); })
+    .then(function(refs) {
+      allBrands = refs.map(function(r) {
+        var mapped = SECTOR_MAP[r.sector] || { filter: 'diger', label: r.sector };
+        return {
+          name: r.brand,
+          sector: mapped.filter,
+          sectorLabel: mapped.label,
+          services: r.services || [],
+          logo: r.logo || null
+        };
+      });
+      renderCards('all');
+    })
+    .catch(function() {
+      // Fallback
+      countEl.textContent = 'Yüklenemedi';
+    });
 
   // Filter click
   filterBtns.forEach(function(btn) {
@@ -837,7 +850,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     });
   });
 
-  // Reset
   if (resetBtn) {
     resetBtn.addEventListener('click', function() {
       currentSector = 'all';
