@@ -849,7 +849,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* Theme Toggle */
 (function() {
   var toggle = document.getElementById('theme-toggle');
@@ -1020,7 +1020,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .then(function(r) { return r.json(); })
     .then(function(d) {
       // Address card
-      var addr = d['address.tr'];
+      var addr = (d['address.en'] && d['address.en'].value) ? d['address.en'] : d['address.tr'];
       if (addr && addr.value) {
         var el = document.getElementById('ct-address');
         if (el) el.innerHTML = addr.value.replace(/,\s*/g, '<br>');
@@ -1078,9 +1078,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       }
 
       // Footer
-      var shortAddr = d['address.short.tr'];
+      var shortAddr = (d['address.short.en'] && d['address.short.en'].value) ? d['address.short.en'] : d['address.short.tr'];
       var footerInfo = document.getElementById('ct-footer-info');
       if (footerInfo) {
-        var fAddr = (shortAddr && shortAddr.value) || (addr && addr.value) || 'İstanbul, Kadıköy';
+        var fAddr = (shortAddr && shortAddr.value) || (addr && addr.value) || 'Istanbul, Kadikoy';
         var fPhone = (phone && phone.value) || '0216 410 39 99';
-        var fPhoneRaw = (phoneRaw && phoneRaw.value) || '02164103999
+        var fPhoneRaw = (phoneRaw && phoneRaw.value) || '02164103999';
+        var fEmail = (email && email.value) || 'info@teamguerilla.com';
+        footerInfo.innerHTML = '<li>' + fAddr + '</li>'
+          + '<li><a href="tel:' + fPhoneRaw + '">' + fPhone + '</a></li>'
+          + '<li><a href="mailto:' + fEmail + '">' + fEmail + '</a></li>';
+      }
+    })
+    .catch(function() { /* Fallback: keep defaults */ });
+})();
+</script>
+
+</body>
+</html>

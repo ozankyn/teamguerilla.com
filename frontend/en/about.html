@@ -507,32 +507,24 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-st
     .then(function(r) { return r.json(); })
     .then(function(d) {
       // Hero
-      if (d['hero.title.tr'] && d['hero.title.tr'].value) {
-        var t = document.getElementById('page-title');
-        if (t) t.innerHTML = d['hero.title.tr'].value;
-      }
-      if (d['hero.subtitle.tr'] && d['hero.subtitle.tr'].value) {
-        var s = document.getElementById('about-hero-desc');
-        if (s) s.textContent = d['hero.subtitle.tr'].value;
-      }
+      // Hero title — EN first, TR fallback
+      var heroT = (d['hero.title.en'] && d['hero.title.en'].value) ? d['hero.title.en'].value : (d['hero.title.tr'] && d['hero.title.tr'].value ? d['hero.title.tr'].value : null);
+      if (heroT) { var t = document.getElementById('page-title'); if (t) t.innerHTML = heroT; }
+      // Hero subtitle
+      var heroS = (d['hero.subtitle.en'] && d['hero.subtitle.en'].value) ? d['hero.subtitle.en'].value : (d['hero.subtitle.tr'] && d['hero.subtitle.tr'].value ? d['hero.subtitle.tr'].value : null);
+      if (heroS) { var s = document.getElementById('about-hero-desc'); if (s) s.textContent = heroS; }
       // Story
-      if (d['story.tr'] && d['story.tr'].value) {
-        var st = document.getElementById('about-story');
-        if (st) st.textContent = d['story.tr'].value;
-      }
-      // Value cards
+      var story = (d['story.en'] && d['story.en'].value) ? d['story.en'].value : (d['story.tr'] && d['story.tr'].value ? d['story.tr'].value : null);
+      if (story) { var st = document.getElementById('about-story'); if (st) st.textContent = story; }
+      // Value cards — EN first, TR fallback
       var vals = ['value0', 'value1', 'value2', 'value3'];
       for (var i = 0; i < 4; i++) {
-        var titleKey = vals[i] + '.title.tr';
-        var descKey = vals[i] + '.desc.tr';
-        if (d[titleKey] && d[titleKey].value) {
-          var vt = document.getElementById('val-title-' + i);
-          if (vt) vt.textContent = d[titleKey].value;
-        }
-        if (d[descKey] && d[descKey].value) {
-          var vd = document.getElementById('val-desc-' + i);
-          if (vd) vd.textContent = d[descKey].value;
-        }
+        var titleEN = vals[i] + '.title.en'; var titleTR = vals[i] + '.title.tr';
+        var descEN  = vals[i] + '.desc.en';  var descTR  = vals[i] + '.desc.tr';
+        var vTitle = (d[titleEN] && d[titleEN].value) ? d[titleEN].value : (d[titleTR] && d[titleTR].value ? d[titleTR].value : null);
+        var vDesc  = (d[descEN]  && d[descEN].value)  ? d[descEN].value  : (d[descTR]  && d[descTR].value  ? d[descTR].value  : null);
+        if (vTitle) { var vt = document.getElementById('val-title-' + i); if (vt) vt.textContent = vTitle; }
+        if (vDesc)  { var vd = document.getElementById('val-desc-'  + i); if (vd) vd.textContent = vDesc;  }
       }
     })
     .catch(function() { /* Keep defaults */ });

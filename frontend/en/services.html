@@ -897,9 +897,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section class="initiatives" aria-labelledby="init-title">
   <div class="container">
     <div class="initiatives__header reveal" style="--stagger: 0">
-      <p class="initiatives__label" aria-hidden="true">Girişimlerimiz</p>
-      <h2 id="init-title" class="initiatives__title">Grup şirketlerimiz</h2>
-      <p class="initiatives__subtitle">Saha pazarlamanın ötesinde, dijital ve prodüksiyon alanlarında da çözümler sunuyoruz.</p>
+      <p class="initiatives__label" aria-hidden="true">Our Ventures</p>
+      <h2 id="init-title" class="initiatives__title">Our group companies</h2>
+      <p class="initiatives__subtitle">Beyond field marketing, we also deliver solutions in digital and production.</p>
     </div>
 
     <div class="init-grid">
@@ -909,13 +909,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <img src="/assets/logos/social_logo_beyaz.png" alt="teamguerilla.social" class="logo-dark">
           <img src="/assets/logos/social_logo.png" alt="teamguerilla.social" class="logo-light">
         </div>
-        <span class="init-card__badge">Dijital</span>
+        <span class="init-card__badge">Digital</span>
         <h3 class="init-card__name">teamguerilla.social</h3>
-        <p class="init-card__desc">Sosyal medya yönetimi, dijital içerik üretimi ve online kampanya planlaması. Sahada kazandığımız deneyimi dijital dünyaya taşıyoruz.</p>
+        <p class="init-card__desc">Social media management, digital content production and online campaign planning. We bring our field experience to the digital world.</p>
         <div class="init-card__tags">
-          <span class="init-card__tag">Sosyal Medya</span>
-          <span class="init-card__tag">İçerik Üretimi</span>
-          <span class="init-card__tag">Dijital Kampanya</span>
+          <span class="init-card__tag">Social Media</span>
+          <span class="init-card__tag">Content Production</span>
+          <span class="init-card__tag">Digital Campaign</span>
         </div>
         <a href="https://teamguerilla.social" target="_blank" rel="noopener" class="init-card__link">
           teamguerilla.social
@@ -928,13 +928,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <img src="/assets/logos/vena_logo_beyaz.png" alt="Venagrup" class="logo-dark">
           <img src="/assets/logos/vena_logo_siyah.png" alt="Venagrup" class="logo-light">
         </div>
-        <span class="init-card__badge">Prodüksiyon</span>
+        <span class="init-card__badge">Production</span>
         <h3 class="init-card__name">Venagrup</h3>
-        <p class="init-card__desc">Dijital pazarlama stratejileri ve prodüksiyon hizmetleri. Ortaklık yapımızla daha geniş kapsamlı proje çözümleri sunuyoruz.</p>
+        <p class="init-card__desc">Digital marketing strategies and production services. Through our partnership structure, we deliver broader project solutions.</p>
         <div class="init-card__tags">
-          <span class="init-card__tag">Dijital Pazarlama</span>
-          <span class="init-card__tag">Prodüksiyon</span>
-          <span class="init-card__tag">Strateji</span>
+          <span class="init-card__tag">Digital Marketing</span>
+          <span class="init-card__tag">Production</span>
+          <span class="init-card__tag">Strategy</span>
         </div>
         <a href="https://venagrup.co" target="_blank" rel="noopener" class="init-card__link">
           venagrup.co
@@ -949,11 +949,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ===== CTA ===== -->
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="container">
-    <h2 id="cta-title" class="cta-section__title reveal" style="--stagger: 0">Hangi hizmet sizin için doğru?</h2>
-    <p class="cta-section__subtitle reveal" style="--stagger: 1">Projenizi dinleyelim, ihtiyacınıza en uygun çözümü birlikte belirleyelim.</p>
+    <h2 id="cta-title" class="cta-section__title reveal" style="--stagger: 0">Which service is right for you?</h2>
+    <p class="cta-section__subtitle reveal" style="--stagger: 1">Tell us about your project and we'll find the best solution together.</p>
     <div class="reveal" style="--stagger: 2">
       <a href="/en/contact" class="btn btn--primary">
-        Projenizi Konuşalım
+        Let's Talk About Your Project
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1124,15 +1124,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     var tagsHtml = sectors.map(function(s) {
       return '<span class="svc-card__tag">' + s + '</span>';
     }).join('');
+    var name = (svc.name_en && svc.name_en.trim()) ? svc.name_en : svc.name_tr;
+    var desc = (svc.description_en && svc.description_en.trim()) ? svc.description_en : svc.description_tr;
 
     return '<article class="svc-card reveal" style="--stagger: ' + idx + '" id="' + slug + '">' +
       '<div class="svc-card__image">' +
-        '<img src="' + img + '" alt="' + svc.name_tr + '" loading="lazy">' +
+        '<img src="' + img + '" alt="' + name + '" loading="lazy">' +
         '<span class="svc-card__number">' + String(idx + 1).padStart(2, '0') + '</span>' +
       '</div>' +
       '<div class="svc-card__body">' +
-        '<h3 class="svc-card__title">' + svc.name_tr + '</h3>' +
-        '<p class="svc-card__desc">' + svc.description_tr + '</p>' +
+        '<h3 class="svc-card__title">' + name + '</h3>' +
+        '<p class="svc-card__desc">' + desc + '</p>' +
         (tagsHtml ? '<div class="svc-card__sectors">' + tagsHtml + '</div>' : '') +
       '</div>' +
     '</article>';

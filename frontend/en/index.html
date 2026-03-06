@@ -1306,7 +1306,7 @@ button {
 </nav>
 
 <!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
+<div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Mobile menu">
   <a href="/en">Home</a><a href="/en/services">Services</a><a href="/en/references">References</a><a href="/en/about">About Us</a><a href="/en/contact">Contact</a><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Careers ↗</a>
 </div>
 
@@ -1330,7 +1330,7 @@ button {
     </p>
     <div class="hero__cta">
       <a href="/en/contact" class="btn-primary" id="hero-cta-btn">
-        Projenizi Konuşalım
+        Let's Talk About Your Project
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
@@ -1407,7 +1407,7 @@ button {
 
     <div class="services__cta reveal">
       <a href="/en/services" class="services__cta-link">
-        Tüm Hizmetlerimizi İnceleyin
+        Explore All Our Services
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1572,7 +1572,7 @@ button {
 <!-- ============================================
      JAVASCRIPT
      ============================================ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function() {
   'use strict';
 
@@ -1709,21 +1709,14 @@ button {
         if (heroImg) heroImg.src = data['hero.image'].value;
       }
       // Hero texts
-      if (data['hero.title.en'] && data['hero.title.en'].value) {
-        var t = document.getElementById('hero-title');
-        if (t) t.innerHTML = data['hero.title.en'].value;
-      }
-      if (data['hero.subtitle.en'] && data['hero.subtitle.en'].value) {
-        var s = document.getElementById('hero-subtitle');
-        if (s) s.textContent = data['hero.subtitle.en'].value;
-      }
+      var heroTitle = (data['hero.title.en'] && data['hero.title.en'].value) ? data['hero.title.en'].value : (data['hero.title.tr'] && data['hero.title.tr'].value ? data['hero.title.tr'].value : null);
+      if (heroTitle) { var t = document.getElementById('hero-title'); if (t) t.innerHTML = heroTitle; }
+      var heroSub = (data['hero.subtitle.en'] && data['hero.subtitle.en'].value) ? data['hero.subtitle.en'].value : (data['hero.subtitle.tr'] && data['hero.subtitle.tr'].value ? data['hero.subtitle.tr'].value : null);
+      if (heroSub) { var s = document.getElementById('hero-subtitle'); if (s) s.textContent = heroSub; }
+      // CTA: EN override if set in admin, otherwise keep HTML default
       if (data['hero.cta.en'] && data['hero.cta.en'].value) {
         var c = document.getElementById('hero-cta-btn');
-        if (c) {
-          var svg = c.querySelector('svg');
-          var svgHtml = svg ? svg.outerHTML : '';
-          c.innerHTML = data['hero.cta.en'].value + ' ' + svgHtml;
-        }
+        if (c) { var svg = c.querySelector('svg'); var svgHtml = svg ? svg.outerHTML : ''; c.innerHTML = data['hero.cta.en'].value + ' ' + svgHtml; }
       }
       // Stats
       var statsMap = [
@@ -1734,7 +1727,7 @@ button {
       ];
       statsMap.forEach(function(s) {
         var valKey = s.key + '.value';
-        var lblKey = s.key + '.label.tr';
+        var lblKey = s.key + '.label.en'; // EN page: skip TR label override
         if (data[valKey] && data[valKey].value) {
           var el = document.getElementById('stat-val-' + s.idx);
           if (el) {
@@ -1743,6 +1736,7 @@ button {
             if (num) el.setAttribute('data-count', num);
           }
         }
+        // EN labels are hardcoded in HTML — only update if admin has EN label defined
         if (data[lblKey] && data[lblKey].value) {
           var lbl = document.getElementById('stat-lbl-' + s.idx);
           if (lbl) lbl.textContent = data[lblKey].value;
@@ -1775,4 +1769,12 @@ button {
       }).join('');
 
       // Duplicate for seamless marquee
-      track.innerHTML = '<div class=
+      track.innerHTML = '<div class="trusted__scroll" aria-hidden="true">' + items + '</div>'
+        + '<div class="trusted__scroll" aria-hidden="true">' + items + '</div>';
+    })
+    .catch(function() { /* Fallback: keep placeholder brands */ });
+})();
+</script>
+
+</body>
+</html>

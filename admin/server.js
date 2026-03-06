@@ -64,11 +64,11 @@ const pages = {
   '/biz-kimiz': 'biz-kimiz.html',
   '/iletisim': 'iletisim.html',
   // English routes
-  '/en': 'index.html',
-  '/en/services': 'hizmetler.html',
-  '/en/references': 'referanslar.html',
-  '/en/about': 'biz-kimiz.html',
-  '/en/contact': 'iletisim.html',
+  '/en': 'en/index.html',
+  '/en/services': 'en/services.html',
+  '/en/references': 'en/references.html',
+  '/en/about': 'en/about.html',
+  '/en/contact': 'en/contact.html',
 };
 
 Object.entries(pages).forEach(([route, file]) => {
