@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Team Guerilla Marketing</title>
+<meta name="description" content="Learn about Team Guerilla Marketing — 20+ years of field marketing experience, 500+ professionals, operating in 81 provinces across Turkey.">>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* TOKENS */
+[data-theme="dark"]{--bg-primary:#0D0D0D;--bg-secondary:#111111;--bg-card:#1A1A1A;--bg-card-hover:#222;--bg-footer:#080808;--bg-nav:rgba(13,13,13,.88);--bg-mobile-menu:rgba(13,13,13,.97);--accent:#E63946;--accent-hover:#FF4D5A;--accent-glow:rgba(230,57,70,.25);--accent-soft:rgba(230,57,70,.06);--text-primary:#FFF;--text-body:#C8C8C8;--text-muted:#888;--text-subtle:#555;--border-subtle:rgba(255,255,255,.06);--border-light:rgba(255,255,255,.12);--shadow-card:0 4px 24px rgba(0,0,0,.3);--shadow-elevated:0 8px 40px rgba(0,0,0,.4);--logo-filter:brightness(0) invert(1);--grid-line:rgba(255,255,255,.02);--toggle-bg:#2A2A2A;--toggle-knob:#FFF;--timeline-line:rgba(255,255,255,.08);--timeline-dot-bg:#0D0D0D}
+[data-theme="light"]{--bg-primary:#F8F7F5;--bg-secondary:#F0EFEC;--bg-card:#FFF;--bg-card-hover:#F5F4F2;--bg-footer:#1A1A1A;--bg-nav:rgba(248,247,245,.88);--bg-mobile-menu:rgba(248,247,245,.97);--accent:#D62839;--accent-hover:#E63946;--accent-glow:rgba(214,40,57,.2);--accent-soft:rgba(214,40,57,.04);--text-primary:#111;--text-body:#444;--text-muted:#777;--text-subtle:#AAA;--border-subtle:rgba(0,0,0,.06);--border-light:rgba(0,0,0,.1);--shadow-card:0 2px 16px rgba(0,0,0,.06);--shadow-elevated:0 8px 32px rgba(0,0,0,.08);--logo-filter:none;--grid-line:rgba(0,0,0,.03);--toggle-bg:#E0DDD8;--toggle-knob:#FFF;--timeline-line:rgba(0,0,0,.1);--timeline-dot-bg:#F8F7F5}
+[data-theme="light"] .footer{--text-primary:#FFF;--text-body:#C8C8C8;--text-muted:#888;--text-subtle:#555;--border-subtle:rgba(255,255,255,.06)}
+:root{--font-display:'Outfit',sans-serif;--font-body:'Plus Jakarta Sans',sans-serif;--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:40px;--space-6:48px;--space-8:64px;--space-10:80px;--space-12:96px;--container-max:1320px;--nav-height:72px;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--shadow-glow:0 0 40px var(--accent-glow);--ease-out:cubic-bezier(.16,1,.3,1);--ease-spring:cubic-bezier(.34,1.56,.64,1);--duration-fast:200ms;--duration-normal:400ms;--duration-slow:600ms;--duration-theme:500ms}
+html,body,.nav,.nav.scrolled,.footer,.page-hero,.about-section,.values,.timeline-section,.team-section,.team-carousel,.cta-section{transition:background-color var(--duration-theme) var(--ease-out),color var(--duration-theme) var(--ease-out),border-color var(--duration-theme) var(--ease-out)}
+
+/* RESET */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--text-body);background:var(--bg-primary);overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-style:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--space-3)}
+@media(min-width:768px){.container{padding:0 var(--space-5)}}
+@media(min-width:1200px){.container{padding:0 var(--space-8)}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-height);transition:background var(--duration-normal) var(--ease-out),backdrop-filter var(--duration-normal) var(--ease-out)}
+.nav.scrolled{background:var(--bg-nav);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border-subtle)}
+.nav__inner{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-3);display:flex;align-items:center;justify-content:space-between;height:100%}
+@media(min-width:1200px){.nav__inner{padding:0 var(--space-8)}}
+.nav__logo{display:flex;align-items:center}.nav__logo img{height: 44px;width:auto;filter:var(--logo-filter);transition:filter var(--duration-theme) var(--ease-out)}
+.nav__right{display:flex;align-items:center;gap:var(--space-2)}@media(min-width:768px){.nav__right{gap:var(--space-4)}}
+.nav__links{display:none;gap:var(--space-5);align-items:center}@media(min-width:1024px){.nav__links{display:flex}}
+.nav__links a{font-weight:500;font-size:14px;color:var(--text-muted);transition:color var(--duration-fast) var(--ease-out);padding:var(--space-1) 0;position:relative}
+.nav__links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform var(--duration-normal) var(--ease-out)}
+.nav__links a:hover,.nav__links a[aria-current="page"]{color:var(--text-primary)}
+.nav__links a:hover::after,.nav__links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
+.theme-toggle{position:relative;width:52px;height:28px;background:var(--toggle-bg);border:1px solid var(--border-subtle);border-radius:99px;cursor:pointer;transition:background var(--duration-theme) var(--ease-out)}
+.theme-toggle__knob{position:absolute;top:3px;left:3px;width:20px;height:20px;background:var(--toggle-knob);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform var(--duration-normal) var(--ease-spring)}
+[data-theme="light"] .theme-toggle__knob{transform:translateX(24px)}
+.theme-toggle__icon{width:12px;height:12px;color:#333}.theme-toggle__icon--sun{display:none}
+[data-theme="light"] .theme-toggle__icon--moon{display:none}[data-theme="light"] .theme-toggle__icon--sun{display:block}
+.nav__lang{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500}
+.nav__lang-active{color:var(--text-primary)}.nav__lang-inactive{color:var(--text-subtle);transition:color var(--duration-fast) var(--ease-out)}.nav__lang-inactive:hover{color:var(--text-primary)}.nav__lang-divider{color:var(--text-subtle);font-size:11px}
+.nav__toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}@media(min-width:1024px){.nav__toggle{display:none}}
+.nav__toggle span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:transform var(--duration-normal) var(--ease-out),opacity var(--duration-fast)}
+.nav__toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav__toggle.active span:nth-child(2){opacity:0}.nav__toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg-mobile-menu);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  padding: calc(var(--nav-height) + var(--space-8)) var(--space-3) var(--space-3);
+  flex-direction: column; gap: var(--space-5);
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu.active { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
+  color: var(--text-primary); transition: color var(--duration-fast) var(--ease-out);
+}
+.mobile-menu a:hover,.mobile-menu a[aria-current="page"]{color:var(--accent)}
+
+/* PAGE HERO */
+.page-hero{padding-top:calc(var(--nav-height) + var(--space-10));padding-bottom:var(--space-10);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 50% 70% at 50% 50%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 50% 70% at 50% 50%,black 20%,transparent 70%)}
+.page-hero::after{content:'';position:absolute;top:-100px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,var(--accent-soft) 0%,transparent 70%);pointer-events:none}
+.page-hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:var(--space-6);align-items:center}
+@media(min-width:768px){.page-hero__grid{grid-template-columns:1fr 1fr;gap:var(--space-8)}}
+.page-hero__content{max-width:560px}
+.page-hero__label{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:var(--space-3)}
+.page-hero__title{font-family:var(--font-display);font-weight:800;font-size:clamp(36px,5vw,60px);line-height:1.08;letter-spacing:-2px;color:var(--text-primary);margin-bottom:var(--space-3)}
+.page-hero__desc{font-size:clamp(16px,1.8vw,19px);line-height:1.7;color:var(--text-body)}
+.page-hero__image{border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;position:relative}
+.page-hero__image img{width:100%;height:100%;object-fit:cover}
+.page-hero__image::after{content:'';position:absolute;inset:0;border-radius:inherit;border:1px solid var(--border-subtle);pointer-events:none}
+
+/* STORY */
+.about-section{padding:var(--space-10) 0}.about-section--alt{background:var(--bg-secondary)}
+.about__intro{max-width:780px;margin:0 auto;text-align:center}
+.about__intro-title{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-1.5px;color:var(--text-primary);line-height:1.1;margin-bottom:var(--space-3)}
+.about__intro-text{font-size:clamp(15px,1.5vw,18px);line-height:1.75;color:var(--text-body)}
+
+/* VALUES */
+.values{padding:var(--space-12) 0}
+.values__header{text-align:center;margin-bottom:var(--space-8)}
+.values__label{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:var(--space-2)}
+.values__title{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-1.5px;color:var(--text-primary);line-height:1.1}
+.values__grid{display:grid;grid-template-columns:1fr;gap:var(--space-2)}
+@media(min-width:768px){.values__grid{grid-template-columns:repeat(2,1fr)}}
+.value-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);position:relative;overflow:hidden;transition:all var(--duration-fast) var(--ease-out)}
+.value-card:hover{border-color:var(--border-light);transform:translateY(-2px);box-shadow:var(--shadow-card)}
+.value-card__number{font-family:var(--font-display);font-weight:900;font-size:72px;line-height:1;position:absolute;top:-8px;right:16px;pointer-events:none;user-select:none}
+[data-theme="dark"] .value-card__number{color:rgba(230,57,70,.08)}[data-theme="light"] .value-card__number{color:rgba(214,40,57,.06)}
+.value-card__icon{width:44px;height:44px;color:var(--accent);margin-bottom:var(--space-3);flex-shrink:0}
+.value-card__title{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--text-primary);margin-bottom:var(--space-1);letter-spacing:-.5px}
+.value-card__desc{font-size:15px;line-height:1.7;color:var(--text-body)}
+
+/* TIMELINE */
+.timeline-section{padding:var(--space-12) 0;background:var(--bg-secondary)}
+.timeline__header{text-align:center;margin-bottom:var(--space-8)}
+.timeline__label{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:var(--space-2)}
+.timeline__title{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-1.5px;color:var(--text-primary);line-height:1.1}
+.timeline{position:relative;max-width:700px;margin:0 auto;padding-left:var(--space-5)}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--timeline-line)}
+.timeline__item{position:relative;padding-bottom:var(--space-6);padding-left:var(--space-4)}.timeline__item:last-child{padding-bottom:0}
+.timeline__dot{position:absolute;left:calc(-1 * var(--space-5) + 1px);top:4px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);background:var(--timeline-dot-bg);z-index:1;transition:background var(--duration-theme) var(--ease-out)}
+.timeline__year{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--accent);letter-spacing:1px;margin-bottom:4px}
+.timeline__text{font-size:15px;line-height:1.7;color:var(--text-body)}
+
+/* TEAM INFO */
+.team-section{padding:var(--space-12) 0}
+.team__grid{display:grid;grid-template-columns:1fr;gap:var(--space-6);align-items:center}
+@media(min-width:768px){.team__grid{grid-template-columns:1fr 1fr;gap:var(--space-8)}}
+.team__title{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.5vw,40px);letter-spacing:-1.5px;color:var(--text-primary);line-height:1.1;margin-bottom:var(--space-3)}
+.team__desc{font-size:clamp(15px,1.5vw,17px);line-height:1.75;color:var(--text-body);margin-bottom:var(--space-4)}
+.team__stats{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-2)}
+.team__stat{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:var(--space-3);text-align:center}
+.team__stat-number{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3vw,36px);color:var(--accent);line-height:1}
+.team__stat-label{font-size:13px;color:var(--text-muted);margin-top:4px}
+.team__image{border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;position:relative}
+.team__image img{width:100%;height:100%;object-fit:cover}
+.team__image::after{content:'';position:absolute;inset:0;border-radius:inherit;border:1px solid var(--border-subtle);pointer-events:none}
+
+/* TEAM CAROUSEL */
+.team-carousel{padding:var(--space-10) 0;background:var(--bg-secondary);overflow:hidden}
+.team-carousel__header{text-align:center;margin-bottom:var(--space-6);padding:0 var(--space-3)}
+.team-carousel__label{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:var(--space-1)}
+.team-carousel__title{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,3.5vw,36px);letter-spacing:-1px;color:var(--text-primary);line-height:1.1}
+.carousel-row{margin-bottom:var(--space-2)}.carousel-row:last-child{margin-bottom:0}
+.carousel-wrapper{position:relative}
+.carousel-wrapper::before,.carousel-wrapper::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.carousel-wrapper::before{left:0;background:linear-gradient(to right,var(--bg-secondary),transparent)}
+.carousel-wrapper::after{right:0;background:linear-gradient(to left,var(--bg-secondary),transparent)}
+.carousel-track{display:flex;gap:var(--space-2);width:max-content;will-change:transform}
+.carousel-track.scrolling{animation:marquee var(--dur,45s) linear infinite}
+.carousel-track:hover{animation-play-state:paused}
+.carousel-row--reverse .carousel-track.scrolling{animation-name:marqueeReverse}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes marqueeReverse{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+
+.person-card{flex-shrink:0;width:172px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);overflow:hidden;transition:all var(--duration-fast) var(--ease-out)}
+@media(min-width:768px){.person-card{width:192px}}
+.person-card:hover{border-color:var(--border-light);transform:translateY(-3px);box-shadow:var(--shadow-card)}
+.person-card__photo{width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--bg-secondary)}
+.person-card__photo img{width:100%;height:100%;object-fit:cover;transition:transform var(--duration-slow) var(--ease-out),filter var(--duration-slow) var(--ease-out);filter:grayscale(20%)}
+.person-card:hover .person-card__photo img{transform:scale(1.06);filter:grayscale(0%)}
+.person-card__info{padding:12px 14px}
+.person-card__name{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-primary);letter-spacing:-.2px;line-height:1.3}
+.person-card__role{font-size:12px;color:var(--text-muted);margin-top:2px}
+
+@media(prefers-reduced-motion:reduce){.carousel-track.scrolling{animation:none}}
+
+/* CTA */
+.cta-section{padding:var(--space-12) 0;text-align:center;background:var(--bg-primary)}
+.cta-section__title{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,4vw,48px);letter-spacing:-1.5px;color:var(--text-primary);line-height:1.1;margin-bottom:var(--space-2)}
+.cta-section__subtitle{font-size:clamp(15px,1.5vw,18px);color:var(--text-muted);margin-bottom:var(--space-5);max-width:520px;margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:16px 36px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--duration-fast) var(--ease-out)}
+.btn--primary{background:var(--accent);color:#FFF;box-shadow:var(--shadow-glow)}
+.btn--primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 0 60px var(--accent-glow)}
+
+/* FOOTER */
+.footer{background:var(--bg-footer);padding:var(--space-10) 0 var(--space-4)}
+.footer__grid{display:grid;grid-template-columns:1fr;gap:var(--space-6);padding-bottom:var(--space-8);border-bottom:1px solid var(--border-subtle)}
+@media(min-width:768px){.footer__grid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.footer__brand-logo{height: 38px;width:auto;filter:brightness(0) invert(1);margin-bottom:var(--space-2)}
+.footer__brand-desc{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:280px;margin-bottom:var(--space-3)}
+.footer__social{display:flex;gap:var(--space-2)}
+.footer__social a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);color:var(--text-muted);transition:color var(--duration-fast) var(--ease-out),background var(--duration-fast) var(--ease-out)}
+.footer__social a:hover{color:var(--text-primary);background:rgba(255,255,255,.06)}.footer__social svg{width:18px;height:18px}
+.footer__col-title{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-primary);margin-bottom:var(--space-3);text-transform:uppercase;letter-spacing:1px}
+.footer__links{display:flex;flex-direction:column;gap:var(--space-1)}.footer__links li,.footer__links a{font-size:14px;color:var(--text-muted);transition:color var(--duration-fast) var(--ease-out)}.footer__links a:hover{color:var(--text-primary)}
+.footer__bottom{display:flex;flex-direction:column;gap:var(--space-2);padding-top:var(--space-4);align-items:center;text-align:center}
+@media(min-width:768px){.footer__bottom{flex-direction:row;justify-content:space-between;text-align:left}}
+.footer__copy{font-size:13px;color:var(--text-subtle)}.footer__legal{display:flex;gap:var(--space-3)}.footer__legal a{font-size:13px;color:var(--text-subtle);transition:color var(--duration-fast) var(--ease-out)}.footer__legal a:hover{color:var(--text-muted)}
+
+/* REVEAL & A11Y */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity var(--duration-slow) var(--ease-out),transform var(--duration-slow) var(--ease-out);transition-delay:calc(var(--stagger,0) * 80ms)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/en" class="nav__logo" aria-label="Team Guerilla Marketing homepage">
+      <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" onerror="this.onerror=null;this.parentElement.innerHTML='<span style=\'font-family:var(--font-display);font-weight:800;font-size:24px;color:var(--text-primary);letter-spacing:-1px\'>Team<span style=color:var(--accent)>G</span></span>'">
+    </a>
+        <ul class="nav__links" role="list">
+      <li><a href="/en">Home</a></li>
+      <li><a href="/en/services">Services</a></li>
+      <li><a href="/en/references">References</a></li>
+      <li><a href="/en/about" aria-current="page">About Us</a></li>
+      <li><a href="/en/contact">Contact</a></li>
+      <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Careers ↗</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" role="switch" aria-checked="false">
+        <div class="theme-toggle__knob">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+      </button>
+      <div class="nav__lang" aria-label="Language selection">
+        <a href="/biz-kimiz" class="nav__lang-inactive">TR</a>
+        <span class="nav__lang-divider" aria-hidden="true">|</span>
+        <span class="nav__lang-active" aria-current="true">EN</span>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
+  <a href="/en">Home</a><a href="/en/services">Services</a><a href="/en/references">References</a><a href="/en/about">About Us</a><a href="/en/contact">Contact</a><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Careers ↗</a>
+</div>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <div class="page-hero__grid">
+      <div class="page-hero__content reveal" style="--stagger:0">
+        <p class="page-hero__label" aria-hidden="true">About Us</p>
+        <h1 id="page-title" class="page-hero__title">20+ years of field experience</h1>
+        <p class="page-hero__desc" id="about-hero-desc">Founded in Istanbul in 2005, Team Guerilla Marketing connects brands with consumers in the field across Turkey. In an increasingly digital world, we believe in the power of direct human contact.</p>
+      </div>
+      <div class="page-hero__image reveal" style="--stagger:1">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&fit=crop&auto=format" alt="Ekip çalışması" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="about-section about-section--alt" aria-labelledby="story-title">
+  <div class="container">
+    <div class="about__intro reveal" style="--stagger:0">
+      <h2 id="story-title" class="about__intro-title">Our Story</h2>
+      <p class="about__intro-text" id="about-story">We started small in 2005 with one conviction: the strongest connection between a brand and its consumer is built in the field. That belief has guided our growth. Today, with a professional team operating across all 81 provinces of Turkey, we bring the same dedication, energy and field-first mindset to every project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values" aria-labelledby="values-title">
+  <div class="container">
+    <div class="values__header reveal" style="--stagger:0">
+      <p class="values__label" aria-hidden="true">Our Values</p>
+      <h2 id="values-title" class="values__title">What makes us us</h2>
+    </div>
+    <div class="values__grid">
+      <article class="value-card reveal" style="--stagger:0">
+        <span class="value-card__number" aria-hidden="true">01</span>
+        <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 4v40M4 24h40"/><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="18" stroke-dasharray="4 4"/></svg>
+        <h3 class="value-card__title" id="val-title-0">Strong in the Field</h3>
+        <p class="value-card__desc" id="val-desc-0">Not desk strategies — field teams that produce real results. With capacity to operate in all 81 provinces, we reach every point.</p>
+      </article>
+      <article class="value-card reveal" style="--stagger:1">
+        <span class="value-card__number" aria-hidden="true">02</span>
+        <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 24l6 6 14-14"/><rect x="6" y="6" width="36" height="36" rx="6"/></svg>
+        <h3 class="value-card__title" id="val-title-1">We Work with Data</h3>
+        <p class="value-card__desc" id="val-desc-1">We report every operation, measure every campaign, analyse every outcome. We give our clients data, not gut feeling.</p>
+      </article>
+      <article class="value-card reveal" style="--stagger:2">
+        <span class="value-card__number" aria-hidden="true">03</span>
+        <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 16c0-6.6 5.4-12 12-12s12 5.4 12 12"/><path d="M8 28c0-8.8 7.2-16 16-16s16 7.2 16 16"/><circle cx="24" cy="36" r="6"/></svg>
+        <h3 class="value-card__title" id="val-title-2">Fast and Flexible</h3>
+        <p class="value-card__desc" id="val-desc-2">Every brand is different, every project unique. We build tailored solutions rather than off-the-shelf packages.</p>
+      </article>
+      <article class="value-card reveal" style="--stagger:3">
+        <span class="value-card__number" aria-hidden="true">04</span>
+        <svg class="value-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 20a8 8 0 1116 0"/><path d="M12 32c0-6.6 5.4-12 12-12s12 5.4 12 12"/><circle cx="24" cy="12" r="6"/><circle cx="10" cy="36" r="5"/><circle cx="38" cy="36" r="5"/></svg>
+        <h3 class="value-card__title" id="val-title-3">People First</h3>
+        <p class="value-card__desc" id="val-desc-3">We invest in our people because the difference in the field is made by people. Ongoing training, fair conditions and motivation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" aria-labelledby="timeline-title">
+  <div class="container">
+    <div class="timeline__header reveal" style="--stagger:0">
+      <p class="timeline__label" aria-hidden="true">Our Journey</p>
+      <h2 id="timeline-title" class="timeline__title">From 2005 to today</h2>
+    </div>
+    <div class="timeline" role="list" aria-label="Company timeline">
+      <div class="timeline__item reveal" style="--stagger:0" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2005</div><p class="timeline__text">Team Guerilla Marketing was founded in Mecidiyeköy, Istanbul. Our first projects in the FMCG sector covered roadshows, concerts, Horeca sponsorships and various event services.</p></div>
+      <div class="timeline__item reveal" style="--stagger:1" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2008</div><p class="timeline__text">Sales support projects launched nationwide, laying the foundations of our Retail department.</p></div>
+      <div class="timeline__item reveal" style="--stagger:2" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2010</div><p class="timeline__text">We organised our first congress for EPDK, marking the launch of our M.I.C.E. services.</p></div>
+      <div class="timeline__item reveal" style="--stagger:3" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2013</div><p class="timeline__text">Both Event and Retail departments expanded significantly, welcoming many new clients to our portfolio.</p></div>
+      <div class="timeline__item reveal" style="--stagger:4" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2016</div><p class="timeline__text">We restructured the Retail department, establishing dedicated sub-teams for training, reporting, fleet management and software.</p></div>
+      <div class="timeline__item reveal" style="--stagger:5" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2019</div><p class="timeline__text">We delivered our first Neuro Marketing projects, introducing a new frontier to field consumer research in Turkey.</p></div>
+      <div class="timeline__item reveal" style="--stagger:6" role="listitem"><div class="timeline__dot" aria-hidden="true"></div><div class="timeline__year">2025</div><p class="timeline__text">We celebrated our 20th anniversary. With a team of 500+, we now operate across all 81 provinces, serve 8 distinct service areas and continue to grow with new ventures.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM INFO -->
+<section class="team-section" aria-labelledby="team-title">
+  <div class="container">
+    <div class="team__grid">
+      <div class="team__content reveal" style="--stagger:0">
+        <h2 id="team-title" class="team__title">Our Team</h2>
+        <p class="team__desc">Our 500+ strong field team is made up of specialists each expert in their discipline. Project managers, field coordinators, designers and logistics — all working together to ensure flawless representation of your brand.</p>
+        <div class="team__stats">
+          <div class="team__stat"><div class="team__stat-number">500+</div><div class="team__stat-label">Professionals</div></div>
+          <div class="team__stat"><div class="team__stat-number">81</div><div class="team__stat-label">Provinces</div></div>
+          <div class="team__stat"><div class="team__stat-number">8+</div><div class="team__stat-label">Avg. yrs experience</div></div>
+          <div class="team__stat"><div class="team__stat-number">%92</div><div class="team__stat-label">Team retention</div></div>
+        </div>
+      </div>
+      <div class="team__image reveal" style="--stagger:1">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&fit=crop&auto=format" alt="Team Guerilla teamwork" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM CAROUSEL -->
+<section class="team-carousel" aria-label="Our team members">
+  <div class="team-carousel__header reveal" style="--stagger:0">
+    <p class="team-carousel__label" aria-hidden="true">Team</p>
+    <h2 class="team-carousel__title">The faces behind the work</h2>
+  </div>
+  <!-- Row 1 — scrolls left -->
+  <div class="carousel-row">
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carousel-row-1" style="--dur:50s"></div>
+    </div>
+  </div>
+  <!-- Row 2 — scrolls right -->
+  <div class="carousel-row carousel-row--reverse">
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carousel-row-2" style="--dur:55s"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title" class="cta-section__title reveal" style="--stagger:0">Let's work together</h2>
+    <p class="cta-section__subtitle reveal" style="--stagger:1">We're here to strengthen your brand in the field. Let's talk about your project.</p>
+    <div class="reveal" style="--stagger:2">
+      <a href="/en/contact" class="btn btn--primary">Get in Touch <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="footer__brand-logo" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin-bottom:16px">Team Guerilla Marketing</div>
+        <p class="footer__brand-desc">Since 2005, connecting brands with consumers in the field. A nationwide field marketing agency operating across Turkey.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/team-gerilla-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Retail</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/en/services#merchandising">Merchandising</a></li>
+          <li><a href="/en/services#sales-support">Sales Support</a></li>
+          <li><a href="/en/services#mystery-shopper">Mystery Shopper</a></li>
+          <li><a href="/en/services#pop-posm">POP / POSM Logistics</a></li>
+          <li><a href="/en/services#software">Software Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Event</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/en/services#sampling">Sampling / Tasting</a></li>
+          <li><a href="/en/services#roadshow">Roadshow</a></li>
+          <li><a href="/en/services#guerrilla">Guerrilla Marketing</a></li>
+          <li><a href="/en/services#event">Event Management</a></li>
+          <li><a href="/en/services#mice">M.I.C.E.</a></li>
+          <li><a href="/en/services#neuro">Neuro Marketing</a></li>
+          <li><a href="/en/services#design">Design Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Corporate</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="/en/about">About Us</a></li>
+          <li><a href="/en/references">References</a></li>
+          <li><a href="/en/contact">Contact</a></li>
+          <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-subtle)"><a href="https://teamguerilla.social" target="_blank" rel="noopener">teamguerilla.social ↗</a></li>
+          <li><a href="https://venagrup.co" target="_blank" rel="noopener">Venagrup ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title">Contact</h3>
+        <ul class="footer__links" role="list">
+          <li>İstanbul, Maltepe</li>
+          <li><a href="tel:02164103999">0216 410 39 99</a></li>
+          <li><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Team Guerilla Marketing. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">KVKK</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Theme */
+(function(){var t=document.getElementById('theme-toggle'),h=document.documentElement,s=localStorage.getItem('tg-theme'),d=window.matchMedia('(prefers-color-scheme:dark)').matches,i=s||(d?'dark':'light');h.setAttribute('data-theme',i);if(t)t.setAttribute('aria-checked',i==='light'?'true':'false');if(t)t.addEventListener('click',function(){var c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('tg-theme',n);this.setAttribute('aria-checked',n==='light'?'true':'false')})})();
+
+/* Nav Scroll */
+(function(){var n=document.querySelector('.nav'),t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){n.classList.toggle('scrolled',window.scrollY>40);t=false});t=true}})})();
+
+/* Mobile Menu */
+(function(){var t=document.querySelector('.nav__toggle'),m=document.getElementById('mobile-menu');if(!t||!m)return;t.addEventListener('click',function(){var o=!m.classList.contains('active');m.classList.toggle('active',o);this.classList.toggle('active',o);this.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false');document.body.style.overflow=''})})})();
+
+/* Reveal */
+(function(){var e=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){e.forEach(function(el){el.classList.add('visible')});return}var o=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});e.forEach(function(el){o.observe(el)})})();
+
+/* Team Carousel */
+(function(){
+  var defaultPhoto = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop&crop=face&auto=format';
+
+  var fallbackPhotos = [
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&q=80&fit=crop&crop=face&auto=format',
+    'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80&fit=crop&crop=face&auto=format'
+  ];
+
+  function card(d){
+    return '<article class="person-card"><div class="person-card__photo"><img src="'+d.photo+'" alt="'+d.name+'" loading="lazy"></div><div class="person-card__info"><div class="person-card__name">'+d.name+'</div><div class="person-card__role">'+d.role+'</div></div></article>';
+  }
+
+  function fill(id, data){
+    var el=document.getElementById(id);
+    if(!el)return;
+    var html='';
+    for(var r=0;r<3;r++){for(var i=0;i<data.length;i++){html+=card(data[i])}}
+    el.innerHTML=html;
+    requestAnimationFrame(function(){el.classList.add('scrolling')});
+  }
+
+  fetch('/api/team')
+    .then(function(r){return r.json()})
+    .then(function(team){
+      var active = team.filter(function(t){return t.active !== false});
+      active.sort(function(a,b){return (a.order||0)-(b.order||0)});
+
+      var members = active.map(function(t, i){
+        return {
+          name: t.name,
+          role: t.title_tr || '',
+          photo: t.photo || fallbackPhotos[i % fallbackPhotos.length]
+        };
+      });
+
+      var half = Math.ceil(members.length / 2);
+      fill('carousel-row-1', members.slice(0, half));
+      fill('carousel-row-2', members.slice(half));
+    })
+    .catch(function(){
+      // Fallback if API fails
+      fill('carousel-row-1', []);
+      fill('carousel-row-2', []);
+    });
+})();
+</script>
+
+<!-- Dynamic content from Admin API -->
+<script>
+(function() {
+  fetch('/api/content/page/about')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Hero
+      if (d['hero.title.tr'] && d['hero.title.tr'].value) {
+        var t = document.getElementById('page-title');
+        if (t) t.innerHTML = d['hero.title.tr'].value;
+      }
+      if (d['hero.subtitle.tr'] && d['hero.subtitle.tr'].value) {
+        var s = document.getElementById('about-hero-desc');
+        if (s) s.textContent = d['hero.subtitle.tr'].value;
+      }
+      // Story
+      if (d['story.tr'] && d['story.tr'].value) {
+        var st = document.getElementById('about-story');
+        if (st) st.textContent = d['story.tr'].value;
+      }
+      // Value cards
+      var vals = ['value0', 'value1', 'value2', 'value3'];
+      for (var i = 0; i < 4; i++) {
+        var titleKey = vals[i] + '.title.tr';
+        var descKey = vals[i] + '.desc.tr';
+        if (d[titleKey] && d[titleKey].value) {
+          var vt = document.getElementById('val-title-' + i);
+          if (vt) vt.textContent = d[titleKey].value;
+        }
+        if (d[descKey] && d[descKey].value) {
+          var vd = document.getElementById('val-desc-' + i);
+          if (vd) vd.textContent = d[descKey].value;
+        }
+      }
+    })
+    .catch(function() { /* Keep defaults */ });
+})();
+</script>
+
+</body>
+</html>
