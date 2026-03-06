@@ -1,0 +1,773 @@
+[
+  {
+    "id": "d9d10967-6233-42de-a423-5d30643e34cd",
+    "brand": "Coca-Cola",
+    "sector": "fmcg",
+    "services": [
+      "sampling",
+      "roadshow",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/5c9bb32d-6c7c-4687-b261-d07e2fa0cb99.png",
+    "order": 0,
+    "active": false,
+    "createdAt": "2026-03-02T07:26:11.812Z",
+    "updatedAt": "2026-03-02T13:58:54.195Z"
+  },
+  {
+    "id": "6b0b5db1-749a-4968-bfdc-e469491fe6c6",
+    "brand": "PepsiCo",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "sales-support",
+      "pop-posm",
+      "sampling"
+    ],
+    "logo": "/uploads/logos/27746c09-3b4b-4003-938b-0976450a722a.png",
+    "order": 1,
+    "active": false,
+    "createdAt": "2026-03-02T07:26:11.812Z",
+    "updatedAt": "2026-03-02T13:59:18.329Z"
+  },
+  {
+    "id": "fd6cdc36-b419-482f-8e33-6222b7061406",
+    "brand": "P&G",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "sales-support"
+    ],
+    "logo": "/uploads/logos/eb0716f4-a5bc-404b-b083-a162274a01e7.png",
+    "order": 3,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.812Z",
+    "updatedAt": "2026-03-02T10:28:18.988Z"
+  },
+  {
+    "id": "437edfa0-7a8c-4e0c-b005-c8e1a5c39c9a",
+    "brand": "Nestlé",
+    "sector": "fmcg",
+    "services": [
+      "sampling",
+      "roadshow"
+    ],
+    "logo": "/uploads/logos/b94445e0-5679-46e8-9e53-f4f4da276b7b.jpg",
+    "order": 4,
+    "active": false,
+    "createdAt": "2026-03-02T07:26:11.812Z",
+    "updatedAt": "2026-03-02T13:46:46.628Z"
+  },
+  {
+    "id": "c1bd8335-c907-45c2-b612-209f97d8e148",
+    "brand": "Mondelez",
+    "sector": "fmcg",
+    "services": [
+      "merchandising"
+    ],
+    "logo": "/uploads/logos/f833cab9-0b8e-49ed-a1ff-af31c608cfc5.png",
+    "order": 5,
+    "active": false,
+    "createdAt": "2026-03-02T07:26:11.813Z",
+    "updatedAt": "2026-03-02T13:46:26.675Z"
+  },
+  {
+    "id": "8498c1d5-5b61-4961-b96e-b9d0a5565bf4",
+    "brand": "Ford",
+    "sector": "automotive",
+    "services": [
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/cefb9e89-da0d-48db-8840-079375a73ef9.jpg",
+    "order": 11,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.813Z",
+    "updatedAt": "2026-03-02T13:15:47.719Z"
+  },
+  {
+    "id": "198556c6-7e31-4c51-bdf2-673786416fac",
+    "brand": "LG",
+    "sector": "technology",
+    "services": [
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/f9fbc7d4-7419-4a59-a900-c705a620c006.png",
+    "order": 18,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.814Z",
+    "updatedAt": "2026-03-02T13:24:51.351Z"
+  },
+  {
+    "id": "1eb78c52-d50a-4127-8f3a-7414c4e92802",
+    "brand": "Vestel",
+    "sector": "technology",
+    "services": [
+      "merchandising",
+      "event"
+    ],
+    "logo": "/uploads/logos/a6d8f650-93d0-43c6-b1ab-85e241bea89f.png",
+    "order": 19,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.814Z",
+    "updatedAt": "2026-03-02T13:28:56.366Z"
+  },
+  {
+    "id": "0e2d250f-b141-4c36-b73b-b88a62bce0c1",
+    "brand": "Garanti BBVA",
+    "sector": "finance",
+    "services": [
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/374ecdd9-2661-4524-a001-3c8039b895bb.jpeg",
+    "order": 25,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.816Z",
+    "updatedAt": "2026-03-02T14:21:19.892Z"
+  },
+  {
+    "id": "34ba5f6e-a23f-4298-a1d7-5ae2c2d01c6e",
+    "brand": "Akbank",
+    "sector": "finance",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/a874afbe-d69f-4330-b727-7d43369eba28.jpg",
+    "order": 26,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.816Z",
+    "updatedAt": "2026-03-02T13:51:45.526Z"
+  },
+  {
+    "id": "96c415fb-b9d6-4707-8428-587bcbccad6a",
+    "brand": "Enerjisa",
+    "sector": "energy",
+    "services": [
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/49b03657-4889-471f-b59b-7b68dfcad633.jpg",
+    "order": 33,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.817Z",
+    "updatedAt": "2026-03-02T13:05:52.047Z"
+  },
+  {
+    "id": "7fb3c979-3b4a-406a-a24b-6f1a4861bf25",
+    "brand": "Türk Telekom",
+    "sector": "technology",
+    "services": [
+      "pop-posm",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/7267253d-380d-49e5-955c-c7f30a9a8e45.png",
+    "order": 34,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.817Z",
+    "updatedAt": "2026-03-02T13:31:26.104Z"
+  },
+  {
+    "id": "c274b638-36c4-4e7a-b0a2-f084f565c321",
+    "brand": "Vodafone",
+    "sector": "technology",
+    "services": [
+      "pop-posm",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/69d87bd6-c5ac-4d1a-9e58-1a32efa11d05.jpg",
+    "order": 35,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T13:43:30.859Z"
+  },
+  {
+    "id": "2744b0e3-acd3-4eff-affd-de92adec46fc",
+    "brand": "Peugeot",
+    "sector": "automotive",
+    "services": [
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/e87fd100-202d-4a87-a7fa-786291c45223.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:15:18.531Z",
+    "updatedAt": "2026-03-02T13:15:18.531Z"
+  },
+  {
+    "id": "02cb0a38-00a3-4e8b-93d7-75d0e8813ea9",
+    "brand": "Isuzu",
+    "sector": "automotive",
+    "services": [
+      "roadshow",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/3b9a454d-9702-47da-8526-7af2748d9834.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:16:33.234Z",
+    "updatedAt": "2026-03-02T13:16:33.234Z"
+  },
+  {
+    "id": "cf0fe46b-6925-4548-98c3-9863bd046593",
+    "brand": "",
+    "sector": "automotive",
+    "services": [
+      "pop-posm",
+      "guerilla"
+    ],
+    "logo": "/uploads/logos/5497559c-b443-4c63-a9b2-8e5395233163.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:19:06.613Z",
+    "updatedAt": "2026-03-02T13:19:06.613Z"
+  },
+  {
+    "id": "e3cb32de-428c-4229-a288-d1229f27b1ec",
+    "brand": "Philips",
+    "sector": "technology",
+    "services": [
+      "pop-posm",
+      "roadshow",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/8952aeca-4a91-43f8-acb6-83dae6c0d866.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:26:39.681Z",
+    "updatedAt": "2026-03-02T13:26:39.681Z"
+  },
+  {
+    "id": "e9be8013-0d3d-42b4-a7d2-42378d6b13df",
+    "brand": "Tesco Kipa",
+    "sector": "retail",
+    "services": [
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/2f556fd0-1541-4160-9390-66dbd46a1fa9.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:32:53.796Z",
+    "updatedAt": "2026-03-02T13:32:53.796Z"
+  },
+  {
+    "id": "f7b958f0-904c-42ad-a464-64c53f23d351",
+    "brand": "Joker Baby",
+    "sector": "retail",
+    "services": [
+      "event"
+    ],
+    "logo": "/uploads/logos/d5c34002-9d0f-4714-b6e4-084155b03d62.jpeg",
+    "active": true,
+    "createdAt": "2026-03-02T13:33:31.617Z",
+    "updatedAt": "2026-03-02T13:33:31.617Z"
+  },
+  {
+    "id": "ba7d1ee3-8f22-4774-a7b4-3888285368f7",
+    "brand": "Marmara Forum",
+    "sector": "retail",
+    "services": [
+      "pop-posm",
+      "sampling",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/27c776a9-7826-42af-8a6f-bc43f01558b2.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:34:32.752Z",
+    "updatedAt": "2026-03-02T13:34:32.752Z"
+  },
+  {
+    "id": "acd95485-7be1-4276-8b36-6f936cab8b7a",
+    "brand": "Sony Music",
+    "sector": "technology",
+    "services": [
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/fa020bab-628a-47e8-9841-df464e4cbae0.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:35:05.961Z",
+    "updatedAt": "2026-03-02T13:35:05.961Z"
+  },
+  {
+    "id": "04fe9287-9fc7-46e3-a63c-ed98176b24df",
+    "brand": "Metro",
+    "sector": "retail",
+    "services": [
+      "pop-posm",
+      "sampling",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/6819213f-27d1-4ac0-86be-392f4096323c.png",
+    "active": true,
+    "createdAt": "2026-03-02T13:39:26.320Z",
+    "updatedAt": "2026-03-02T13:39:26.320Z"
+  },
+  {
+    "id": "fb6dfc0c-88f2-4e28-849c-5241f15fd6e4",
+    "brand": "Decathlon",
+    "sector": "retail",
+    "services": [
+      "event"
+    ],
+    "logo": "/uploads/logos/6f9f6983-f31f-408e-8f61-cf5011154d87.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:40:45.301Z",
+    "updatedAt": "2026-03-02T13:40:45.301Z"
+  },
+  {
+    "id": "0e8f6c9f-6e39-46e6-9e04-fcdf727ccd44",
+    "brand": "Arzum",
+    "sector": "technology",
+    "services": [
+      "sampling",
+      "event",
+      "mice"
+    ],
+    "logo": "/uploads/logos/0637c886-73bb-4d9b-b90c-7ac488bbdc6e.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:41:28.035Z",
+    "updatedAt": "2026-03-02T13:41:28.035Z"
+  },
+  {
+    "id": "5b8a8304-2fdb-4434-bcb7-12575d5b87be",
+    "brand": "İnci Akü - EAS",
+    "sector": "automotive",
+    "services": [
+      "sales-support",
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/96585b90-9aaa-4b92-9ac3-3705d9aabf94.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:42:50.309Z",
+    "updatedAt": "2026-03-02T13:43:51.327Z"
+  },
+  {
+    "id": "80c862ef-7076-4970-a96b-d6939748f4b2",
+    "brand": "Hendrick's Gin",
+    "sector": "fmcg",
+    "services": [
+      "event"
+    ],
+    "logo": "/uploads/logos/e27f9c52-776d-4f27-bcbd-3e9957ed2312.jpeg",
+    "active": false,
+    "createdAt": "2026-03-02T13:48:43.558Z",
+    "updatedAt": "2026-03-02T13:58:57.684Z"
+  },
+  {
+    "id": "0b107d05-aec8-4270-80a1-d85f8a142213",
+    "brand": "Yörsan",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/33a3f488-be89-491c-9c2e-58656bc1c03e.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T13:49:19.059Z",
+    "updatedAt": "2026-03-02T13:59:00.488Z"
+  },
+  {
+    "id": "89829e8b-9647-4f0d-bbc0-de0c2ae7d078",
+    "brand": "Aktif Bank",
+    "sector": "finance",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "roadshow",
+      "guerilla",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/8acfab37-cb5f-4735-9402-ec8d0f2e7de7.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T13:50:12.984Z",
+    "updatedAt": "2026-03-02T13:50:12.984Z"
+  },
+  {
+    "id": "040e3d63-52a5-4a52-a3a4-7fffca21ac07",
+    "brand": "",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "sampling",
+      "event"
+    ],
+    "logo": "/uploads/logos/6f9a4b4d-c210-452f-a439-d31d13b55a37.jpeg",
+    "active": false,
+    "createdAt": "2026-03-02T13:50:46.432Z",
+    "updatedAt": "2026-03-02T13:59:06.554Z"
+  },
+  {
+    "id": "fba51af9-f66e-4b66-ab4e-92067b659450",
+    "brand": "Dardanel",
+    "sector": "fmcg",
+    "services": [
+      "roadshow",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/3d221fb3-4018-46fc-9294-be00f9ee017f.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T13:52:48.583Z",
+    "updatedAt": "2026-03-02T13:59:10.917Z"
+  },
+  {
+    "id": "8234e010-d356-43e5-8cd2-43364b7d11bd",
+    "brand": "Sütaş",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/de4cf2b3-f01e-4dbe-85fc-2033ef4de180.jpeg",
+    "active": false,
+    "createdAt": "2026-03-02T13:57:11.249Z",
+    "updatedAt": "2026-03-02T13:59:13.335Z"
+  },
+  {
+    "id": "527f02a5-a3a5-4220-9af0-8bf0d316c39d",
+    "brand": "Burn",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "roadshow",
+      "event"
+    ],
+    "logo": "/uploads/logos/874138e1-a16f-4cff-a580-34989cfb6751.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T13:58:48.373Z",
+    "updatedAt": "2026-03-02T13:59:16.272Z"
+  },
+  {
+    "id": "f5a5c008-2803-485a-b3d4-a4c9aa1f1f19",
+    "brand": "Colgate-Palmolive",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event",
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/e3cefd51-6a02-4af4-8bd5-9e839556260d.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:00:58.282Z",
+    "updatedAt": "2026-03-02T14:00:58.282Z"
+  },
+  {
+    "id": "37f432a7-2095-42bf-95a9-d797f7a09616",
+    "brand": "Filli Boya",
+    "sector": "other",
+    "services": [
+      "sales-support",
+      "sampling",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/0c618869-7053-4c76-805f-487c2c367ca7.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:03:27.661Z",
+    "updatedAt": "2026-03-02T14:10:46.780Z"
+  },
+  {
+    "id": "e2bb32c3-f8a2-4de8-a961-35ed65b094ce",
+    "brand": "28 Black",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "sampling",
+      "roadshow",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/14cdb18d-13a3-41fa-9b0e-5ab8b1beaec3.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:04:35.118Z",
+    "updatedAt": "2026-03-02T14:04:35.118Z"
+  },
+  {
+    "id": "4848d299-486b-4c12-9474-c9a6eeb3e93e",
+    "brand": "Anadolu Efes",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "sales-support",
+      "mystery-shopping",
+      "pop-posm",
+      "software",
+      "sampling",
+      "roadshow",
+      "event"
+    ],
+    "logo": "/uploads/logos/d5917f9f-40ab-4672-97e7-9e88884b4691.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:05:25.180Z",
+    "updatedAt": "2026-03-02T14:05:25.180Z"
+  },
+  {
+    "id": "2355945a-f258-4dd4-ad7c-1d22cca44ea8",
+    "brand": "Tranquini",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "sampling"
+    ],
+    "logo": "/uploads/logos/61c4b50b-43b0-4359-a481-e898365ed4d7.png",
+    "active": true,
+    "createdAt": "2026-03-02T14:06:26.215Z",
+    "updatedAt": "2026-03-02T14:06:26.215Z"
+  },
+  {
+    "id": "7997e532-d65a-420a-a613-e0e39775e6bb",
+    "brand": "EPDK",
+    "sector": "energy",
+    "services": [
+      "mice",
+      "design"
+    ],
+    "logo": "/uploads/logos/f9cfb0b5-33b0-437b-a4cf-63adb2ec4400.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:07:00.547Z",
+    "updatedAt": "2026-03-02T14:21:46.168Z"
+  },
+  {
+    "id": "a0b36f22-7449-4d95-adb4-a9311804c8dc",
+    "brand": "Continental",
+    "sector": "automotive",
+    "services": [
+      "sales-support",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/bfd2db34-ce6d-4bd4-b2b9-a45aa1bd467d.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:07:41.383Z",
+    "updatedAt": "2026-03-02T14:07:41.383Z"
+  },
+  {
+    "id": "6bf5bd5c-ee5f-4b11-9fd5-64b4df8aebf7",
+    "brand": "Hype Enerji İçeceği",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "sampling",
+      "roadshow"
+    ],
+    "logo": "/uploads/logos/8f483d92-5c99-4b38-9693-342175354cef.png",
+    "active": true,
+    "createdAt": "2026-03-02T14:08:27.247Z",
+    "updatedAt": "2026-03-02T14:08:27.247Z"
+  },
+  {
+    "id": "a1d86cc6-37a8-476b-9244-a7f3e10cfee0",
+    "brand": "Star TV",
+    "sector": "other",
+    "services": [
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/8aa5cd6e-c7fe-41cd-a2cb-d7dd0f5d70c2.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:08:59.319Z",
+    "updatedAt": "2026-03-02T14:08:59.319Z"
+  },
+  {
+    "id": "903c8456-14a4-4ad0-9ccd-b48fb95213be",
+    "brand": "CCN Holding",
+    "sector": "fmcg",
+    "services": [],
+    "logo": "/uploads/logos/ae59bed3-1e8f-4afc-acb2-a4171012af3e.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:10:41.295Z",
+    "updatedAt": "2026-03-02T14:10:41.295Z"
+  },
+  {
+    "id": "f231e844-fffc-4340-aac4-b41db0c587a5",
+    "brand": "7Days",
+    "sector": "fmcg",
+    "services": [
+      "sampling",
+      "guerilla",
+      "event"
+    ],
+    "logo": "/uploads/logos/177082e1-6abb-4eb3-9846-3498bd2cce42.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:11:44.073Z",
+    "updatedAt": "2026-03-02T14:11:44.073Z"
+  },
+  {
+    "id": "1c03fcab-0f90-4e41-85f0-270a6c35b3e0",
+    "brand": "Nesine.com",
+    "sector": "other",
+    "services": [],
+    "logo": "/uploads/logos/133124c7-013a-4062-befc-71086777538b.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:12:11.678Z",
+    "updatedAt": "2026-03-02T14:12:11.678Z"
+  },
+  {
+    "id": "27f44ed4-8d37-47fc-b46e-c6b8146892be",
+    "brand": "Lav",
+    "sector": "other",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "event"
+    ],
+    "logo": "/uploads/logos/6f3c15de-35b7-4ae8-98fc-e033cf3573cf.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:13:24.763Z",
+    "updatedAt": "2026-03-02T14:13:24.763Z"
+  },
+  {
+    "id": "c0a5f1ca-c60f-45b1-b667-d1d68b0f7c2b",
+    "brand": "Yazgan Şarapçılık",
+    "sector": "fmcg",
+    "services": [
+      "merchandising"
+    ],
+    "logo": "/uploads/logos/a7f2fdae-2498-4212-ac7d-e9f804caf81d.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:14:07.776Z",
+    "updatedAt": "2026-03-02T14:14:07.776Z"
+  },
+  {
+    "id": "20e93b94-523f-41f7-8c72-fb7c003fbe16",
+    "brand": "Kemal Kükrer",
+    "sector": "fmcg",
+    "services": [
+      "sales-support",
+      "pop-posm",
+      "sampling",
+      "roadshow",
+      "event",
+      "design"
+    ],
+    "logo": "/uploads/logos/97ad9290-a5f3-4845-96fe-0a7bcc5216bc.jpg",
+    "active": false,
+    "createdAt": "2026-03-02T14:15:26.350Z",
+    "updatedAt": "2026-03-02T14:15:26.350Z"
+  },
+  {
+    "id": "36a59742-3ba0-44ef-ae4d-14da07f1bffb",
+    "brand": "Philip Morris International",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "sales-support",
+      "mystery-shopping",
+      "software"
+    ],
+    "logo": "/uploads/logos/19e91df7-31f3-4e2f-a227-e3546dc1859d.jpg",
+    "active": true,
+    "createdAt": "2026-03-02T14:16:44.579Z",
+    "updatedAt": "2026-03-02T14:16:44.579Z"
+  },
+  {
+    "id": "3c1c210f-174b-4451-8313-60bf33dc84e4",
+    "brand": "ADCO",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "pop-posm",
+      "software"
+    ],
+    "logo": "/uploads/logos/faeb3992-2e09-47b2-9191-e940cce272d0.png",
+    "active": true,
+    "createdAt": "2026-03-04T06:56:31.748Z",
+    "updatedAt": "2026-03-04T06:56:31.749Z"
+  },
+  {
+    "id": "c54a189c-bde1-4482-8c9e-83e8ab5dc7af",
+    "brand": "Brown Forman",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "pop-posm",
+      "software"
+    ],
+    "logo": "/uploads/logos/f7efd541-1472-4791-a159-d5b4d5fd2e24.png",
+    "active": true,
+    "createdAt": "2026-03-04T06:57:56.775Z",
+    "updatedAt": "2026-03-04T06:57:56.775Z"
+  },
+  {
+    "id": "ae95d062-ed99-4998-ad01-112bef5adebb",
+    "brand": "Beylerbeyi",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "software"
+    ],
+    "logo": "/uploads/logos/d43d390b-c4a3-4548-8f2d-e7fd0d21521c.png",
+    "active": true,
+    "createdAt": "2026-03-04T06:59:08.355Z",
+    "updatedAt": "2026-03-04T06:59:08.355Z"
+  },
+  {
+    "id": "aecc3693-fc2b-415e-a0f0-72bcc98c91fb",
+    "brand": "Opet",
+    "sector": "fmcg",
+    "services": [
+      "merchandising",
+      "sales-support",
+      "pop-posm",
+      "software",
+      "roadshow",
+      "event"
+    ],
+    "logo": "/uploads/logos/35133d2e-b67e-4cf7-8fb4-08ef3a385534.png",
+    "active": true,
+    "createdAt": "2026-03-04T07:01:05.819Z",
+    "updatedAt": "2026-03-04T07:01:05.819Z"
+  }
+]

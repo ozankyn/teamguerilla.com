@@ -1,0 +1,90 @@
+[
+  {
+    "id": "4b076558-bf22-4680-a247-d852ce2a62d0",
+    "name": "Fatih Kayan",
+    "title_tr": "Ajans Başkanı",
+    "title_en": "President",
+    "photo": "/uploads/team/e94ae56d-4f04-44d1-bf56-5c021a42367e.jpg",
+    "order": 0,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T11:44:52.805Z"
+  },
+  {
+    "id": "bf3fa725-5e9b-41e3-b7d5-02823a740c2f",
+    "name": "Ozan Eren Kayan",
+    "title_tr": "Retail Direktörü",
+    "title_en": "Retail Director",
+    "photo": "/uploads/team/5524ef73-0eb4-4ace-b014-7f4379cfe92d.jpeg",
+    "order": 1,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T11:46:33.642Z"
+  },
+  {
+    "id": "8ba9a46f-f351-478a-8cdf-e38e931b4fb0",
+    "name": "Hakan Alpan",
+    "title_tr": "Genel Koordinatör",
+    "title_en": "General Coordinator",
+    "photo": "/uploads/team/d120514f-19ec-4a4e-9e60-31faf15512d4.jpeg",
+    "order": 2,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T11:47:07.499Z"
+  },
+  {
+    "id": "9ae75f0e-2c3c-44b7-8af6-268c75578db9",
+    "name": "Zeynep Arslan",
+    "title_tr": "Kreatif Direktör",
+    "title_en": "Creative Director",
+    "photo": null,
+    "order": 3,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T07:26:11.818Z"
+  },
+  {
+    "id": "8b94edc8-2eb3-4159-8cf0-b56f2f321541",
+    "name": "Can Öztürk",
+    "title_tr": "Saha Koordinatörü",
+    "title_en": "Field Coordinator",
+    "photo": null,
+    "order": 4,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T07:26:11.818Z"
+  },
+  {
+    "id": "f374efd8-2e6f-483d-9f16-81db90529821",
+    "name": "Selin Yıldız",
+    "title_tr": "Müşteri İlişkileri Müdürü",
+    "title_en": "Client Relations Manager",
+    "photo": null,
+    "order": 5,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T07:26:11.818Z"
+  },
+  {
+    "id": "c6c185c4-c374-42b0-ba2e-64e190947e49",
+    "name": "Burak Şahin",
+    "title_tr": "Etkinlik Müdürü",
+    "title_en": "Events Manager",
+    "photo": null,
+    "order": 6,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.818Z",
+    "updatedAt": "2026-03-02T07:26:11.818Z"
+  },
+  {
+    "id": "5a115d79-eec8-4d19-9f24-dc67773eee63",
+    "name": "Deniz Aydın",
+    "title_tr": "Pazarlama Uzmanı",
+    "title_en": "Marketing Specialist",
+    "photo": null,
+    "order": 7,
+    "active": true,
+    "createdAt": "2026-03-02T07:26:11.819Z",
+    "updatedAt": "2026-03-02T07:26:11.819Z"
+  }
+]
