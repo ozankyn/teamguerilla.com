@@ -1,87 +1,87 @@
 {
   "home.hero.title.tr": {
-    "value": "Markanız sahada, Biz arkadasındayız",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "value": "Markanız sahada, Biz arkasındayız",
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.title.en": {
     "value": "We Bring Your Brand to the Field",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.subtitle.tr": {
     "value": "20 yılı aşkın deneyim, 500+ kişilik saha ekibi, Türkiye genelinde operasyon.",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.subtitle.en": {
     "value": "Over 20 years of experience, 500+ field team members, operations across Turkey.",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.cta.tr": {
     "value": "Hemen İletişime Geçin",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.cta.en": {
     "value": "Get in Touch",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.hero.image": {
     "value": "/uploads/homepage/9d14e47a-e0e2-49c3-9c11-498cd8cf9bb3.png",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.dept.retail.image": {
     "value": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80&fit=crop&auto=format",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.dept.event.image": {
     "value": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80&fit=crop&auto=format",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.years.value": {
     "value": "20+",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.years.label.tr": {
     "value": "Yıllık Deneyim",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.years.label.en": {
     "value": "Years of Experience",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.team.value": {
     "value": "500+",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.team.label.tr": {
     "value": "Saha Profesyoneli",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.team.label.en": {
     "value": "Field Professionals",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.cities.value": {
     "value": "81",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.cities.label.tr": {
     "value": "Şehir",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.cities.label.en": {
     "value": "Cities",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.brands.value": {
     "value": "100+",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.brands.label.tr": {
     "value": "Tamamlanan Proje",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.brands.label.en": {
     "value": "Brands",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "about.hero.title.tr": {
     "value": "2005'ten Bu Yana Sahada",
@@ -145,15 +145,15 @@
   },
   "home.stats.projects.value": {
     "value": "100+",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.projects.label.tr": {
     "value": "Tamamlanan Proje",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "home.stats.projects.label.en": {
     "value": "Completed Projects",
-    "updatedAt": "2026-03-09T09:17:37.553Z"
+    "updatedAt": "2026-03-09T12:16:47.563Z"
   },
   "about.value0.title.tr": {
     "value": "Sahada Güçlüyüz",

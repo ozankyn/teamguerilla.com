@@ -3,10 +3,20 @@
     "id": "f195eccf-7386-47cd-bfca-8ab55b8a45c5",
     "username": "admin",
     "email": "info@teamguerilla.com",
-    "password": "$2a$10$bYoctAe4WCaJLlUGToKBteuu4s.MoQjaRIKNFgig8cxJoG1pkwIua",
+    "password": "$2a$10$CkEgQQi0OhfUDbYoct4v1.KozgG36E5F2Dj3lPKuYsR/8qM3riglS",
     "role": "admin",
     "name": "Admin",
     "createdAt": "2026-03-02T07:26:11.809Z",
-    "updatedAt": "2026-03-02T07:26:11.810Z"
+    "updatedAt": "2026-03-09T11:21:10.304Z"
+  },
+  {
+    "id": "379999b1-3ec1-4139-b987-5ef336f66664",
+    "username": "bora",
+    "email": "boragelisken@teamguerilla.com",
+    "password": "$2a$10$8PZaDx.XNfywwsomWUbOzuUQJHOmuDb1CvbSMEEwOtRbrKfCUMK0.",
+    "role": "editor",
+    "name": "Bora Gelişken",
+    "createdAt": "2026-03-09T11:21:44.008Z",
+    "updatedAt": "2026-03-09T11:21:44.008Z"
   }
 ]
