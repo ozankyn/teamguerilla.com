@@ -9,11 +9,11 @@
       "event",
       "design"
     ],
-    "logo": "/uploads/logos/5c9bb32d-6c7c-4687-b261-d07e2fa0cb99.png",
+    "logo": "/uploads/logos/9ab420b6-c3c1-4f22-b266-fec080389c4c.png",
     "order": 0,
     "active": false,
     "createdAt": "2026-03-02T07:26:11.812Z",
-    "updatedAt": "2026-03-02T13:58:54.195Z"
+    "updatedAt": "2026-03-09T10:18:03.989Z"
   },
   {
     "id": "6b0b5db1-749a-4968-bfdc-e469491fe6c6",
@@ -85,9 +85,9 @@
     ],
     "logo": "/uploads/logos/cefb9e89-da0d-48db-8840-079375a73ef9.jpg",
     "order": 11,
-    "active": true,
+    "active": false,
     "createdAt": "2026-03-02T07:26:11.813Z",
-    "updatedAt": "2026-03-02T13:15:47.719Z"
+    "updatedAt": "2026-03-09T10:18:42.692Z"
   },
   {
     "id": "198556c6-7e31-4c51-bdf2-673786416fac",
@@ -214,9 +214,9 @@
       "design"
     ],
     "logo": "/uploads/logos/e87fd100-202d-4a87-a7fa-786291c45223.jpg",
-    "active": true,
+    "active": false,
     "createdAt": "2026-03-02T13:15:18.531Z",
-    "updatedAt": "2026-03-02T13:15:18.531Z"
+    "updatedAt": "2026-03-09T10:18:30.613Z"
   },
   {
     "id": "02cb0a38-00a3-4e8b-93d7-75d0e8813ea9",
@@ -228,22 +228,22 @@
       "event"
     ],
     "logo": "/uploads/logos/3b9a454d-9702-47da-8526-7af2748d9834.jpg",
-    "active": true,
+    "active": false,
     "createdAt": "2026-03-02T13:16:33.234Z",
-    "updatedAt": "2026-03-02T13:16:33.234Z"
+    "updatedAt": "2026-03-09T10:18:34.870Z"
   },
   {
     "id": "cf0fe46b-6925-4548-98c3-9863bd046593",
-    "brand": "",
+    "brand": "Renault",
     "sector": "automotive",
     "services": [
       "pop-posm",
       "guerilla"
     ],
     "logo": "/uploads/logos/5497559c-b443-4c63-a9b2-8e5395233163.jpg",
-    "active": true,
+    "active": false,
     "createdAt": "2026-03-02T13:19:06.613Z",
-    "updatedAt": "2026-03-02T13:19:06.613Z"
+    "updatedAt": "2026-03-09T10:18:27.319Z"
   },
   {
     "id": "e3cb32de-428c-4229-a288-d1229f27b1ec",
@@ -373,9 +373,9 @@
       "design"
     ],
     "logo": "/uploads/logos/96585b90-9aaa-4b92-9ac3-3705d9aabf94.jpg",
-    "active": true,
+    "active": false,
     "createdAt": "2026-03-02T13:42:50.309Z",
-    "updatedAt": "2026-03-02T13:43:51.327Z"
+    "updatedAt": "2026-03-09T10:18:37.806Z"
   },
   {
     "id": "80c862ef-7076-4970-a96b-d6939748f4b2",
@@ -591,7 +591,7 @@
     "logo": "/uploads/logos/bfd2db34-ce6d-4bd4-b2b9-a45aa1bd467d.jpg",
     "active": true,
     "createdAt": "2026-03-02T14:07:41.383Z",
-    "updatedAt": "2026-03-02T14:07:41.383Z"
+    "updatedAt": "2026-03-09T10:18:40.509Z"
   },
   {
     "id": "6bf5bd5c-ee5f-4b11-9fd5-64b4df8aebf7",
