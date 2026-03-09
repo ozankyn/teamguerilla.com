@@ -12,7 +12,7 @@
       "FMCG",
       "Perakende",
       "Teknoloji",
-      "İlaç"
+      "Kozmetik"
     ],
     "order": 0,
     "active": true,
@@ -69,7 +69,7 @@
     "sectors": [
       "FMCG",
       "Teknoloji",
-      "İlaç"
+      "Kozmetik"
     ],
     "order": 3,
     "active": true,
@@ -107,7 +107,7 @@
     "sectors": [
       "FMCG",
       "Perakende",
-      "İlaç"
+      "Kozmetik"
     ],
     "order": 5,
     "active": true,
@@ -185,7 +185,7 @@
     "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80&fit=crop&auto=format",
     "sectors": [
       "Finans",
-      "İlaç",
+      "Kozmetik",
       "Otomotiv",
       "Enerji"
     ],
@@ -193,25 +193,6 @@
     "active": true,
     "createdAt": "2026-03-02T08:16:51.994Z",
     "updatedAt": "2026-03-02T08:16:51.994Z"
-  },
-  {
-    "id": "6a9315d3-436e-484c-a569-49e6daf1e7df",
-    "department": "event",
-    "name_tr": "Neuro Marketing",
-    "name_en": "Neuro Marketing",
-    "description_tr": "deneme deneme ozan ozan deneme",
-    "description_en": "We scientifically measure your campaign impact with neuroscience-based consumer behavior analysis and marketing consultancy.",
-    "icon": "brain",
-    "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80&fit=crop&auto=format",
-    "sectors": [
-      "FMCG",
-      "Perakende",
-      "Teknoloji"
-    ],
-    "order": 10,
-    "active": true,
-    "createdAt": "2026-03-02T08:16:51.994Z",
-    "updatedAt": "2026-03-02T08:18:07.676Z"
   },
   {
     "id": "46c97c91-4975-401e-8299-9b262dd7a4ce",

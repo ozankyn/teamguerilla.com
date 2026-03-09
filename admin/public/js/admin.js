@@ -31,7 +31,7 @@ let state = {
 // ─── SECTOR LABELS ───
 const SECTOR_LABELS = {
   fmcg: 'FMCG', automotive: 'Otomotiv', technology: 'Teknoloji',
-  retail: 'Perakende', finance: 'Finans', pharma: 'İlaç',
+  retail: 'Perakende', finance: 'Finans', pharma: 'Kozmetik',
   energy: 'Enerji', other: 'Diğer'
 };
 const SERVICE_LABELS = {
