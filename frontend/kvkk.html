@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KVKK — Team Guerilla Marketing</title>
+<meta name="description" content="Team Guerilla Marketing KVKK belgeler, aydınlatma metni ve başvuru formu.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+[data-theme="dark"]{--bg:#0D0D0D;--bg2:#111;--card:#1A1A1A;--bg-footer:#080808;--bg-nav:rgba(13,13,13,0.88);--bg-mob:rgba(13,13,13,0.97);--acc:#E63946;--acc-h:#FF4D5A;--acc-glow:rgba(230,57,70,0.25);--acc-s:rgba(230,57,70,0.06);--t1:#FFF;--t2:#C8C8C8;--t3:#888;--t4:#555;--bd:rgba(255,255,255,0.06);--bdl:rgba(255,255,255,0.12);--inp:#141414;--inp-b:rgba(255,255,255,0.12);--inp-f:rgba(230,57,70,0.4);--logo-f:brightness(0) invert(1);--tog:#2A2A2A;--knob:#FFF}
+[data-theme="light"]{--bg:#F8F7F5;--bg2:#F0EFEC;--card:#FFF;--bg-footer:#1A1A1A;--bg-nav:rgba(248,247,245,0.88);--bg-mob:rgba(248,247,245,0.97);--acc:#D62839;--acc-h:#E63946;--acc-glow:rgba(214,40,57,0.2);--acc-s:rgba(214,40,57,0.04);--t1:#111;--t2:#444;--t3:#777;--t4:#AAA;--bd:rgba(0,0,0,0.06);--bdl:rgba(0,0,0,0.1);--inp:#FFF;--inp-b:rgba(0,0,0,0.15);--inp-f:rgba(214,40,57,0.3);--logo-f:none;--tog:#E0DDD8;--knob:#FFF}
+[data-theme="light"] .footer{--t1:#FFF;--t2:#C8C8C8;--t3:#888;--t4:#555;--bd:rgba(255,255,255,0.06)}
+:root{--fd:'Outfit',sans-serif;--fb:'Plus Jakarta Sans',sans-serif;--nh:72px;--cmax:1320px;--r1:8px;--r2:12px;--r3:16px;--eo:cubic-bezier(0.16,1,0.3,1);--es:cubic-bezier(0.34,1.56,0.64,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--t2);background:var(--bg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-style:none}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{width:100%;max-width:var(--cmax);margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 40px}}
+html,body,.nav,.footer,.page-hero{transition:background-color .5s var(--eo),color .5s var(--eo)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nh);background:var(--bg-nav);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .4s var(--eo),background .5s var(--eo)}
+.nav.scrolled{border-bottom-color:var(--bd)}
+.nav__i{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 24px;max-width:var(--cmax);margin:0 auto}
+@media(min-width:1200px){.nav__i{padding:0 64px}}
+.nav__logo img{height:36px;width:auto}
+.nav__r{display:flex;align-items:center;gap:16px}
+@media(min-width:768px){.nav__r{gap:40px}}
+.nav__links{display:none;gap:40px;align-items:center}
+@media(min-width:1024px){.nav__links{display:flex}}
+.nav__links a{font-size:14px;font-weight:500;color:var(--t3);transition:color .2s;position:relative}
+.nav__links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1.5px;background:var(--acc);transform:scaleX(0);transform-origin:right;transition:transform .2s}
+.nav__links a:hover{color:var(--t1)}.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.tog{width:48px;height:26px;border-radius:13px;background:var(--tog);position:relative;transition:background .5s var(--eo);flex-shrink:0}
+.tog__k{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--knob);display:flex;align-items:center;justify-content:center;transition:transform .4s var(--es)}
+[data-theme="light"] .tog__k{transform:translateX(22px)}
+.tog__k svg{width:12px;height:12px;color:#333}
+.tog__sun{display:none}[data-theme="light"] .tog__moon{display:none}[data-theme="light"] .tog__sun{display:block}
+.lang{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500}
+.lang-a{color:var(--t1)}.lang-i{color:var(--t4);transition:color .2s}.lang-i:hover{color:var(--t1)}.lang-d{color:var(--t4);font-size:11px}
+.nav__tog{width:32px;height:32px;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:4px}
+@media(min-width:1024px){.nav__tog{display:none}}
+.nav__tog span{display:block;height:1.5px;background:var(--t1);border-radius:2px;transition:transform .4s var(--eo),opacity .2s}
+.nav__tog.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav__tog.active span:nth-child(2){opacity:0}
+.nav__tog.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mmenu{display:none;flex-direction:column;gap:16px;position:fixed;top:var(--nh);left:0;right:0;bottom:0;z-index:99;background:var(--bg-mob);backdrop-filter:blur(20px);padding:40px 24px;overflow-y:auto}
+.mmenu.active{display:flex}
+.mmenu a{font-family:var(--fd);font-size:20px;font-weight:600;color:var(--t2);padding:16px 0;border-bottom:1px solid var(--bd);transition:color .2s}
+.mmenu a:hover{color:var(--acc)}
+
+/* HERO */
+.hero{padding-top:calc(var(--nh) + 96px);padding-bottom:80px;background:var(--bg);position:relative}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--acc-glow),transparent)}
+.hero-label{font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--acc);margin-bottom:24px}
+.hero-title{font-family:var(--fd);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--t1);margin-bottom:16px}
+.hero-desc{font-size:16px;color:var(--t3);max-width:520px;line-height:1.7}
+.hero-meta{font-size:13px;color:var(--t4);margin-top:8px}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s var(--eo),transform .6s var(--eo);transition-delay:calc(var(--s,0)*80ms)}
+.rv.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* LEGAL */
+.legal{padding:80px 0 128px}
+.layout{display:grid;grid-template-columns:1fr;gap:64px}
+@media(min-width:1024px){.layout{grid-template-columns:230px 1fr;gap:80px;align-items:start}}
+.toc{position:sticky;top:calc(var(--nh) + 16px)}
+.toc-title{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);margin-bottom:8px}
+.toc-list{display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-size:12px;color:var(--t3);padding:5px 12px;border-left:2px solid var(--bd);border-radius:0 var(--r1) var(--r1) 0;transition:color .2s,border-color .2s;display:block;line-height:1.4}
+.toc-list a:hover{color:var(--t1);border-left-color:var(--acc)}
+.toc-list a.act{color:var(--acc);border-left-color:var(--acc)}
+.tg{margin-bottom:24px}
+.tg-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);padding:0 12px;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.tg-lbl span{width:15px;height:15px;border-radius:3px;background:var(--acc-s);border:1px solid rgba(230,57,70,0.2);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:var(--acc);flex-shrink:0}
+
+/* CONTENT */
+.content{max-width:760px}
+.content section{padding-bottom:64px;margin-bottom:64px;border-bottom:1px solid var(--bd)}
+.content section:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.content h2{font-family:var(--fd);font-size:19px;font-weight:700;color:var(--t1);margin-bottom:24px;letter-spacing:-.01em;display:flex;align-items:flex-start;gap:12px;line-height:1.3}
+.content h2 .sn{font-size:10px;font-weight:700;color:var(--acc);background:var(--acc-s);border:1px solid rgba(230,57,70,0.2);border-radius:var(--r1);padding:2px 7px;letter-spacing:.05em;flex-shrink:0;margin-top:3px}
+.content h3{font-family:var(--fd);font-size:14px;font-weight:600;color:var(--t1);margin:32px 0 12px;text-transform:uppercase;letter-spacing:.05em}
+.content p{font-size:15px;line-height:1.75;color:var(--t2);margin-bottom:12px}
+.content p:last-child{margin-bottom:0}
+.content ul{margin:12px 0;display:flex;flex-direction:column;gap:6px}
+.content ul li{font-size:15px;line-height:1.7;color:var(--t2);padding-left:24px;position:relative}
+.content ul li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.content a{color:var(--acc);text-decoration:underline;text-underline-offset:3px}
+.content a:hover{color:var(--acc-h)}
+.content strong{color:var(--t1);font-weight:600}
+.content .note{font-size:13px;color:var(--t3);font-style:italic;margin-top:12px}
+
+/* Chapter divider */
+.chap{display:flex;align-items:center;gap:24px;margin:80px 0 48px;padding:20px 24px;background:var(--card);border:1px solid var(--bdl);border-radius:var(--r3);border-left:3px solid var(--acc)}
+.chap-n{font-family:var(--fd);font-size:32px;font-weight:900;color:var(--acc);opacity:.2;line-height:1;flex-shrink:0}
+.chap-t h3{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--t1);margin-bottom:2px}
+.chap-t p{font-size:12px;color:var(--t3);margin:0}
+
+/* Tables */
+.dt,.rt{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+.dt th,.rt th{text-align:left;padding:8px 12px;background:var(--card);color:var(--t3);font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--bdl)}
+.dt td,.rt td{padding:8px 12px;border-bottom:1px solid var(--bd);color:var(--t2);vertical-align:top;line-height:1.5}
+.dt td:first-child{font-weight:600;color:var(--t1);white-space:nowrap;padding-right:20px}
+.dt tr:last-child td,.rt tr:last-child td{border-bottom:none}
+
+/* Info box */
+.ib{background:var(--acc-s);border:1px solid rgba(230,57,70,0.15);border-radius:var(--r3);padding:20px 24px;margin-bottom:40px}
+.ib p{font-size:14px;color:var(--t2);margin:0;line-height:1.65}
+
+/* Sibling nav */
+.sibs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:64px}
+.sibs a{font-size:13px;font-weight:500;padding:7px 14px;border:1px solid var(--bdl);border-radius:100px;color:var(--t3);transition:all .2s}
+.sibs a:hover{color:var(--t1);border-color:var(--t4)}
+.sibs a.act{color:var(--acc);border-color:var(--acc);background:var(--acc-s)}
+
+/* FORM */
+.kform{display:flex;flex-direction:column;gap:24px}
+.fg{display:flex;flex-direction:column;gap:8px}
+.fg label{font-size:13px;font-weight:600;color:var(--t1)}
+.fg label span{color:var(--acc)}
+.fi,.fs,.fta{background:var(--inp);border:1px solid var(--inp-b);border-radius:var(--r2);padding:11px 14px;font-size:14px;color:var(--t1);font-family:var(--fb);transition:border-color .2s,box-shadow .2s;width:100%}
+.fi:focus,.fs:focus,.fta:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px var(--inp-f)}
+.fi::placeholder,.fta::placeholder{color:var(--t4)}
+.fs{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.fta{resize:vertical;min-height:100px;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.frow{grid-template-columns:1fr 1fr}}
+.fsec{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--t1);padding-bottom:12px;border-bottom:1px solid var(--bd);margin-top:8px}
+.cbl{display:flex;flex-direction:column;gap:8px}
+.cbi{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border:1px solid var(--bd);border-radius:var(--r2);cursor:pointer;transition:all .2s}
+.cbi:hover{border-color:var(--bdl);background:rgba(255,255,255,0.02)}
+.cbi input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--acc);cursor:pointer}
+.cbi label{font-size:14px;color:var(--t2);line-height:1.5;cursor:pointer}
+.cbi label strong{display:block;color:var(--t1);font-size:12px;font-weight:600;margin-bottom:2px}
+.cbi.chkd{border-color:rgba(230,57,70,0.3);background:var(--acc-s)}
+.rg{display:flex;flex-wrap:wrap;gap:8px}
+.ri{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--bd);border-radius:100px;cursor:pointer;transition:all .2s}
+.ri:hover{border-color:var(--bdl)}
+.ri input{accent-color:var(--acc);cursor:pointer}
+.ri label{font-size:13px;color:var(--t2);cursor:pointer}
+.fsub{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;background:var(--acc);color:#fff;font-family:var(--fd);font-size:14px;font-weight:700;border-radius:var(--r2);transition:all .2s;cursor:pointer;border:none;margin-top:8px}
+.fsub:hover{background:var(--acc-h);transform:translateY(-1px);box-shadow:0 8px 24px var(--acc-glow)}
+.fsub:active{transform:none}
+.fsub:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.fnote{font-size:13px;color:var(--t3);line-height:1.6;padding:16px;background:var(--card);border-radius:var(--r2);border:1px solid var(--bd)}
+.fsuccess{display:none;text-align:center;padding:48px 32px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:var(--r3)}
+.fsuccess h3{font-family:var(--fd);font-size:20px;font-weight:700;color:#22c55e;margin-bottom:12px}
+.fsuccess p{font-size:15px;color:var(--t2)}
+
+/* FOOTER */
+.footer{background:var(--bg-footer);padding:96px 0 24px;border-top:1px solid var(--bd)}
+.footer-g{display:grid;gap:64px;grid-template-columns:1fr}
+@media(min-width:768px){.footer-g{grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}}
+.f-logo{height:40px;width:auto;filter:var(--logo-f);margin-bottom:24px}
+.f-desc{font-size:13px;color:var(--t3);line-height:1.6;max-width:240px;margin-bottom:24px}
+.f-social{display:flex;gap:8px}
+.f-social a{width:36px;height:36px;border-radius:var(--r1);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;color:var(--t3);transition:all .2s}
+.f-social a:hover{color:var(--t1);background:rgba(255,255,255,0.06)}
+.f-social svg{width:18px;height:18px}
+.f-ct{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--t4);margin-bottom:24px}
+.f-links{display:flex;flex-direction:column;gap:12px}
+.f-links li a,.f-links li{font-size:13px;color:var(--t3);transition:color .2s}
+.f-links li a:hover{color:var(--t1)}
+.f-bot{margin-top:80px;padding-top:16px;border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.f-copy{font-size:12px;color:var(--t4)}
+.f-legal{display:flex;gap:32px}
+.f-legal a{font-size:12px;color:var(--t4);transition:color .2s}
+.f-legal a:hover{color:var(--t3)}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation">
+  <div class="nav__i">
+    <a href="/" class="nav__logo" aria-label="Team Guerilla Marketing anasayfa">
+      <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" onerror="this.onerror=null;this.parentElement.innerHTML='<span style=&quot;font-family:var(--fd);font-weight:800;font-size:24px;color:var(--t1);letter-spacing:-1px&quot;>Team<span style=color:var(--acc)>G</span></span>'">
+    </a>
+    <ul class="nav__links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hizmetler">Hizmetler</a></li>
+      <li><a href="/referanslar">Referanslar</a></li>
+      <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+      <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank" rel="noopener">Kariyer ↗</a></li>
+    </ul>
+    <div class="nav__r">
+      <button class="tog" id="theme-toggle" aria-label="Temayı değiştir">
+        <div class="tog__k">
+          <svg class="tog__moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="tog__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+      </button>
+      <div class="lang">
+        <span class="lang-a">TR</span>
+        <span class="lang-d">|</span>
+        <a href="/en/kvkk" class="lang-i">EN</a>
+      </div>
+      <button class="nav__tog" id="nav-tog" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mmenu" id="mobile-menu">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hizmetler">Hizmetler</a>
+  <a href="/referanslar">Referanslar</a>
+  <a href="/biz-kimiz">Biz Kimiz?</a>
+  <a href="/iletisim">İletişim</a>
+  <a href="https://portal.teamguerilla.com/kariyer/" target="_blank">Kariyer ↗</a>
+</div>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="rv" style="--s:0">
+      <p class="hero-label">Yasal</p>
+      <h1 class="hero-title">KVKK Belgeler</h1>
+      <p class="hero-desc">Kişisel verilerinizin korunmasına ilişkin politikalarımız, aydınlatma metinlerimiz ve başvuru formumuz.</p>
+      <p class="hero-meta">Son güncelleme: Mart 2026</p>
+    </div>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="wrap">
+
+    <div class="sibs rv" style="--s:1">
+      <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+      <a href="/kvkk" class="act" aria-current="page">KVKK</a>
+      <a href="/kullanim-sartlari">Kullanım Şartları</a>
+    </div>
+
+    <div class="layout">
+
+      <aside class="toc rv" style="--s:2">
+        <p class="toc-title">Bölümler</p>
+        <nav><ul class="toc-list">
+          <div class="tg"><p class="tg-lbl"><span>I</span>Veri Gizliliği</p>
+            <li><a href="#i1">Amaç ve Kapsam</a></li>
+            <li><a href="#i2">Tanımlar</a></li>
+            <li><a href="#i3">Temel İlkeler</a></li>
+            <li><a href="#i4">Veri İşleme</a></li>
+            <li><a href="#i5">Özel Nitelikli Veriler</a></li>
+            <li><a href="#i6">Veri Aktarımı</a></li>
+            <li><a href="#i7">Veri Sahibi Hakları</a></li>
+            <li><a href="#i8">Güvenlik Önlemleri</a></li>
+          </div>
+          <div class="tg"><p class="tg-lbl"><span>II</span>Saklama &amp; İmha</p>
+            <li><a href="#ii1">Saklama Alanları</a></li>
+            <li><a href="#ii2">Saklama/İmha Halleri</a></li>
+            <li><a href="#ii3">Saklama Süreleri</a></li>
+            <li><a href="#ii4">İmha Yöntemleri</a></li>
+            <li><a href="#ii5">Periyodik İmha</a></li>
+          </div>
+          <div class="tg"><p class="tg-lbl"><span>III</span>Aydınlatma Metni</p>
+            <li><a href="#iii1">Genel Bilgilendirme</a></li>
+            <li><a href="#iii2">İşleme Amaçları</a></li>
+            <li><a href="#iii3">Saklama Süresi</a></li>
+            <li><a href="#iii4">Haklarınız</a></li>
+          </div>
+          <div class="tg"><p class="tg-lbl"><span>IV</span>Tedarikçi/İş Ortağı</p>
+            <li><a href="#iv1">Kapsam ve Veriler</a></li>
+            <li><a href="#iv2">İşleme Amaçları</a></li>
+            <li><a href="#iv3">Üçüncü Kişilerle Paylaşım</a></li>
+            <li><a href="#iv4">Haklarınız</a></li>
+          </div>
+          <div class="tg"><p class="tg-lbl"><span>V</span>Başvuru Formu</p>
+            <li><a href="#v1">Başvuru Yöntemleri</a></li>
+            <li><a href="#v2">Online Form</a></li>
+          </div>
+        </ul></nav>
+      </aside>
+
+      <div class="content rv" style="--s:3">
+
+        <div class="ib">
+          <p>Bu sayfa; <strong>EMİRA REKLAM ORGANİZASYON TASARIM TİC. LTD. ŞTİ.</strong> ve <strong>TG REKLAM DANIŞMANLIK TELEKOM HİZ. DIŞ. LTD. ŞTİ.</strong> (Team Guerilla Marketing) tarafından 6698 sayılı KVKK kapsamındaki tüm belgeleri kapsamaktadır.</p>
+        </div>
+
+        <!-- I -->
+        <div class="chap"><div class="chap-n">I</div><div class="chap-t"><h3>Veri Gizliliği Taahhütnamesi</h3><p>Kişisel Verilerin Korunması Temel Politikası</p></div></div>
+
+        <section id="i1"><h2><span class="sn">1.1</span>Amaç ve Kapsam</h2>
+          <p>Bu politika, Team Guerilla Marketing'in KVKK başta olmak üzere ilgili mevzuat uyarınca kişisel verileri koruma ve işleme yükümlülüklerini yerine getirirken uygulanacak temel esasları düzenler.</p>
+          <p>Team Guerilla Marketing, kendi bünyesinde tuttuğu kişisel veriler bakımından işbu politikaya ve bağlı prosedürlere uymayı taahhüt eder. KVKK düzenlemeleri ile bu politika arasında uyumsuzluk olması halinde KVKK hükümleri esas alınır.</p>
+        </section>
+
+        <section id="i2"><h2><span class="sn">1.2</span>Tanımlar</h2>
+          <table class="dt"><tbody>
+            <tr><td>Açık Rıza</td><td>Belirli bir konuya ilişkin, bilgilendirmeye dayanan ve özgür iradeyle açıklanan rıza.</td></tr>
+            <tr><td>Anonim Hale Getirme</td><td>Kişisel verilerin kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesi.</td></tr>
+            <tr><td>Kişisel Veri</td><td>Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgi.</td></tr>
+            <tr><td>Kişisel Veri İşleme</td><td>Kişisel veriler üzerinde elde etme, kaydetme, depolama, değiştirme, aktarma gibi her türlü işlem.</td></tr>
+            <tr><td>KVKK</td><td>6698 sayılı Kişisel Verilerin Korunması Kanunu.</td></tr>
+            <tr><td>Kurul / Kurum</td><td>Kişisel Verileri Koruma Kurulu / Kurumu.</td></tr>
+            <tr><td>Özel Nitelikli Kişisel Veri</td><td>Irk, etnik köken, siyasi düşünce, felsefi inanç, din, sağlık, cinsel hayat, ceza mahkûmiyeti, biyometrik ve genetik veriler.</td></tr>
+            <tr><td>Silme / Yok Etme</td><td>Kişisel verilerin ilgili kullanıcılar tarafından erişilemez / hiç kimse tarafından geri getirilemez hale getirilmesi.</td></tr>
+            <tr><td>Veri İşleyen</td><td>Veri sorumlusu adına kişisel verileri işleyen gerçek veya tüzel kişi.</td></tr>
+            <tr><td>Veri Sorumlusu</td><td>Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminden sorumlu kişi.</td></tr>
+          </tbody></table>
+        </section>
+
+        <section id="i3"><h2><span class="sn">1.3</span>Temel İlkeler</h2>
+          <ul>
+            <li><strong>Hukuka ve dürüstlük kurallarına uygunluk:</strong> Kişisel veriler ölçülülük esasına dayalı olarak işlenir.</li>
+            <li><strong>Doğruluk ve güncellik:</strong> Verilerin işlendiği süre boyunca eksiksiz, doğru ve güncel tutulması için gerekli önlemler alınır.</li>
+            <li><strong>Belirli, açık ve meşru amaç:</strong> Hangi amaçla işleneceği önceden belirlenir; veri sahipleri aydınlatılır, gerektiğinde açık rızaları alınır.</li>
+            <li><strong>Amaçla bağlantılı ve sınırlı işleme:</strong> Kişisel veriler yalnızca belirlenen amaçlara elverişli biçimde ve bu amaçlarla sınırlı olarak işlenir.</li>
+            <li><strong>Gerekli süre kadar muhafaza:</strong> Saklama süresi sona erdiğinde veriler silinir, yok edilir veya anonim hale getirilir.</li>
+          </ul>
+        </section>
+
+        <section id="i4"><h2><span class="sn">1.4</span>Kişisel Veri İşleme</h2>
+          <h3>Açık Rıza ile İşleme</h3>
+          <p>Kişisel veriler, aydınlatma yükümlülüğünün yerine getirilmesi sonrasında ve veri sahibinin bilgilendirmeye dayalı, özgür iradeyle açık rızasını vermesi halinde işlenir.</p>
+          <h3>Açık Rıza Aranmayan Haller (KVKK Madde 5/2)</h3>
+          <ul>
+            <li>Kanunlarda açıkça öngörülmesi</li>
+            <li>Fiili imkânsızlık nedeniyle rıza açıklanamayacak durumlarda hayat/beden bütünlüğünün korunması zorunluluğu</li>
+            <li>Bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması</li>
+            <li>Hukuki yükümlülüğün yerine getirilmesi için zorunluluk</li>
+            <li>Veri sahibi tarafından alenileştirilmiş veriler</li>
+            <li>Bir hakkın tesisi, kullanılması veya korunması için zorunluluk</li>
+            <li>Temel haklara zarar vermemek kaydıyla şirketin meşru menfaati için zorunluluk</li>
+          </ul>
+        </section>
+
+        <section id="i5"><h2><span class="sn">1.5</span>Özel Nitelikli Kişisel Veriler</h2>
+          <p>Özel nitelikli kişisel veriler yalnızca veri sahibinin açık rızasının bulunması veya kanunlarda öngörülen hallerde işlenebilir. Team Guerilla Marketing bu kapsamda:</p>
+          <ul>
+            <li>İlgili çalışanlara KVKK ve veri güvenliği konularında düzenli eğitimler verir</li>
+            <li>Gizlilik sözleşmeleri akdeder</li>
+            <li>Erişim yetkilerini net tanımlar ve periyodik olarak denetler</li>
+            <li>Görev değişikliği veya ayrılmalarda erişim yetkilerini derhal kaldırır</li>
+            <li>E-posta ile aktarımda şifreli kurumsal e-posta veya KEP hesabı kullanır</li>
+          </ul>
+        </section>
+
+        <section id="i6"><h2><span class="sn">1.6</span>Kişisel Verilerin Aktarılması</h2>
+          <p>Team Guerilla Marketing, kişisel veri işleme amaçları doğrultusunda gerekli önlemleri alarak kişisel verileri yurt içinde ve/veya yurt dışında bulunan üçüncü kişilere KVKK'ya uygun şekilde aktarabilir.</p>
+          <p>Üçüncü kişilerle akdedilen sözleşmelere gerekli koruyucu düzenlemeler eklenir. Kişisel veriler; sunucu/hosting hizmet sağlayıcıları, teknik destek tedarikçileri ve yasal zorunluluk halinde yetkili kamu kurumları ile paylaşılabilir.</p>
+        </section>
+
+        <section id="i7"><h2><span class="sn">1.7</span>Veri Sahibinin Hakları</h2>
+          <p>KVKK Madde 11 uyarınca aşağıdaki haklara sahipsiniz:</p>
+          <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+            <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri öğrenme</li>
+            <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+            <li>Amaç ve süre koşulları dahilinde silinmesini veya yok edilmesini isteme</li>
+            <li>Otomatik sistemler vasıtasıyla aleyhinize oluşan sonuçlara itiraz etme</li>
+            <li>Kanuna aykırı işleme nedeniyle uğradığınız zararın giderilmesini talep etme</li>
+          </ul>
+          <h3>Başvuru Kanalları</h3>
+          <ul>
+            <li><strong>Posta:</strong> Caferağa Mah. Kadıköy, İstanbul</li>
+            <li><strong>E-posta:</strong> <a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+          </ul>
+          <p>Talebiniz en geç <strong>30 gün</strong> içinde ücretsiz olarak sonuçlandırılır.</p>
+        </section>
+
+        <section id="i8"><h2><span class="sn">1.8</span>Veri Güvenliği Önlemleri</h2>
+          <h3>İdari Tedbirler</h3>
+          <ul>
+            <li>Kişisel verilere erişim yetkisi yalnızca erişilmesi gereken alanlarla sınırlandırılmıştır</li>
+            <li>Veri paylaşımı yapılan üçüncü kişilerle gizlilik sözleşmeleri akdedilmektedir</li>
+            <li>Çalışanlar düzenli olarak KVKK konusunda bilgilendirilmektedir</li>
+            <li>Kişisel veri ihlali halinde Kurul'a derhal bildirim yapılır</li>
+          </ul>
+          <h3>Teknik Tedbirler</h3>
+          <ul>
+            <li>Bilgi teknolojileri altyapısı kapsamında risk değerlendirmesi yapılır</li>
+            <li>Veri sızıntısını engelleyecek teknik altyapı ve güvenlik sistemleri kurulur</li>
+            <li>Kişisel verilerin saklandığı ortamlar şifreli veya kriptografik yöntemlerle korunur</li>
+            <li>Virüs koruma, güvenlik duvarı ve yedekleme sistemleri aktif tutulur</li>
+          </ul>
+          <h3>Şirket İçi Denetim</h3>
+          <p>KVKK'nın 12. maddesi uyarınca şirket içi denetimler düzenli olarak yapılmaktadır. Kanuni olmayan yollarla veri dışarıya çıkması halinde derhal Kurul'a bildirim yapılır.</p>
+        </section>
+
+
+        <!-- II -->
+        <div class="chap"><div class="chap-n">II</div><div class="chap-t"><h3>Kişisel Veri Saklama ve İmha Politikası</h3><p>Saklama alanları, süreler ve imha usulleri</p></div></div>
+
+        <section id="ii1"><h2><span class="sn">2.1</span>Saklama Alanları</h2>
+          <table class="dt"><tbody>
+            <tr><td>Fiziksel Ortamlar</td><td>Kâğıt ve benzeri baskı yapılabilecek belgeler ve dosyalar.</td></tr>
+            <tr><td>Yerel Dijital Ortamlar</td><td>Şirket bünyesindeki sunucular, sabit ve taşınabilir diskler.</td></tr>
+            <tr><td>Bulut Dijital Ortamlar</td><td>Şirket bünyesi dışında, kriptografik olarak şifrelenmiş internet tabanlı sunucular ve depolama alanları.</td></tr>
+          </tbody></table>
+        </section>
+
+        <section id="ii2"><h2><span class="sn">2.2</span>Saklama ve İmhayı Gerektiren Haller</h2>
+          <h3>Saklamayı Gerektiren Haller</h3>
+          <ul>
+            <li>Sözleşmelerin kurulması ve ifasıyla doğrudan ilgili olması</li>
+            <li>Bir hakkın tesisi, korunması veya kullanılması amacı bulunması</li>
+            <li>Şirketin meşru menfaatleri için saklamanın zorunlu olması</li>
+            <li>Hukuki yükümlülüğün yerine getirilmesi</li>
+            <li>Mevzuatta açıkça öngörülmesi</li>
+            <li>Veri sahibinin açık rızasının bulunması</li>
+          </ul>
+          <h3>İmhayı Gerektiren Haller</h3>
+          <ul>
+            <li>İlgili mevzuat hükümlerinin değiştirilmesi</li>
+            <li>Kişisel verilerin işlenmesini gerektiren sebep ve amaçların ortadan kalkması</li>
+            <li>Veri sahibinin açık rızasını geri alması</li>
+            <li>İlgili kişinin silme/yok etme/anonim hale getirme talebinin kabul edilmesi</li>
+            <li>Azami saklama süresinin geçmiş olması</li>
+          </ul>
+        </section>
+
+        <section id="ii3"><h2><span class="sn">2.3</span>Saklama Süreleri</h2>
+          <table class="rt"><thead><tr><th>Veri Sahibi / Kategori</th><th>Süre</th></tr></thead>
+          <tbody>
+            <tr><td>Çalışan — İşe alım evrakları, SGK bildirimleri, özlük verileri, iş yeri sağlık dosyası</td><td>Hizmet akdi süresince + sona ermesinden itibaren 10 yıl</td></tr>
+            <tr><td>İş ortağı / çözüm ortağı / danışman — Kimlik, iletişim, finansal bilgiler</td><td>İş ilişkisi süresince + sona ermesinden itibaren 10 yıl</td></tr>
+            <tr><td>İnternet sitesi ziyaretçi verileri ve form verileri</td><td>1 yıl</td></tr>
+            <tr><td>Çalışan adayı — Özgeçmiş ve başvuru formu</td><td>En fazla 1 yıl</td></tr>
+            <tr><td>İş birliği yapılan kurum/firma verileri</td><td>İş ilişkisi süresince + sona ermesinden itibaren 10 yıl</td></tr>
+            <tr><td>Şirket ortakları ve yönetim kurulu üyelerine ait bilgiler</td><td>İlişki sona ermesinden itibaren 10 yıl</td></tr>
+            <tr><td>Active Directory kayıtları / Log/Takip Sistemleri</td><td>İlişki sona ermesinden itibaren 1 yıl</td></tr>
+            <tr><td>Bordrolama ve ödeme işlemleri</td><td>İlişki sona ermesinden itibaren 10 yıl</td></tr>
+            <tr><td>Kişisel veri imha süreçleri tutanakları</td><td>3 yıl</td></tr>
+          </tbody></table>
+          <p class="note">* İlgili mevzuatta daha uzun süreler öngörülmesi halinde mevzuat hükümleri esas alınır.</p>
+        </section>
+
+        <section id="ii4"><h2><span class="sn">2.4</span>İmha Yöntemleri</h2>
+          <h3>Fiziksel Ortamda</h3>
+          <ul>
+            <li><strong>Karartma:</strong> Kişisel veriler mürekkep veya kalem kullanılarak okunamaz hale getirilir ya da kesilerek belgeden çıkarılır.</li>
+            <li><strong>Fiziksel Yok Etme:</strong> Belgeler, evrak imha makineleriyle bir araya gelemeyecek biçimde parçalanır.</li>
+          </ul>
+          <h3>Dijital Ortamda</h3>
+          <ul>
+            <li><strong>Yazılımdan Silme:</strong> Veriler dijital komutla geri kurtarılamayacak şekilde silinir.</li>
+            <li><strong>Fiziksel Yok Etme:</strong> Optik ve manyetik medya; eritme, yakma, kırma yoluyla imha edilir.</li>
+            <li><strong>Üzerine Yazma:</strong> Manyetik medya üzerine özel yazılımla en az yedi kez rastgele veri yazılır.</li>
+          </ul>
+        </section>
+
+        <section id="ii5"><h2><span class="sn">2.5</span>Periyodik İmha</h2>
+          <p>KVKK Yönetmeliği'nin 11. maddesi uyarınca Team Guerilla Marketing, periyodik imha süresini <strong>6 ay</strong> olarak belirlemiştir. Saklama süresi dolan kişisel veriler 6 aylık periyotlarla anonim hale getirilir veya imha edilir.</p>
+          <p>Tüm imha işlemleri kayıt altına alınır; söz konusu kayıtlar diğer hukuki yükümlülükler hariç olmak üzere en az <strong>3 yıl</strong> saklanır.</p>
+        </section>
+
+
+        <!-- III -->
+        <div class="chap"><div class="chap-n">III</div><div class="chap-t"><h3>KVKK Bilgilendirme ve Aydınlatma Metni</h3><p>Müşteri ve site ziyaretçileri için aydınlatma</p></div></div>
+
+        <section id="iii1"><h2><span class="sn">3.1</span>Genel Bilgilendirme</h2>
+          <p>6698 sayılı Kişisel Verilerin Korunması Kanunu, 7 Nisan 2016 tarihinde Resmî Gazete'de yayınlanarak yürürlüğe girmiştir. Kanunun amacı; kişisel verilerin işlenmesinde başta özel hayatın gizliliği olmak üzere kişilerin temel hak ve özgürlüklerini korumak ve kişisel verileri işleyen gerçek ve tüzel kişilerin yükümlülükleri ile uyacakları usul ve esasları düzenlemektir.</p>
+          <p><strong>EMİRA REKLAM ORGANİZASYON TASARIM TİC. LTD. ŞTİ.</strong> ve <strong>TG REKLAM DANIŞMANLIK TELEKOM HİZ. DIŞ. LTD. ŞTİ.</strong> (Team Guerilla Marketing), sunduğu hizmetler kapsamında müşterilerinden kişisel veri toplamakta ve yasal sınırlar dahilinde işlemektedir.</p>
+          <p>Kişisel verileriniz; kimlik bilgileri, iletişim bilgileri ve çağrı merkezi ses kayıtlarını kapsamaktadır.</p>
+        </section>
+
+        <section id="iii2"><h2><span class="sn">3.2</span>Kişisel Verilerin İşlenme Amaçları</h2>
+          <p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+          <ul>
+            <li>Şirketimiz ile aranızda kurulan sözleşmelerin ifasını sağlamak</li>
+            <li>İdari birimlerce öngörülen bilgi saklama, raporlama ve bilgilendirme yükümlülüklerine uymak</li>
+            <li>Talep edilen ürün ve hizmetleri sunabilmek</li>
+            <li>Müşteri ilişkilerini yönetmek, iletişim ve hizmet kalitesini artırmak</li>
+            <li>Ticari ilişkiyi devam ettirmek</li>
+            <li>Açık rızanız bulunması halinde ticari elektronik ileti göndermek</li>
+          </ul>
+          <p>Kişisel verileriniz; resmi makamlar, yurt içi ve yurt dışındaki gerçek ve tüzel kişilerle KVKK'nın belirlediği koşullar çerçevesinde paylaşılabilir. Hizmet kalite kontrolü amacıyla anlaşmalı üçüncü kişilere de aktarım yapılabilir. Üçüncü kişilere aktarım sırasında gerekli teknik ve hukuki önlemler alınır; ancak üçüncü kişinin kendi sorumluluk alanından kaynaklanan ihlallerden Team Guerilla Marketing sorumlu değildir.</p>
+        </section>
+
+        <section id="iii3"><h2><span class="sn">3.3</span>Kişisel Verilerin Saklama Süresi</h2>
+          <p>Kişisel verileriniz; yasal yükümlülüklerin yerine getirilmesi ve taraflar arasındaki sözleşmeden doğan yükümlülüklerin ifası amacıyla, işlendikleri amaç için gerekli olan süre kadar muhafaza edilir.</p>
+          <p>KVKK Madde 7/1 uyarınca işlenmesi gerektiren amaç ortadan kalktığında ve/veya mevzuatta öngörülen zamanaşımı süreleri dolduğunda kişisel veriler silinir, yok edilir veya anonim hale getirilir.</p>
+        </section>
+
+        <section id="iii4"><h2><span class="sn">3.4</span>Veri Sahibi Hakları</h2>
+          <p>KVKK ve ilgili mevzuat uyarınca <a href="https://www.teamguerilla.com" target="_blank" rel="noopener">teamguerilla.com</a> adresine başvurarak aşağıdaki haklarınızı kullanabilirsiniz:</p>
+          <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+            <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içi veya yurt dışında aktarıldığı üçüncü kişileri öğrenme</li>
+            <li>Eksik veya yanlış işlenmişse düzeltilmesini ve aktarılan üçüncü kişilere bildirilmesini isteme</li>
+            <li>Amaç ortadan kalktığında silinmesini veya anonim hale getirilmesini isteme</li>
+            <li>Otomatik sistemler vasıtasıyla aleyhinize oluşan sonuçlara itiraz etme</li>
+            <li>Kanuna aykırı veri işleme nedeniyle zararın giderilmesini talep etme</li>
+          </ul>
+          <p>Talepler en geç <strong>30 gün</strong> içinde ücretsiz sonuçlandırılır. Soru ve görüşleriniz için: <a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a> / <a href="tel:02164103999">0216 410 39 99</a></p>
+        </section>
+
+
+        <!-- IV -->
+        <div class="chap"><div class="chap-n">IV</div><div class="chap-t"><h3>Tedarikçi / İş Ortağı / Dış Hizmet Sağlayıcı Aydınlatma Metni</h3><p>Gerçek kişi ve tüzel kişi temsilcileri için</p></div></div>
+
+        <section id="iv1"><h2><span class="sn">4.1</span>Kapsam ve İşlenen Veriler</h2>
+          <p>Team Guerilla Marketing; <strong>EMİRA REKLAM ORGANİZASYON TASARIM TİC. LTD. ŞTİ.</strong> ve <strong>TG REKLAM DANIŞMANLIK TELEKOM HİZ. DIŞ. LTD. ŞTİ.</strong> sıfatıyla, ticari ilişkilerimiz kapsamında elde ettiğimiz kişisel verilerinizin; işlenmelerini gerektiren amaç çerçevesinde ve bu amaç ile bağlantılı, sınırlı ve ölçülü şekilde işleneceğini ve KVKK'nın öngördüğü şartlarda yurt içi veya yurt dışı üçüncü kişilere aktarılabileceğini bildiririz.</p>
+          <table class="rt"><thead><tr><th>Veri Kategorisi</th><th>Kapsam</th></tr></thead>
+          <tbody>
+            <tr><td>Kimlik Verisi</td><td>Ad, soyadı, T.C. Kimlik No, doğum tarihi ve yeri, cinsiyet, medeni durum, milliyet, nüfus cüzdanı/ehliyet sureti</td></tr>
+            <tr><td>İletişim Verisi</td><td>E-posta adresi, adres ve telefon numarası</td></tr>
+            <tr><td>Özel Nitelikli Kişisel Veri</td><td>Nüfus cüzdanı/ehliyet suretinde yer alan din ve kan grubu, adli sicil kaydı</td></tr>
+            <tr><td>Finansal Veri</td><td>Banka hesap bilgileri</td></tr>
+            <tr><td>Eğitim Verisi</td><td>Eğitmen özgeçmişleri</td></tr>
+            <tr><td>Çalışma Verisi</td><td>SGK giriş bildirgesi, görevlendirme belgeleri, işe başlama tarihi, unvan, imza sirküleri</td></tr>
+            <tr><td>Görsel ve İşitsel Veri</td><td>Fotoğraf, güvenlik kamera kayıtları, şirket yetkilileriyle görüşme sırasında alınan ses kayıtları</td></tr>
+            <tr><td>Diğer</td><td>Araç plakası</td></tr>
+          </tbody></table>
+          <h3>Veri Toplama Yöntemi</h3>
+          <p>Kişisel verileriniz; hukuki yükümlülüklerimizi yerine getirmek, aramızdaki sözleşmenin ifası ve şirketin meşru menfaati gereği, tarafınız veya şirketiniz temsilcileri tarafından sözlü, fiziksel veya elektronik ortamda iletilmesi ve şirket binalarına yerleştirilen güvenlik kameraları aracılığıyla toplanmaktadır.</p>
+        </section>
+
+        <section id="iv2"><h2><span class="sn">4.2</span>Kişisel Verilerin İşlenme Amaçları</h2>
+          <ul>
+            <li>Temin edilen mal ve hizmete ilişkin işlerin koordinasyonu ve kalite kontrolü</li>
+            <li>Finans ve muhasebe kayıtlarının tutulması ve ödeme işlemlerinin gerçekleştirilmesi</li>
+            <li>Tedarikçi, iş ortakları ve müşteriler arasında iletişimin sağlanması</li>
+            <li>Ziyaretçi faaliyetlerinin takibi</li>
+            <li>Tedarikçi çalışanlarından destek alınması</li>
+            <li>Şirket politikalarının uygulanması</li>
+            <li>Savunma hakkının kullanılabilmesi veya hukuki yükümlülüklerin yerine getirilmesi</li>
+            <li>İş sağlığı ve güvenliğinin sağlanması ve denetimi</li>
+          </ul>
+          <p>Kişisel verileriniz ilgili mevzuatta belirtilen veya işlendikleri amaç için gerekli olan azami süre kadar muhafaza edilecektir.</p>
+        </section>
+
+        <section id="iv3"><h2><span class="sn">4.3</span>Üçüncü Kişilerle Paylaşım</h2>
+          <p>Kişisel verileriniz faaliyetin gerektirdiği ölçüde aşağıdaki taraflarla paylaşılabilir:</p>
+          <ul>
+            <li>Bina yönetimini gerçekleştiren şirketler</li>
+            <li>Mesleki danışmanlar, muhasebeciler ve denetçiler</li>
+            <li>Bilgi teknolojileri ve arşiv hizmeti veren şirketler</li>
+            <li>İş sağlığı ve güvenliği kurumları ve uzmanları</li>
+            <li>Şirketin ticari, idari veya sözleşmesel ilişki içinde bulunduğu kurumlar ve bankalar</li>
+          </ul>
+        </section>
+
+        <section id="iv4"><h2><span class="sn">4.4</span>Haklarınız ve Başvuru</h2>
+          <p>KVKK'nın 11. maddesi gereği kimliğinizi ispat etmeniz kaydıyla aşağıdaki haklara sahipsiniz:</p>
+          <ul>
+            <li>Kişisel veri işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme</li>
+            <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içi veya yurt dışına aktarılıp aktarılmadığını ve kimlere aktarıldığını öğrenme</li>
+            <li>Yanlış ve eksik verilerin düzeltilmesini ve aktarılan alıcıların bilgilendirilmesini talep etme</li>
+            <li>KVKK Madde 7 kapsamında verilerin imha edilmesini talep etme</li>
+            <li>Otomatik sistem analizlerinin çıkarlarınıza aykırı sonuçlarına itiraz etme</li>
+            <li>Kanuna aykırı işleme nedeniyle zararın giderilmesini talep etme</li>
+          </ul>
+          <p>Başvurunuzu şirketimizin internet adresindeki form aracılığıyla, yazılı olarak veya kayıtlı e-posta adresiniz üzerinden iletebilirsiniz. Talepler niteliğine göre en geç <strong>30 gün</strong> içinde ücretsiz sonuçlandırılır.</p>
+          <h3>İletişim</h3>
+          <ul>
+            <li><strong>Web:</strong> <a href="https://www.teamguerilla.com">www.teamguerilla.com</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+            <li><strong>Adres:</strong> Caferağa Mah. Kadıköy, İstanbul</li>
+          </ul>
+        </section>
+
+
+        <!-- V -->
+        <div class="chap"><div class="chap-n">V</div><div class="chap-t"><h3>KVKK Başvuru Formu</h3><p>Kişisel verilerinize ilişkin talepler için</p></div></div>
+
+        <section id="v1"><h2><span class="sn">5.1</span>Başvuru Yöntemleri</h2>
+          <p>Kanunun 13. maddesinin 1. fıkrası uyarınca başvurularınızın yazılı olarak veya Kurum tarafından belirlenen yöntemlerle iletilmesi gerekmektedir.</p>
+          <table class="dt"><thead><tr><th>Yöntem</th><th>Adres / Kanal</th><th>Konu Bilgisi</th></tr></thead>
+          <tbody>
+            <tr><td>İadeli Taahhütlü Mektup</td><td>Caferağa Mah. Kadıköy, İstanbul</td><td>Zarfın üzerine "Kişisel Verilerin Korunması Kanunu Bilgi Talebi" yazılacaktır.</td></tr>
+            <tr><td>E-posta</td><td><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></td><td>E-posta konu bölümüne "Kişisel Verilerin Korunması Kanunu Bilgi Talebi" yazılacaktır.</td></tr>
+          </tbody></table>
+          <p>Talebiniz niteliğine göre en kısa sürede ve en geç <strong>30 gün</strong> içinde yanıtlandırılacaktır. Eksik bilgi veya belge halinde değerlendirme süresi tamamlanana kadar duracaktır.</p>
+        </section>
+
+        <section id="v2"><h2><span class="sn">5.2</span>Online Başvuru Formu</h2>
+          <div id="form-wrap">
+            <div class="kform" id="kvkk-form">
+
+              <p class="fsec">Başvuru Sahibi Bilgileri</p>
+
+              <div class="frow">
+                <div class="fg"><label for="fn">Ad Soyad <span>*</span></label><input type="text" id="fn" class="fi" placeholder="Ad Soyad" autocomplete="name"></div>
+                <div class="fg"><label for="ftc">T.C. Kimlik No <span>*</span></label><input type="text" id="ftc" class="fi" placeholder="11 haneli T.C. Kimlik No" maxlength="11"></div>
+              </div>
+              <div class="frow">
+                <div class="fg"><label for="fe">E-posta <span>*</span></label><input type="email" id="fe" class="fi" placeholder="ornek@email.com" autocomplete="email"></div>
+                <div class="fg"><label for="fp">Cep Telefonu</label><input type="tel" id="fp" class="fi" placeholder="0xxx xxx xx xx"></div>
+              </div>
+              <div class="fg"><label for="fa">Adres</label><input type="text" id="fa" class="fi" placeholder="İkametgâh adresiniz"></div>
+              <div class="fg">
+                <label for="fr">Şirketimizle İlişkiniz <span>*</span></label>
+                <select id="fr" class="fs">
+                  <option value="" disabled selected>Seçiniz</option>
+                  <option value="musteri">Müşteri</option>
+                  <option value="calisan">Çalışan</option>
+                  <option value="aday">Çalışan Adayı</option>
+                  <option value="tedarikci">Tedarikçi / İş Ortağı</option>
+                  <option value="ziyaretci">Ziyaretçi</option>
+                  <option value="diger">Diğer</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>İlişkiniz Sona Erdi Mi?</label>
+                <div class="rg">
+                  <label class="ri"><input type="radio" name="fend" value="hayir"><span>Hayır, devam ediyor</span></label>
+                  <label class="ri"><input type="radio" name="fend" value="evet"><span>Evet, sona erdi</span></label>
+                </div>
+              </div>
+
+              <p class="fsec">Talep Konusu</p>
+              <p style="font-size:14px;color:var(--t3);margin-bottom:16px">Bir veya birden fazla talep seçebilirsiniz.</p>
+
+              <div class="fg"><div class="cbl">
+                <label class="cbi"><input type="checkbox" name="tal" value="1"><div><label><strong>Talep 1 — Veri işlenip işlenmediğini öğrenme</strong>Kurumunuzun hakkımda kişisel veri işleyip işlemediğini öğrenmek istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="2"><div><label><strong>Talep 2 — Veri işleme faaliyetleri hakkında bilgi talep etme</strong>Kişisel verilerimin işlendiğine dair bilgi talep ediyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="3"><div><label><strong>Talep 3 — İşlenme amacını öğrenme</strong>Kişisel verilerimin işlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenmek istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="4"><div><label><strong>Talep 4 — Aktarılan üçüncü kişileri öğrenme</strong>Kişisel verilerimin yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilmek istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="5"><div><label><strong>Talep 5 — Eksik veya yanlış verilerin düzeltilmesi</strong>Kişisel verilerimin eksik veya yanlış işlendiğini düşünüyorum, düzeltilmesini istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="6"><div><label><strong>Talep 6 — Verilerin silinmesi veya anonim hale getirilmesi</strong>İşlenmesini gerektiren sebeplerin ortadan kalktığını düşündüğüm verilerimin silinmesini veya anonim hale getirilmesini istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="7"><div><label><strong>Talep 7 — Düzeltme talebinin üçüncü kişilere bildirilmesi</strong>Düzeltilmesini talep ettiğim verilerin aktarıldığı üçüncü kişilere de bildirilmesini istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="8"><div><label><strong>Talep 8 — Silme/anonim hale getirme talebinin üçüncü kişilere bildirilmesi</strong>Silme veya anonim hale getirme talebimin aktarılan üçüncü kişilere de bildirilmesini istiyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="9"><div><label><strong>Talep 9 — Otomatik sistem analizine itiraz</strong>Münhasıran otomatik sistemler vasıtasıyla yapılan veri analizi sonucunda şahsım aleyhine ortaya çıkan sonuca itiraz ediyorum.</label></div></label>
+                <label class="cbi"><input type="checkbox" name="tal" value="10"><div><label><strong>Talep 10 — Kanuna aykırı işleme nedeniyle zarar tazminatı</strong>Kişisel verilerimin kanuna aykırı işlenmesi nedeniyle uğradığım zararın tazminini talep ediyorum.</label></div></label>
+              </div></div>
+
+              <div class="fg"><label for="fd">Talep Açıklaması <span>*</span></label><textarea id="fd" class="fta" rows="5" placeholder="Talebinizi ve ilgili ayrıntıları açıklayınız."></textarea></div>
+
+              <div class="fg">
+                <label>Cevabın İletileceği Yöntem <span>*</span></label>
+                <div class="rg">
+                  <label class="ri"><input type="radio" name="freply" value="eposta"><span>E-posta adresime</span></label>
+                  <label class="ri"><input type="radio" name="freply" value="adres"><span>İkametgâh adresime</span></label>
+                </div>
+              </div>
+
+              <div class="fnote">Bu başvuru formunda sağlamış olduğum bilgi ve belgelerin doğru ve güncel olduğunu, şahsıma ait olduğunu beyan ve taahhüt ederim. Bu bilgi ve belgelerin KVKK'nın 13. maddesi uyarınca yapmış olduğum başvurunun değerlendirilmesi amacıyla işlenmesine izin veriyorum.</div>
+
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                <button type="button" class="fsub" id="fsub-btn" onclick="submitForm()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                  Başvuruyu Gönder
+                </button>
+                <span style="font-size:13px;color:var(--t4)">* zorunlu alanlar</span>
+              </div>
+            </div>
+
+            <div class="fsuccess" id="form-success">
+              <div style="font-size:40px;margin-bottom:16px">&#10003;</div>
+              <h3>Başvurunuz Alındı</h3>
+              <p>Talebiniz en geç 30 iş günü içinde <strong id="suc-email"></strong> adresine iletilecektir.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-g">
+      <div>
+        <img src="https://www.teamguerilla.com/ozan/logo.png" alt="Team Guerilla Marketing" class="f-logo" onerror="this.style.display='none'">
+        <p class="f-desc">2005'ten bu yana markalarla tüketiciyi sahada buluşturan, Türkiye genelinde faaliyet gösteren saha pazarlama ajansı.</p>
+        <div class="f-social">
+          <a href="https://www.instagram.com/teamguerilla.marketing/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/teamguerillamarketing/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/team-gerilla-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="f-ct">Hizmetler</h3>
+        <ul class="f-links">
+          <li><a href="/hizmetler#merchandising">Merchandising</a></li>
+          <li><a href="/hizmetler#sampling">Sampling / Tadım</a></li>
+          <li><a href="/hizmetler#roadshow">Roadshow</a></li>
+          <li><a href="/hizmetler#gerilla">Gerilla Pazarlama</a></li>
+          <li><a href="/hizmetler#event">Event / Etkinlik</a></li>
+          <li><a href="/hizmetler#mice">M.I.C.E.</a></li>
+          <li><a href="/hizmetler#neuro">Neuro Marketing</a></li>
+          <li><a href="/hizmetler#tasarim">Tasarım Atölyesi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="f-ct">Kurumsal</h3>
+        <ul class="f-links">
+          <li><a href="/biz-kimiz">Biz Kimiz?</a></li>
+          <li><a href="/referanslar">Referanslar</a></li>
+          <li><a href="/iletisim">İletişim</a></li>
+          <li><a href="https://portal.teamguerilla.com/kariyer/" target="_blank">Kariyer ↗</a></li>
+          <li style="margin-top:8px;padding-top:8px;border-top:1px solid var(--bd)"><a href="https://teamguerilla.social" target="_blank">teamguerilla.social ↗</a></li>
+          <li><a href="https://venagrup.co" target="_blank">Venagrup ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="f-ct">İletişim</h3>
+        <ul class="f-links">
+          <li>İstanbul, Kadıköy</li>
+          <li><a href="tel:02164103999">0216 410 39 99</a></li>
+          <li><a href="mailto:info@teamguerilla.com">info@teamguerilla.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bot">
+      <p class="f-copy">&copy; 2026 Team Guerilla Marketing. Tüm hakları saklıdır.</p>
+      <div class="f-legal">
+        <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+        <a href="/kvkk">KVKK</a>
+        <a href="/kullanim-sartlari">Kullanım Şartları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var t=document.getElementById('theme-toggle'),h=document.documentElement,s=localStorage.getItem('tg-theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches,i=s||(d?'dark':'light');h.setAttribute('data-theme',i);if(t){t.addEventListener('click',function(){var c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('tg-theme',n);});}})();
+(function(){var n=document.querySelector('.nav'),t=false;window.addEventListener('scroll',function(){if(!t){requestAnimationFrame(function(){n.classList.toggle('scrolled',window.scrollY>40);t=false;});t=true;}});})();
+(function(){var t=document.getElementById('nav-tog'),m=document.getElementById('mobile-menu');if(!t||!m)return;t.addEventListener('click',function(){var o=!m.classList.contains('active');m.classList.toggle('active',o);this.classList.toggle('active',o);this.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false');document.body.style.overflow='';});});})();
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('vis');});return;}var o=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');o.unobserve(e.target);}});},{threshold:0.05,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){o.observe(el);});})();
+(function(){var sections=document.querySelectorAll('.content section[id]');var links=document.querySelectorAll('.toc-list a');if(!sections.length||!links.length)return;var o=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('act');});var a=document.querySelector('.toc-list a[href="#'+e.target.id+'"]');if(a)a.classList.add('act');}});},{threshold:0.25});sections.forEach(function(s){o.observe(s);});})();
+document.querySelectorAll('.cbi input[type="checkbox"]').forEach(function(cb){cb.addEventListener('change',function(){this.closest('.cbi').classList.toggle('chkd',this.checked);});});
+function submitForm(){
+  var name=document.getElementById('fn').value.trim();
+  var tc=document.getElementById('ftc').value.trim();
+  var email=document.getElementById('fe').value.trim();
+  var rel=document.getElementById('fr').value;
+  var det=document.getElementById('fd').value.trim();
+  var chk=document.querySelectorAll('input[name="tal"]:checked');
+  var rep=document.querySelector('input[name="freply"]:checked');
+  var err=[];
+  if(!name)err.push('Ad Soyad zorunludur');
+  if(!tc||tc.length!==11||isNaN(tc))err.push('Geçerli bir T.C. Kimlik No giriniz (11 hane)');
+  if(!email||!email.includes('@'))err.push('Geçerli bir e-posta adresi giriniz');
+  if(!rel)err.push('Şirketimizle ilişkinizi seçiniz');
+  if(chk.length===0)err.push('En az bir talep seçiniz');
+  if(!det)err.push('Talep açıklaması zorunludur');
+  if(!rep)err.push('Cevap yöntemi seçiniz');
+  if(err.length>0){alert(err.join('\n'));return;}
+  var btn=document.getElementById('fsub-btn');
+  btn.disabled=true;btn.textContent='Gönderiliyor...';
+  setTimeout(function(){
+    document.getElementById('kvkk-form').style.display='none';
+    document.getElementById('suc-email').textContent=email;
+    document.getElementById('form-success').style.display='block';
+  },800);
+}
+</script>
+</body>
+</html>

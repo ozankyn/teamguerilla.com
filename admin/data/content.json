@@ -1,111 +1,111 @@
 {
   "home.hero.title.tr": {
     "value": "Markanız sahada, Biz arkadasındayız",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.title.en": {
     "value": "We Bring Your Brand to the Field",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.subtitle.tr": {
     "value": "20 yılı aşkın deneyim, 500+ kişilik saha ekibi, Türkiye genelinde operasyon.",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.subtitle.en": {
     "value": "Over 20 years of experience, 500+ field team members, operations across Turkey.",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.cta.tr": {
     "value": "Hemen İletişime Geçin",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.cta.en": {
     "value": "Get in Touch",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.hero.image": {
-    "value": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80&fit=crop&auto=format",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "value": "/uploads/homepage/9d14e47a-e0e2-49c3-9c11-498cd8cf9bb3.png",
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.dept.retail.image": {
     "value": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80&fit=crop&auto=format",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.dept.event.image": {
     "value": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80&fit=crop&auto=format",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.263Z"
   },
   "home.stats.years.value": {
     "value": "20+",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.years.label.tr": {
     "value": "Yıllık Deneyim",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.years.label.en": {
     "value": "Years of Experience",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.team.value": {
     "value": "500+",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.team.label.tr": {
     "value": "Saha Profesyoneli",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.team.label.en": {
     "value": "Field Professionals",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.cities.value": {
     "value": "81",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.cities.label.tr": {
     "value": "Şehir",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.cities.label.en": {
     "value": "Cities",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.brands.value": {
     "value": "100+",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.brands.label.tr": {
     "value": "Tamamlanan Proje",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.brands.label.en": {
     "value": "Brands",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "about.hero.title.tr": {
     "value": "2005'ten Bu Yana Sahada",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.hero.title.en": {
     "value": "In the Field Since 2005",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.hero.subtitle.tr": {
     "value": "Türkiye'nin en köklü saha pazarlama ekiplerinden biriyiz.",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.hero.subtitle.en": {
     "value": "One of Turkey's most established field marketing teams.",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.story.tr": {
-    "value": "2005 yılında İstanbul'da küçük bir ekiple yola çıktık. Bugün 500+ kişilik profesyonel kadromuzla Türkiye'nin 81 iline ulaşıyoruz. İki on yılı aşkın süredir büyük ve küçük markaların saha ihtiyaçlarını karşılıyor, her projeye ilk günkü heyecanla yaklaşıyoruz.",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "value": "2005 yılında İstanbul'da küçük bir ekiple yola çıktık. Bugün 500+ kişilik profesyonel kadromuzla Türkiye'nin 81 iline ulaşıyoruz. 20 yılı aşkın süredir büyük ve küçük markaların saha ihtiyaçlarını karşılıyor, her projeye ilk günkü heyecanla yaklaşıyoruz.",
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.story.en": {
     "value": "We started in 2005 in Istanbul with a small team. Today, with our over 500-member professional crew, we reach all 81 provinces of Turkey. For over two decades, we have been meeting the field needs of brands big and small, approaching every project with the same enthusiasm as day one.",
-    "updatedAt": "2026-03-02T08:05:21.342Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "contact.address.tr": {
     "value": "Aydınevler Mh. Durak Sk Ofis İn Maltepe - A blok No: 3/5 K:1 D:11 Maltepe İSTANBUL",
@@ -145,78 +145,78 @@
   },
   "home.stats.projects.value": {
     "value": "100+",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.projects.label.tr": {
     "value": "Tamamlanan Proje",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "home.stats.projects.label.en": {
     "value": "Completed Projects",
-    "updatedAt": "2026-03-02T12:39:18.184Z"
+    "updatedAt": "2026-03-06T14:51:43.264Z"
   },
   "about.value0.title.tr": {
     "value": "Sahada Güçlüyüz",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value0.title.en": {
     "value": "Strong in the Field",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value0.desc.tr": {
     "value": "Masabaşı stratejiler değil, sahada sonuç üreten ekipler. 81 ilde operasyon kapasitemizle her noktaya ulaşıyoruz.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value0.desc.en": {
     "value": "Not desk strategies, but teams that deliver results in the field. We reach every point with our operational capacity across 81 provinces.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value1.title.tr": {
     "value": "Veriye Dayalı Çalışıyoruz",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value1.title.en": {
     "value": "Data-Driven",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value1.desc.tr": {
     "value": "Her operasyonu raporluyor, her kampanyayı ölçüyor, her sonucu analiz ediyoruz. Müşterilerimize his değil, veri sunuyoruz.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value1.desc.en": {
     "value": "We report every operation, measure every campaign, analyze every result. We offer our clients data, not feelings.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value2.title.tr": {
     "value": "Esnek ve Hızlıyız",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value2.title.en": {
     "value": "Flexible and Fast",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value2.desc.tr": {
     "value": "Her marka farklı, her proje kendine özgü. Standart paketler yerine ihtiyaca özel çözümler üretiyoruz.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value2.desc.en": {
     "value": "Every brand is different, every project is unique. We create custom solutions instead of standard packages.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value3.title.tr": {
     "value": "İnsan Odaklıyız",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value3.title.en": {
     "value": "People-Focused",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value3.desc.tr": {
     "value": "Ekibimize yatırım yapıyoruz çünkü sahada farkı insanlar yaratır. Sürekli eğitim, düzgün çalışma koşulları ve motivasyon.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   },
   "about.value3.desc.en": {
     "value": "We invest in our team because people make the difference in the field. Continuous training, proper working conditions and motivation.",
-    "updatedAt": "2026-03-02T08:16:51.993Z"
+    "updatedAt": "2026-03-06T14:45:42.046Z"
   }
 }

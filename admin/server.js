@@ -58,17 +58,26 @@ const FRONTEND_DIR = path.resolve(__dirname, '..', 'frontend');
 app.use('/assets', express.static(path.join(FRONTEND_DIR, 'assets')));
 
 const pages = {
+  // Turkish pages
   '/': 'index.html',
   '/hizmetler': 'hizmetler.html',
   '/referanslar': 'referanslar.html',
   '/biz-kimiz': 'biz-kimiz.html',
   '/iletisim': 'iletisim.html',
-  // English routes
+  // Turkish legal pages
+  '/kvkk': 'kvkk.html',
+  '/gizlilik-politikasi': 'gizlilik-politikasi.html',
+  '/kullanim-sartlari': 'kullanim-sartlari.html',
+  // English pages
   '/en': 'en/index.html',
   '/en/services': 'en/services.html',
   '/en/references': 'en/references.html',
   '/en/about': 'en/about.html',
   '/en/contact': 'en/contact.html',
+  // English legal pages
+  '/en/kvkk': 'kvkk.html',
+  '/en/privacy': 'gizlilik-politikasi.html',
+  '/en/terms': 'kullanim-sartlari.html',
 };
 
 Object.entries(pages).forEach(([route, file]) => {
